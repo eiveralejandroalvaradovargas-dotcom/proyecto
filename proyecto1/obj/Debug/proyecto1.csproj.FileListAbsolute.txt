@@ -1,0 +1,14 @@
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\bin\Debug\proyecto1.exe
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\bin\Debug\proyecto1.pdb
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.csprojResolveAssemblyReference.cache
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.FormMenuAdmin.resources
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.FormRegistrarAdmin.resources
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.FormRegistrarJugador.resources
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.MainForm.resources
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.csproj.GenerateResource.Cache
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.exe
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.pdb
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.FormConsultarUsuarios.resources
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.FormJuego.resources
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.FormGestionPreguntas.resources
+C:\Users\Userr\OneDrive\Documents\SharpDevelop Projects\proyecto1\proyecto1\obj\Debug\proyecto1.FormModulos.resources

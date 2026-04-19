@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{5BC87F50-080B-4841-BC91-DADDA3EBC281}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>proyecto1</RootNamespace>
+    <AssemblyName>proyecto1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormGestionPreguntas.cs" />
+    <Compile Include="FormGestionPreguntas.Designer.cs">
+      <DependentUpon>FormGestionPreguntas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenuJugador.cs" />
+    <Compile Include="FormMenuJugador.Designer.cs">
+      <DependentUpon>FormMenuJugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FormConsultarUsuarios.cs" />
+    <Compile Include="formularios\FormConsultarUsuarios.Designer.cs">
+      <DependentUpon>FormConsultarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FormJuego.cs" />
+    <Compile Include="formularios\FormJuego.Designer.cs">
+      <DependentUpon>FormJuego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FormMenuAdmin.cs" />
+    <Compile Include="formularios\FormMenuAdmin.Designer.cs">
+      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FormModulos.cs" />
+    <Compile Include="formularios\FormModulos.Designer.cs">
+      <DependentUpon>FormModulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FormRegistrarAdmin.cs" />
+    <Compile Include="formularios\FormRegistrarAdmin.Designer.cs">
+      <DependentUpon>FormRegistrarAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FormRegistrarJugador.cs" />
+    <Compile Include="formularios\FormRegistrarJugador.Designer.cs">
+      <DependentUpon>FormRegistrarJugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\MainForm.cs" />
+    <Compile Include="formularios\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\LogicaJuego.cs" />
+    <Compile Include="Modelos\ModuloEducativo.cs" />
+    <Compile Include="Modelos\opcion.cs" />
+    <Compile Include="Modelos\Pregunta.cs" />
+    <Compile Include="Modelos\Program.cs" />
+    <Compile Include="Modelos\PuntuacionJugador.cs" />
+    <Compile Include="Modelos\usuarios.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormGestionPreguntas.resx">
+      <DependentUpon>FormGestionPreguntas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FormConsultarUsuarios.resx">
+      <DependentUpon>FormConsultarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FormJuego.resx">
+      <DependentUpon>FormJuego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FormMenuAdmin.resx">
+      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FormModulos.resx">
+      <DependentUpon>FormModulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FormRegistrarAdmin.resx">
+      <DependentUpon>FormRegistrarAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FormRegistrarJugador.resx">
+      <DependentUpon>FormRegistrarJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modelos" />
+    <Folder Include="formularios" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
