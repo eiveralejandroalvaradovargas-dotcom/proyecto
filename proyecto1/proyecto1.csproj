@@ -96,6 +96,9 @@
     <EmbeddedResource Include="FormGestionPreguntas.resx">
       <DependentUpon>FormGestionPreguntas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuJugador.resx">
+      <DependentUpon>FormMenuJugador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\FormConsultarUsuarios.resx">
       <DependentUpon>FormConsultarUsuarios.cs</DependentUpon>
     </EmbeddedResource>

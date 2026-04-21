@@ -46,6 +46,7 @@ namespace proyecto1
 			this.rbOpcion4 = new System.Windows.Forms.RadioButton();
 			this.btnResponder = new System.Windows.Forms.Button();
 			this.lblPuntuacion = new System.Windows.Forms.Label();
+			this.Volver = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.picImagen)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -74,10 +75,11 @@ namespace proyecto1
 			this.lblPregunta.Name = "lblPregunta";
 			this.lblPregunta.Size = new System.Drawing.Size(500, 60);
 			this.lblPregunta.TabIndex = 2;
+			
 			// 
 			// picImagen
 			// 
-			this.picImagen.Location = new System.Drawing.Point(30, 140);
+			this.picImagen.Location = new System.Drawing.Point(30, 104);
 			this.picImagen.Name = "picImagen";
 			this.picImagen.Size = new System.Drawing.Size(150, 150);
 			this.picImagen.TabIndex = 3;
@@ -138,11 +140,22 @@ namespace proyecto1
 			this.lblPuntuacion.TabIndex = 9;
 			this.lblPuntuacion.Text = "Puntuacion 0";
 			// 
+			// Volver
+			// 
+			this.Volver.Location = new System.Drawing.Point(30, 272);
+			this.Volver.Name = "Volver";
+			this.Volver.Size = new System.Drawing.Size(100, 28);
+			this.Volver.TabIndex = 10;
+			this.Volver.Text = "Volver";
+			this.Volver.UseVisualStyleBackColor = true;
+			this.Volver.Click += new System.EventHandler(this.VolverClick);
+			// 
 			// FormJuego
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(550, 330);
+			this.Controls.Add(this.Volver);
 			this.Controls.Add(this.lblPuntuacion);
 			this.Controls.Add(this.btnResponder);
 			this.Controls.Add(this.rbOpcion4);
@@ -158,6 +171,7 @@ namespace proyecto1
 			((System.ComponentModel.ISupportInitialize)(this.picImagen)).EndInit();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Button Volver;
 		private System.Windows.Forms.Label lblPuntuacion;
 		private System.Windows.Forms.Button btnResponder;
 		private System.Windows.Forms.RadioButton rbOpcion4;

@@ -10,14 +10,16 @@ namespace proyecto1
 	public partial class FormJuego : Form
 	{
 		private int idUsuario;
+		private string Nombre_de_Usuario;
 		private LogicaJuego logica;
 		private List<Pregunta> preguntasActuales;
 		private int indicePregunta;
 		
 		
-		public FormJuego(int idUsuario)
+		public FormJuego(int idUsuario, string Nombre_de_Usuario)
 		{
 			this.idUsuario = idUsuario;
+			this.Nombre_de_Usuario = Nombre_de_Usuario;
 			logica = new LogicaJuego();
 			InitializeComponent();
 			CargarModulos();
@@ -169,6 +171,14 @@ namespace proyecto1
 				existente.Puntos = logica.PuntajeActual;
 			else
 				MainForm.PuntuacionesGlobales.Add(new PuntuacionJugador(idUsuario,idModulo,logica.PuntajeActual));
+		}
+		
+		
+		void VolverClick(object sender, EventArgs e)
+		{
+			FormMenuJugador Menu_Jugador = new FormMenuJugador(this.Nombre_de_Usuario, this.idUsuario);				
+			Menu_Jugador.Show();
+			this.Close();
 		}
 	}
 }

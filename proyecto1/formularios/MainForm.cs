@@ -88,8 +88,8 @@ namespace proyecto1
 					else
 						{
 							MessageBox.Show("Bienvenido Jugador");
-							FormJuego juego = new FormJuego(encontrar.Id);
-							juego.Show();
+							FormMenuJugador Menu_Jugador = new FormMenuJugador(encontrar.Username, encontrar.Id);
+							Menu_Jugador.Show();
 							this.Hide();
 						}
 					}
