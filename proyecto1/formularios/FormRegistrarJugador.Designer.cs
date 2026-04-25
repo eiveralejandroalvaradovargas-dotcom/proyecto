@@ -84,6 +84,7 @@ namespace proyecto1
 			this.textContraseña.Name = "textContraseña";
 			this.textContraseña.Size = new System.Drawing.Size(100, 20);
 			this.textContraseña.TabIndex = 4;
+			this.textContraseña.UseSystemPasswordChar = true;
 			// 
 			// btnRegistrar
 			// 
@@ -96,7 +97,7 @@ namespace proyecto1
 			this.btnRegistrar.UseVisualStyleBackColor = true;
 			this.btnRegistrar.Click += new System.EventHandler(this.BtnRegistrarClick);
 			// 
-			// FormRegistrar
+			// FormRegistrarJugador
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -107,7 +108,7 @@ namespace proyecto1
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Name = "FormRegistrar";
+			this.Name = "FormRegistrarJugador";
 			this.Text = "FormRegistrar";
 			this.ResumeLayout(false);
 			this.PerformLayout();

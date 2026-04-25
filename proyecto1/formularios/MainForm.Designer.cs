@@ -96,6 +96,7 @@ namespace proyecto1
 			this.textContraseña.Name = "textContraseña";
 			this.textContraseña.Size = new System.Drawing.Size(100, 20);
 			this.textContraseña.TabIndex = 5;
+			this.textContraseña.UseSystemPasswordChar = true;
 			// 
 			// btnRegistrar
 			// 
