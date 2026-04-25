@@ -80,7 +80,7 @@ namespace proyecto1
 					{
 					if(encontrar.Rol == "Admin")
 						{
-							MessageBox.Show("Bienvenido Administrador");
+							MessageBox.Show("Bienvenido Administrador", "Inicio exitoso");
 							FormMenuAdmin MenuAdmin = new FormMenuAdmin();
 							MenuAdmin.Show();
 							this.Hide();

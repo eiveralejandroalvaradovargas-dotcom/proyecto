@@ -36,5 +36,12 @@ namespace proyecto1
 			pantallaModulos.Show();
 			this.Hide();
 		}
+		
+		
+		
+		void Añadir_preguntasClick(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }

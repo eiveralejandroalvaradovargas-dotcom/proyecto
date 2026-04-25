@@ -39,125 +39,159 @@ namespace proyecto1
 			this.label1 = new System.Windows.Forms.Label();
 			this.cmbPreguntas = new System.Windows.Forms.ComboBox();
 			this.dataPreguntas = new System.Windows.Forms.DataGridView();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.Regisstrar = new System.Windows.Forms.Button();
+			this.Modificar = new System.Windows.Forms.Button();
+			this.Eliminar = new System.Windows.Forms.Button();
+			this.Pregunta_ESP = new System.Windows.Forms.TextBox();
+			this.Pregunta_ENG = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
+			this.Volver = new System.Windows.Forms.Button();
+			this.Ver_Todo = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataPreguntas)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(153, 9);
+			this.label1.Location = new System.Drawing.Point(238, 24);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "label1";
+			this.label1.Text = "Modulo";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// cmbPreguntas
 			// 
 			this.cmbPreguntas.FormattingEnabled = true;
 			this.cmbPreguntas.Location = new System.Drawing.Point(142, 50);
 			this.cmbPreguntas.Name = "cmbPreguntas";
-			this.cmbPreguntas.Size = new System.Drawing.Size(169, 21);
+			this.cmbPreguntas.Size = new System.Drawing.Size(261, 21);
 			this.cmbPreguntas.TabIndex = 1;
+			this.cmbPreguntas.SelectedIndexChanged += new System.EventHandler(this.CmbPreguntasSelectedIndexChanged);
 			// 
 			// dataPreguntas
 			// 
 			this.dataPreguntas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataPreguntas.Location = new System.Drawing.Point(51, 86);
 			this.dataPreguntas.Name = "dataPreguntas";
-			this.dataPreguntas.Size = new System.Drawing.Size(344, 185);
+			this.dataPreguntas.ReadOnly = true;
+			this.dataPreguntas.Size = new System.Drawing.Size(453, 185);
 			this.dataPreguntas.TabIndex = 2;
+			this.dataPreguntas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataPreguntasCellClick);
 			// 
-			// button1
+			// Regisstrar
 			// 
-			this.button1.Location = new System.Drawing.Point(51, 378);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(89, 37);
-			this.button1.TabIndex = 3;
-			this.button1.Text = "button1";
-			this.button1.UseVisualStyleBackColor = true;
+			this.Regisstrar.Location = new System.Drawing.Point(12, 378);
+			this.Regisstrar.Name = "Regisstrar";
+			this.Regisstrar.Size = new System.Drawing.Size(89, 37);
+			this.Regisstrar.TabIndex = 3;
+			this.Regisstrar.Text = "Registrar";
+			this.Regisstrar.UseVisualStyleBackColor = true;
+			this.Regisstrar.Click += new System.EventHandler(this.Button1Click);
 			// 
-			// button2
+			// Modificar
 			// 
-			this.button2.Location = new System.Drawing.Point(177, 378);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(89, 37);
-			this.button2.TabIndex = 4;
-			this.button2.Text = "button2";
-			this.button2.UseVisualStyleBackColor = true;
+			this.Modificar.Location = new System.Drawing.Point(249, 378);
+			this.Modificar.Name = "Modificar";
+			this.Modificar.Size = new System.Drawing.Size(89, 37);
+			this.Modificar.TabIndex = 4;
+			this.Modificar.Text = "Modificar";
+			this.Modificar.UseVisualStyleBackColor = true;
+			this.Modificar.Click += new System.EventHandler(this.ModificarClick);
 			// 
-			// button3
+			// Eliminar
 			// 
-			this.button3.Location = new System.Drawing.Point(306, 378);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(89, 37);
-			this.button3.TabIndex = 5;
-			this.button3.Text = "button3";
-			this.button3.UseVisualStyleBackColor = true;
+			this.Eliminar.Location = new System.Drawing.Point(357, 378);
+			this.Eliminar.Name = "Eliminar";
+			this.Eliminar.Size = new System.Drawing.Size(89, 37);
+			this.Eliminar.TabIndex = 5;
+			this.Eliminar.Text = "Eliminar";
+			this.Eliminar.UseVisualStyleBackColor = true;
+			this.Eliminar.Click += new System.EventHandler(this.EliminarClick);
 			// 
-			// textBox1
+			// Pregunta_ESP
 			// 
-			this.textBox1.Location = new System.Drawing.Point(64, 316);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(124, 20);
-			this.textBox1.TabIndex = 6;
+			this.Pregunta_ESP.Location = new System.Drawing.Point(64, 316);
+			this.Pregunta_ESP.Name = "Pregunta_ESP";
+			this.Pregunta_ESP.Size = new System.Drawing.Size(124, 20);
+			this.Pregunta_ESP.TabIndex = 6;
 			// 
-			// textBox2
+			// Pregunta_ENG
 			// 
-			this.textBox2.Location = new System.Drawing.Point(249, 316);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(124, 20);
-			this.textBox2.TabIndex = 7;
+			this.Pregunta_ENG.Location = new System.Drawing.Point(380, 316);
+			this.Pregunta_ENG.Name = "Pregunta_ENG";
+			this.Pregunta_ENG.Size = new System.Drawing.Size(124, 20);
+			this.Pregunta_ENG.TabIndex = 7;
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(73, 290);
+			this.label2.Location = new System.Drawing.Point(64, 290);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(100, 23);
+			this.label2.Size = new System.Drawing.Size(119, 23);
 			this.label2.TabIndex = 8;
-			this.label2.Text = "label2";
+			this.label2.Text = "Pregunta en español";
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(261, 290);
+			this.label3.Location = new System.Drawing.Point(393, 290);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(100, 23);
 			this.label3.TabIndex = 9;
-			this.label3.Text = "label3";
+			this.label3.Text = "Pregunta en ingles";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// Volver
+			// 
+			this.Volver.Location = new System.Drawing.Point(514, 12);
+			this.Volver.Name = "Volver";
+			this.Volver.Size = new System.Drawing.Size(75, 23);
+			this.Volver.TabIndex = 10;
+			this.Volver.Text = "Volver";
+			this.Volver.UseVisualStyleBackColor = true;
+			// 
+			// Ver_Todo
+			// 
+			this.Ver_Todo.Location = new System.Drawing.Point(126, 378);
+			this.Ver_Todo.Name = "Ver_Todo";
+			this.Ver_Todo.Size = new System.Drawing.Size(89, 37);
+			this.Ver_Todo.TabIndex = 11;
+			this.Ver_Todo.Text = "Ver todo";
+			this.Ver_Todo.UseVisualStyleBackColor = true;
+			this.Ver_Todo.Click += new System.EventHandler(this.Ver_TodoClick);
 			// 
 			// FormGestionPreguntas
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(458, 427);
+			this.ClientSize = new System.Drawing.Size(601, 427);
+			this.Controls.Add(this.Ver_Todo);
+			this.Controls.Add(this.Volver);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.textBox1);
-			this.Controls.Add(this.button3);
-			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.Pregunta_ENG);
+			this.Controls.Add(this.Pregunta_ESP);
+			this.Controls.Add(this.Eliminar);
+			this.Controls.Add(this.Modificar);
+			this.Controls.Add(this.Regisstrar);
 			this.Controls.Add(this.dataPreguntas);
 			this.Controls.Add(this.cmbPreguntas);
 			this.Controls.Add(this.label1);
 			this.Name = "FormGestionPreguntas";
-			this.Text = "FormGestionPreguntas";
+			this.Text = "Gestion de Preguntas";
 			((System.ComponentModel.ISupportInitialize)(this.dataPreguntas)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button Ver_Todo;
+		private System.Windows.Forms.Button Volver;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.TextBox Pregunta_ENG;
+		private System.Windows.Forms.TextBox Pregunta_ESP;
+		private System.Windows.Forms.Button Eliminar;
+		private System.Windows.Forms.Button Modificar;
+		private System.Windows.Forms.Button Regisstrar;
 		private System.Windows.Forms.DataGridView dataPreguntas;
 		private System.Windows.Forms.ComboBox cmbPreguntas;
 		private System.Windows.Forms.Label label1;

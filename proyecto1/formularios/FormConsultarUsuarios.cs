@@ -94,6 +94,7 @@ namespace proyecto1
 		{
 			FormRegistrarAdmin pantallaRegistrarAdmin = new FormRegistrarAdmin();
 			pantallaRegistrarAdmin.Show();
+			Actualizacion();
 		}
 		
 

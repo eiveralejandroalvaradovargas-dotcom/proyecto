@@ -109,7 +109,7 @@ namespace proyecto1
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "FormRegistrarJugador";
-			this.Text = "FormRegistrar";
+			this.Text = "Registrar";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
