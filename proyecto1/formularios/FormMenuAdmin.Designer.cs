@@ -40,6 +40,7 @@ namespace proyecto1
 			this.btnConsultar = new System.Windows.Forms.Button();
 			this.BtnGestionarPreguntas = new System.Windows.Forms.Button();
 			this.btnGestionarModulos = new System.Windows.Forms.Button();
+			this.Añadir_preguntas = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -84,11 +85,23 @@ namespace proyecto1
 			this.btnGestionarModulos.UseVisualStyleBackColor = true;
 			this.btnGestionarModulos.Click += new System.EventHandler(this.BtnGestionarModulosClick);
 			// 
+			// Añadir_preguntas
+			// 
+			this.Añadir_preguntas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Añadir_preguntas.Location = new System.Drawing.Point(236, 55);
+			this.Añadir_preguntas.Name = "Añadir_preguntas";
+			this.Añadir_preguntas.Size = new System.Drawing.Size(86, 38);
+			this.Añadir_preguntas.TabIndex = 9;
+			this.Añadir_preguntas.Text = "Añadir Preguntas";
+			this.Añadir_preguntas.UseVisualStyleBackColor = true;
+			this.Añadir_preguntas.Click += new System.EventHandler(this.Añadir_preguntasClick);
+			// 
 			// FormMenuAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(393, 210);
+			this.Controls.Add(this.Añadir_preguntas);
 			this.Controls.Add(this.btnGestionarModulos);
 			this.Controls.Add(this.BtnGestionarPreguntas);
 			this.Controls.Add(this.btnConsultar);
@@ -97,6 +110,7 @@ namespace proyecto1
 			this.Text = "FormMenuAdmin";
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Button Añadir_preguntas;
 		private System.Windows.Forms.Button btnGestionarModulos;
 		private System.Windows.Forms.Button BtnGestionarPreguntas;
 		private System.Windows.Forms.Button btnConsultar;

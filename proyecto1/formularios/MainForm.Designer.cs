@@ -48,11 +48,11 @@ namespace proyecto1
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(110, 9);
+			this.label1.Location = new System.Drawing.Point(91, 9);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(135, 23);
+			this.label1.Size = new System.Drawing.Size(150, 23);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "inicio de Secion";
+			this.label1.Text = "Inicio de Sesion";
 			// 
 			// label2
 			// 
@@ -96,6 +96,7 @@ namespace proyecto1
 			this.textContraseña.Name = "textContraseña";
 			this.textContraseña.Size = new System.Drawing.Size(100, 20);
 			this.textContraseña.TabIndex = 5;
+			this.textContraseña.UseSystemPasswordChar = true;
 			// 
 			// btnRegistrar
 			// 
@@ -121,7 +122,7 @@ namespace proyecto1
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "MainForm";
-			this.Text = "proyecto1";
+			this.Text = "Plataforma educativa(?";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}

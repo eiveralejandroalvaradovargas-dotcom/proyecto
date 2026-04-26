@@ -65,12 +65,13 @@ namespace proyecto1
 			this.dataUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataUsuario.Location = new System.Drawing.Point(12, 39);
 			this.dataUsuario.Name = "dataUsuario";
+			this.dataUsuario.ReadOnly = true;
 			this.dataUsuario.Size = new System.Drawing.Size(322, 324);
 			this.dataUsuario.TabIndex = 1;
 			// 
 			// btnModificar
 			// 
-			this.btnModificar.Location = new System.Drawing.Point(363, 283);
+			this.btnModificar.Location = new System.Drawing.Point(478, 283);
 			this.btnModificar.Name = "btnModificar";
 			this.btnModificar.Size = new System.Drawing.Size(94, 34);
 			this.btnModificar.TabIndex = 2;
@@ -80,7 +81,7 @@ namespace proyecto1
 			// 
 			// btnEliminar
 			// 
-			this.btnEliminar.Location = new System.Drawing.Point(480, 283);
+			this.btnEliminar.Location = new System.Drawing.Point(593, 283);
 			this.btnEliminar.Name = "btnEliminar";
 			this.btnEliminar.Size = new System.Drawing.Size(94, 34);
 			this.btnEliminar.TabIndex = 5;
@@ -152,7 +153,7 @@ namespace proyecto1
 			// btnRegistrar
 			// 
 			this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnRegistrar.Location = new System.Drawing.Point(598, 283);
+			this.btnRegistrar.Location = new System.Drawing.Point(363, 283);
 			this.btnRegistrar.Name = "btnRegistrar";
 			this.btnRegistrar.Size = new System.Drawing.Size(86, 34);
 			this.btnRegistrar.TabIndex = 15;
@@ -178,7 +179,7 @@ namespace proyecto1
 			this.Controls.Add(this.dataUsuario);
 			this.Controls.Add(this.label1);
 			this.Name = "FormConsultarUsuarios";
-			this.Text = "FormConsultarUsuarios";
+			this.Text = "Consultar Usuarios";
 			((System.ComponentModel.ISupportInitialize)(this.dataUsuario)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
