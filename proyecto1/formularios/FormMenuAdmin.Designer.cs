@@ -36,6 +36,7 @@ namespace proyecto1
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuAdmin));
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnConsultar = new System.Windows.Forms.Button();
 			this.BtnGestionarPreguntas = new System.Windows.Forms.Button();
@@ -45,7 +46,9 @@ namespace proyecto1
 			// 
 			// label1
 			// 
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.BackColor = System.Drawing.Color.Transparent;
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.Gainsboro;
 			this.label1.Location = new System.Drawing.Point(138, 9);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(131, 23);
@@ -54,52 +57,66 @@ namespace proyecto1
 			// 
 			// btnConsultar
 			// 
-			this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnConsultar.Location = new System.Drawing.Point(51, 135);
+			this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnConsultar.Location = new System.Drawing.Point(51, 129);
 			this.btnConsultar.Name = "btnConsultar";
-			this.btnConsultar.Size = new System.Drawing.Size(86, 38);
+			this.btnConsultar.Size = new System.Drawing.Size(86, 44);
 			this.btnConsultar.TabIndex = 6;
 			this.btnConsultar.Text = "Consultar usuarios";
-			this.btnConsultar.UseVisualStyleBackColor = true;
+			this.btnConsultar.UseVisualStyleBackColor = false;
 			this.btnConsultar.Click += new System.EventHandler(this.BtnConsultarClick);
 			// 
 			// BtnGestionarPreguntas
 			// 
-			this.BtnGestionarPreguntas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BtnGestionarPreguntas.Location = new System.Drawing.Point(236, 135);
+			this.BtnGestionarPreguntas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.BtnGestionarPreguntas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.BtnGestionarPreguntas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.BtnGestionarPreguntas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnGestionarPreguntas.Location = new System.Drawing.Point(236, 129);
 			this.BtnGestionarPreguntas.Name = "BtnGestionarPreguntas";
-			this.BtnGestionarPreguntas.Size = new System.Drawing.Size(86, 38);
+			this.BtnGestionarPreguntas.Size = new System.Drawing.Size(86, 44);
 			this.BtnGestionarPreguntas.TabIndex = 7;
 			this.BtnGestionarPreguntas.Text = "Gestionar Preguntas";
-			this.BtnGestionarPreguntas.UseVisualStyleBackColor = true;
+			this.BtnGestionarPreguntas.UseVisualStyleBackColor = false;
 			this.BtnGestionarPreguntas.Click += new System.EventHandler(this.BtnGestionarPreguntasClick);
 			// 
 			// btnGestionarModulos
 			// 
-			this.btnGestionarModulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnGestionarModulos.Location = new System.Drawing.Point(51, 55);
+			this.btnGestionarModulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnGestionarModulos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnGestionarModulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnGestionarModulos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnGestionarModulos.Location = new System.Drawing.Point(51, 47);
 			this.btnGestionarModulos.Name = "btnGestionarModulos";
-			this.btnGestionarModulos.Size = new System.Drawing.Size(86, 38);
+			this.btnGestionarModulos.Size = new System.Drawing.Size(86, 46);
 			this.btnGestionarModulos.TabIndex = 8;
 			this.btnGestionarModulos.Text = "Gestionar Modulos";
-			this.btnGestionarModulos.UseVisualStyleBackColor = true;
+			this.btnGestionarModulos.UseVisualStyleBackColor = false;
 			this.btnGestionarModulos.Click += new System.EventHandler(this.BtnGestionarModulosClick);
 			// 
 			// Añadir_preguntas
 			// 
-			this.Añadir_preguntas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Añadir_preguntas.Location = new System.Drawing.Point(236, 55);
+			this.Añadir_preguntas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.Añadir_preguntas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.Añadir_preguntas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Añadir_preguntas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Añadir_preguntas.Location = new System.Drawing.Point(236, 47);
 			this.Añadir_preguntas.Name = "Añadir_preguntas";
-			this.Añadir_preguntas.Size = new System.Drawing.Size(86, 38);
+			this.Añadir_preguntas.Size = new System.Drawing.Size(86, 46);
 			this.Añadir_preguntas.TabIndex = 9;
 			this.Añadir_preguntas.Text = "Añadir Preguntas";
-			this.Añadir_preguntas.UseVisualStyleBackColor = true;
+			this.Añadir_preguntas.UseVisualStyleBackColor = false;
 			this.Añadir_preguntas.Click += new System.EventHandler(this.Añadir_preguntasClick);
 			// 
 			// FormMenuAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.ClientSize = new System.Drawing.Size(393, 210);
 			this.Controls.Add(this.Añadir_preguntas);
 			this.Controls.Add(this.btnGestionarModulos);

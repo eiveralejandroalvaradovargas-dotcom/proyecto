@@ -36,6 +36,7 @@ namespace proyecto1
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultarUsuarios));
 			this.label1 = new System.Windows.Forms.Label();
 			this.dataUsuario = new System.Windows.Forms.DataGridView();
 			this.btnModificar = new System.Windows.Forms.Button();
@@ -53,16 +54,20 @@ namespace proyecto1
 			// 
 			// label1
 			// 
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.BackColor = System.Drawing.Color.Transparent;
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.Gainsboro;
 			this.label1.Location = new System.Drawing.Point(256, 13);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(158, 23);
+			this.label1.Size = new System.Drawing.Size(173, 23);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Consulta de Usuarios";
 			// 
 			// dataUsuario
 			// 
+			this.dataUsuario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
 			this.dataUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataUsuario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
 			this.dataUsuario.Location = new System.Drawing.Point(12, 39);
 			this.dataUsuario.Name = "dataUsuario";
 			this.dataUsuario.ReadOnly = true;
@@ -71,26 +76,36 @@ namespace proyecto1
 			// 
 			// btnModificar
 			// 
+			this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnModificar.Location = new System.Drawing.Point(478, 283);
 			this.btnModificar.Name = "btnModificar";
 			this.btnModificar.Size = new System.Drawing.Size(94, 34);
 			this.btnModificar.TabIndex = 2;
 			this.btnModificar.Text = "Modificar";
-			this.btnModificar.UseVisualStyleBackColor = true;
+			this.btnModificar.UseVisualStyleBackColor = false;
 			this.btnModificar.Click += new System.EventHandler(this.BtnModificarClick);
 			// 
 			// btnEliminar
 			// 
+			this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEliminar.Location = new System.Drawing.Point(593, 283);
 			this.btnEliminar.Name = "btnEliminar";
 			this.btnEliminar.Size = new System.Drawing.Size(94, 34);
 			this.btnEliminar.TabIndex = 5;
 			this.btnEliminar.Text = "Eliminar";
-			this.btnEliminar.UseVisualStyleBackColor = true;
+			this.btnEliminar.UseVisualStyleBackColor = false;
 			this.btnEliminar.Click += new System.EventHandler(this.BtnEliminarClick);
 			// 
 			// cmbRol
 			// 
+			this.cmbRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+			this.cmbRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.cmbRol.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cmbRol.ForeColor = System.Drawing.Color.Gainsboro;
 			this.cmbRol.FormattingEnabled = true;
 			this.cmbRol.Items.AddRange(new object[] {
 									"Todos",
@@ -105,20 +120,31 @@ namespace proyecto1
 			// 
 			// textContraseña
 			// 
+			this.textContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+			this.textContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.textContraseña.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textContraseña.ForeColor = System.Drawing.Color.Gainsboro;
 			this.textContraseña.Location = new System.Drawing.Point(363, 152);
 			this.textContraseña.Name = "textContraseña";
-			this.textContraseña.Size = new System.Drawing.Size(94, 20);
+			this.textContraseña.Size = new System.Drawing.Size(94, 22);
 			this.textContraseña.TabIndex = 8;
 			// 
 			// textNombre
 			// 
+			this.textNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+			this.textNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.textNombre.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textNombre.ForeColor = System.Drawing.Color.Gainsboro;
 			this.textNombre.Location = new System.Drawing.Point(363, 89);
 			this.textNombre.Name = "textNombre";
-			this.textNombre.Size = new System.Drawing.Size(94, 20);
+			this.textNombre.Size = new System.Drawing.Size(94, 22);
 			this.textNombre.TabIndex = 9;
 			// 
 			// label2
 			// 
+			this.label2.BackColor = System.Drawing.Color.Transparent;
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.Gainsboro;
 			this.label2.Location = new System.Drawing.Point(480, 60);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(94, 23);
@@ -127,6 +153,9 @@ namespace proyecto1
 			// 
 			// label3
 			// 
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.ForeColor = System.Drawing.Color.Gainsboro;
 			this.label3.Location = new System.Drawing.Point(363, 126);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(94, 20);
@@ -135,6 +164,9 @@ namespace proyecto1
 			// 
 			// label4
 			// 
+			this.label4.BackColor = System.Drawing.Color.Transparent;
+			this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.ForeColor = System.Drawing.Color.Gainsboro;
 			this.label4.Location = new System.Drawing.Point(363, 59);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(94, 24);
@@ -143,6 +175,10 @@ namespace proyecto1
 			// 
 			// cmbID
 			// 
+			this.cmbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+			this.cmbID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.cmbID.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cmbID.ForeColor = System.Drawing.Color.Gainsboro;
 			this.cmbID.FormattingEnabled = true;
 			this.cmbID.Location = new System.Drawing.Point(480, 86);
 			this.cmbID.Name = "cmbID";
@@ -152,19 +188,23 @@ namespace proyecto1
 			// 
 			// btnRegistrar
 			// 
-			this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnRegistrar.Location = new System.Drawing.Point(363, 283);
 			this.btnRegistrar.Name = "btnRegistrar";
 			this.btnRegistrar.Size = new System.Drawing.Size(86, 34);
 			this.btnRegistrar.TabIndex = 15;
 			this.btnRegistrar.Text = "Registrar";
-			this.btnRegistrar.UseVisualStyleBackColor = true;
+			this.btnRegistrar.UseVisualStyleBackColor = false;
 			this.btnRegistrar.Click += new System.EventHandler(this.BtnRegistrarClick);
 			// 
 			// FormConsultarUsuarios
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.ClientSize = new System.Drawing.Size(699, 375);
 			this.Controls.Add(this.btnRegistrar);
 			this.Controls.Add(this.cmbID);
