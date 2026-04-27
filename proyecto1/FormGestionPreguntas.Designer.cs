@@ -149,6 +149,7 @@ namespace proyecto1
 			this.Volver.TabIndex = 10;
 			this.Volver.Text = "Volver";
 			this.Volver.UseVisualStyleBackColor = true;
+			this.Volver.Click += new System.EventHandler(this.VolverClick);
 			// 
 			// Ver_Todo
 			// 
