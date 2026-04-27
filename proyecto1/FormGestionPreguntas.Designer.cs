@@ -193,7 +193,12 @@ namespace proyecto1
 			this.Volver.Size = new System.Drawing.Size(75, 23);
 			this.Volver.TabIndex = 10;
 			this.Volver.Text = "Volver";
+<<<<<<< HEAD
 			this.Volver.UseVisualStyleBackColor = false;
+=======
+			this.Volver.UseVisualStyleBackColor = true;
+			this.Volver.Click += new System.EventHandler(this.VolverClick);
+>>>>>>> 731a9ea73c47e0e5cac3f5860fdfcbb641f0ac69
 			// 
 			// Ver_Todo
 			// 

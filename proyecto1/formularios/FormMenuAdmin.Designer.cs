@@ -41,7 +41,6 @@ namespace proyecto1
 			this.btnConsultar = new System.Windows.Forms.Button();
 			this.BtnGestionarPreguntas = new System.Windows.Forms.Button();
 			this.btnGestionarModulos = new System.Windows.Forms.Button();
-			this.Añadir_preguntas = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -97,6 +96,7 @@ namespace proyecto1
 			this.btnGestionarModulos.UseVisualStyleBackColor = false;
 			this.btnGestionarModulos.Click += new System.EventHandler(this.BtnGestionarModulosClick);
 			// 
+<<<<<<< HEAD
 			// Añadir_preguntas
 			// 
 			this.Añadir_preguntas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -111,6 +111,8 @@ namespace proyecto1
 			this.Añadir_preguntas.UseVisualStyleBackColor = false;
 			this.Añadir_preguntas.Click += new System.EventHandler(this.Añadir_preguntasClick);
 			// 
+=======
+>>>>>>> 731a9ea73c47e0e5cac3f5860fdfcbb641f0ac69
 			// FormMenuAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,7 +120,6 @@ namespace proyecto1
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.ClientSize = new System.Drawing.Size(393, 210);
-			this.Controls.Add(this.Añadir_preguntas);
 			this.Controls.Add(this.btnGestionarModulos);
 			this.Controls.Add(this.BtnGestionarPreguntas);
 			this.Controls.Add(this.btnConsultar);
@@ -127,7 +128,6 @@ namespace proyecto1
 			this.Text = "FormMenuAdmin";
 			this.ResumeLayout(false);
 		}
-		private System.Windows.Forms.Button Añadir_preguntas;
 		private System.Windows.Forms.Button btnGestionarModulos;
 		private System.Windows.Forms.Button BtnGestionarPreguntas;
 		private System.Windows.Forms.Button btnConsultar;

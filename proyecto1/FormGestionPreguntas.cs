@@ -19,6 +19,9 @@ namespace proyecto1
 		
 		void Actualizar()
 		{
+			dataPreguntas.CurrentCell = null;
+			dataPreguntas.DataSource = null;
+			
 			var Modulo_Actual = cmbPreguntas.SelectedItem as ModuloEducativo;
 			if(Modulo_Actual != null)
 			{
@@ -26,6 +29,12 @@ namespace proyecto1
 				var Filtro = MainForm.ListaPreguntas.Where(Objeto => Objeto.IdModulo == Modulo_Actual.Id).ToList();
 				dataPreguntas.DataSource = Filtro;
 			}
+			else
+			{
+				dataPreguntas.DataSource = MainForm.ListaPreguntas;
+			}
+			
+			dataPreguntas.Refresh();
 		}
 		
 		void Limpiar_Casillas()
@@ -37,6 +46,10 @@ namespace proyecto1
 		void Button1Click(object sender, EventArgs e)
 		{
 			var Modulo_Actual = cmbPreguntas.SelectedItem as ModuloEducativo;
+			if(cmbPreguntas.SelectedItem == null)
+			{
+				MessageBox.Show("Seleccione una materia", "Advertencia"); return;
+			}
 			
 			int New_ID = MainForm.ListaPreguntas.Count +1;
 			
@@ -68,6 +81,20 @@ namespace proyecto1
 		
 		void EliminarClick(object sender, EventArgs e)
 		{
+			if (Seleccion_de_ID == -1)
+			{
+				MessageBox.Show("Seleccione una pregunta para eliminar", "Eliminacion"); return;
+			}
+			Pregunta Encontrada = MainForm.ListaPreguntas.Find(Objeto => Objeto.Id == Seleccion_de_ID);
+			if (Encontrada != null)
+			{
+				MainForm.ListaPreguntas.Remove(Encontrada);
+				Actualizar();
+				Limpiar_Casillas();
+				Seleccion_de_ID = -1;
+				
+				MessageBox.Show("Se ha eliminado la pregunta correctamente", "Eliminacion");
+			}
 			
 		}
 		
@@ -77,6 +104,7 @@ namespace proyecto1
 			
 			if (Modulo_Actual != null)
 			{
+				Seleccion_de_ID = -1;
 				var Filtro = MainForm.ListaPreguntas.Where(Objeto => Objeto.IdModulo == Modulo_Actual.Id).ToList();
 				
 				dataPreguntas.DataSource = null;
@@ -86,22 +114,32 @@ namespace proyecto1
 		
 		void Ver_TodoClick(object sender, EventArgs e)
 		{
+			cmbPreguntas.SelectedIndex = -1;
+			
 			dataPreguntas.DataSource = null;
 			dataPreguntas.DataSource = MainForm.ListaPreguntas;
-			
-			cmbPreguntas.SelectedIndex = -1;
 		}
 		
 		void DataPreguntasCellClick(object sender, DataGridViewCellEventArgs e)
 		{
-			if (e.RowIndex >= 0)
+			if (e.RowIndex >= 0 && e.RowIndex < dataPreguntas.Rows.Count)
 			{
 				var Fila = dataPreguntas.Rows[e.RowIndex];
-				Seleccion_de_ID = int.Parse(Fila.Cells["Id"].Value.ToString());
+				if (Fila.Cells["Id"].Value != null)
+				{
+				  Seleccion_de_ID = int.Parse(Fila.Cells["Id"].Value.ToString());
 				
-				Pregunta_ESP.Text = Fila.Cells["TextoES"].Value.ToString();
-				Pregunta_ENG.Text = Fila.Cells["TextoEN"].Value.ToString();
+				  Pregunta_ESP.Text = Fila.Cells["TextoES"].Value.ToString();
+				  Pregunta_ENG.Text = Fila.Cells["TextoEN"].Value.ToString();
+				}
 			}
+		}
+		
+		void VolverClick(object sender, EventArgs e)
+		{
+			FormMenuAdmin Menu_Administrador = new FormMenuAdmin();
+			Menu_Administrador.Show();
+			this.Close();
 		}
 	}
 }
