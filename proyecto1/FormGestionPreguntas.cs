@@ -50,14 +50,20 @@ namespace proyecto1
 			{
 				MessageBox.Show("Seleccione una materia", "Advertencia"); return;
 			}
+			else if (string.IsNullOrEmpty(Pregunta_ESP.Text) || string.IsNullOrEmpty(Pregunta_ENG.Text))
+			{
+				MessageBox.Show("Por favor, llenar todos los campos solicitados", "Registro fallido");
+			}
+			else
+			{
+			    int New_ID = MainForm.ListaPreguntas.Count +1;
 			
-			int New_ID = MainForm.ListaPreguntas.Count +1;
+			    Pregunta New_Question = new Pregunta (New_ID, Modulo_Actual.Id, Pregunta_ESP.Text, Pregunta_ENG.Text, "");
 			
-			Pregunta New_Question = new Pregunta (New_ID, Modulo_Actual.Id, Pregunta_ESP.Text, Pregunta_ENG.Text, "");
-			
-			MainForm.ListaPreguntas.Add(New_Question);
-			Actualizar();
-			Limpiar_Casillas();
+			    MainForm.ListaPreguntas.Add(New_Question);
+			    Actualizar();
+			    Limpiar_Casillas();
+			}
 		}
 		
 		void ModificarClick(object sender, EventArgs e)
