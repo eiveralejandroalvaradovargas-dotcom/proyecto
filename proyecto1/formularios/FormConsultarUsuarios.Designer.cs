@@ -37,7 +37,7 @@ namespace proyecto1
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultarUsuarios));
-			this.label1 = new System.Windows.Forms.Label();
+			this.lbl_Title = new System.Windows.Forms.Label();
 			this.dataUsuario = new System.Windows.Forms.DataGridView();
 			this.btnModificar = new System.Windows.Forms.Button();
 			this.btnEliminar = new System.Windows.Forms.Button();
@@ -45,23 +45,25 @@ namespace proyecto1
 			this.textContraseña = new System.Windows.Forms.TextBox();
 			this.textNombre = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
+			this.lbl_Contraseña = new System.Windows.Forms.Label();
+			this.lbl_Usuario = new System.Windows.Forms.Label();
 			this.cmbID = new System.Windows.Forms.ComboBox();
 			this.btnRegistrar = new System.Windows.Forms.Button();
+			this.btn_Volver = new System.Windows.Forms.Button();
+			this.lbl_Ver = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataUsuario)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// label1
+			// lbl_Title
 			// 
-			this.label1.BackColor = System.Drawing.Color.Transparent;
-			this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label1.Location = new System.Drawing.Point(256, 13);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(173, 23);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Consulta de Usuarios";
+			this.lbl_Title.BackColor = System.Drawing.Color.Transparent;
+			this.lbl_Title.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_Title.ForeColor = System.Drawing.Color.White;
+			this.lbl_Title.Location = new System.Drawing.Point(235, 13);
+			this.lbl_Title.Name = "lbl_Title";
+			this.lbl_Title.Size = new System.Drawing.Size(173, 23);
+			this.lbl_Title.TabIndex = 0;
+			this.lbl_Title.Text = "Consulta de Usuarios";
 			// 
 			// dataUsuario
 			// 
@@ -76,9 +78,10 @@ namespace proyecto1
 			// 
 			// btnModificar
 			// 
-			this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnModificar.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.btnModificar.Location = new System.Drawing.Point(478, 283);
 			this.btnModificar.Name = "btnModificar";
 			this.btnModificar.Size = new System.Drawing.Size(94, 34);
@@ -92,7 +95,7 @@ namespace proyecto1
 			this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnEliminar.Location = new System.Drawing.Point(593, 283);
+			this.btnEliminar.Location = new System.Drawing.Point(363, 323);
 			this.btnEliminar.Name = "btnEliminar";
 			this.btnEliminar.Size = new System.Drawing.Size(94, 34);
 			this.btnEliminar.TabIndex = 5;
@@ -111,9 +114,9 @@ namespace proyecto1
 									"Todos",
 									"Jugador",
 									"Admin"});
-			this.cmbRol.Location = new System.Drawing.Point(467, 323);
+			this.cmbRol.Location = new System.Drawing.Point(478, 153);
 			this.cmbRol.Name = "cmbRol";
-			this.cmbRol.Size = new System.Drawing.Size(121, 21);
+			this.cmbRol.Size = new System.Drawing.Size(96, 21);
 			this.cmbRol.TabIndex = 6;
 			this.cmbRol.Text = "Todos";
 			this.cmbRol.SelectedIndexChanged += new System.EventHandler(this.CmbRolSelectedIndexChanged);
@@ -151,27 +154,27 @@ namespace proyecto1
 			this.label2.TabIndex = 11;
 			this.label2.Text = "ID";
 			// 
-			// label3
+			// lbl_Contraseña
 			// 
-			this.label3.BackColor = System.Drawing.Color.Transparent;
-			this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label3.Location = new System.Drawing.Point(363, 126);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(94, 20);
-			this.label3.TabIndex = 12;
-			this.label3.Text = "Contraseña";
+			this.lbl_Contraseña.BackColor = System.Drawing.Color.Transparent;
+			this.lbl_Contraseña.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_Contraseña.ForeColor = System.Drawing.Color.Gainsboro;
+			this.lbl_Contraseña.Location = new System.Drawing.Point(363, 126);
+			this.lbl_Contraseña.Name = "lbl_Contraseña";
+			this.lbl_Contraseña.Size = new System.Drawing.Size(94, 20);
+			this.lbl_Contraseña.TabIndex = 12;
+			this.lbl_Contraseña.Text = "Contraseña";
 			// 
-			// label4
+			// lbl_Usuario
 			// 
-			this.label4.BackColor = System.Drawing.Color.Transparent;
-			this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label4.Location = new System.Drawing.Point(363, 59);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(94, 24);
-			this.label4.TabIndex = 13;
-			this.label4.Text = "Nombre";
+			this.lbl_Usuario.BackColor = System.Drawing.Color.Transparent;
+			this.lbl_Usuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_Usuario.ForeColor = System.Drawing.Color.Gainsboro;
+			this.lbl_Usuario.Location = new System.Drawing.Point(363, 59);
+			this.lbl_Usuario.Name = "lbl_Usuario";
+			this.lbl_Usuario.Size = new System.Drawing.Size(94, 24);
+			this.lbl_Usuario.TabIndex = 13;
+			this.lbl_Usuario.Text = "Nombre";
 			// 
 			// cmbID
 			// 
@@ -193,11 +196,36 @@ namespace proyecto1
 			this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnRegistrar.Location = new System.Drawing.Point(363, 283);
 			this.btnRegistrar.Name = "btnRegistrar";
-			this.btnRegistrar.Size = new System.Drawing.Size(86, 34);
+			this.btnRegistrar.Size = new System.Drawing.Size(94, 34);
 			this.btnRegistrar.TabIndex = 15;
 			this.btnRegistrar.Text = "Registrar";
 			this.btnRegistrar.UseVisualStyleBackColor = false;
 			this.btnRegistrar.Click += new System.EventHandler(this.BtnRegistrarClick);
+			// 
+			// btn_Volver
+			// 
+			this.btn_Volver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btn_Volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_Volver.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_Volver.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.btn_Volver.Location = new System.Drawing.Point(478, 323);
+			this.btn_Volver.Name = "btn_Volver";
+			this.btn_Volver.Size = new System.Drawing.Size(94, 34);
+			this.btn_Volver.TabIndex = 16;
+			this.btn_Volver.Text = "Volver";
+			this.btn_Volver.UseVisualStyleBackColor = false;
+			this.btn_Volver.Click += new System.EventHandler(this.Btn_VolverClick);
+			// 
+			// lbl_Ver
+			// 
+			this.lbl_Ver.BackColor = System.Drawing.Color.Transparent;
+			this.lbl_Ver.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_Ver.ForeColor = System.Drawing.Color.Gainsboro;
+			this.lbl_Ver.Location = new System.Drawing.Point(478, 126);
+			this.lbl_Ver.Name = "lbl_Ver";
+			this.lbl_Ver.Size = new System.Drawing.Size(94, 20);
+			this.lbl_Ver.TabIndex = 17;
+			this.lbl_Ver.Text = "Ver";
 			// 
 			// FormConsultarUsuarios
 			// 
@@ -205,11 +233,13 @@ namespace proyecto1
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.ClientSize = new System.Drawing.Size(699, 375);
+			this.ClientSize = new System.Drawing.Size(600, 382);
+			this.Controls.Add(this.lbl_Ver);
+			this.Controls.Add(this.btn_Volver);
 			this.Controls.Add(this.btnRegistrar);
 			this.Controls.Add(this.cmbID);
-			this.Controls.Add(this.label4);
-			this.Controls.Add(this.label3);
+			this.Controls.Add(this.lbl_Usuario);
+			this.Controls.Add(this.lbl_Contraseña);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.textNombre);
 			this.Controls.Add(this.textContraseña);
@@ -217,17 +247,19 @@ namespace proyecto1
 			this.Controls.Add(this.btnEliminar);
 			this.Controls.Add(this.btnModificar);
 			this.Controls.Add(this.dataUsuario);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lbl_Title);
 			this.Name = "FormConsultarUsuarios";
 			this.Text = "Consultar Usuarios";
 			((System.ComponentModel.ISupportInitialize)(this.dataUsuario)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label lbl_Ver;
+		private System.Windows.Forms.Button btn_Volver;
 		private System.Windows.Forms.Button btnRegistrar;
 		private System.Windows.Forms.ComboBox cmbID;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label lbl_Usuario;
+		private System.Windows.Forms.Label lbl_Contraseña;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox textNombre;
 		private System.Windows.Forms.TextBox textContraseña;
@@ -235,6 +267,6 @@ namespace proyecto1
 		private System.Windows.Forms.Button btnEliminar;
 		private System.Windows.Forms.Button btnModificar;
 		private System.Windows.Forms.DataGridView dataUsuario;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lbl_Title;
 	}
 }

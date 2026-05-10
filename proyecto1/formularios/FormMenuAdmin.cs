@@ -11,6 +11,12 @@ namespace proyecto1
 		public FormMenuAdmin()
 		{
 			InitializeComponent();
+			
+			foreach (Control Textos_Properties in this.Controls)
+			{
+				Textos_Properties.Tag = Textos_Properties.Text;
+			}
+			Verificar();
 		}
 
 		
@@ -19,6 +25,7 @@ namespace proyecto1
 		void BtnConsultarClick(object sender, EventArgs e)
 		{
 			FormConsultarUsuarios pantallaConsultaUsuarios = new FormConsultarUsuarios();
+			pantallaConsultaUsuarios.Owner = this;
 			pantallaConsultaUsuarios.Show();
 			this.Hide();
 		}
@@ -26,6 +33,7 @@ namespace proyecto1
 		void BtnGestionarPreguntasClick(object sender, EventArgs e)
 		{
 			FormGestionPreguntas pantallaPregunta = new FormGestionPreguntas();
+			pantallaPregunta.Owner = this;
 			pantallaPregunta.Show();
 			this.Hide();
 		}
@@ -33,15 +41,43 @@ namespace proyecto1
 		void BtnGestionarModulosClick(object sender, EventArgs e)
 		{
 			FormModulos pantallaModulos = new FormModulos();
+			pantallaModulos.Owner = this;
 			pantallaModulos.Show();
 			this.Hide();
 		}
 		
-		
-		
-		void Añadir_preguntasClick(object sender, EventArgs e)
+		void Btn_Cerrar_SesionClick(object sender, EventArgs e)
 		{
+			proyecto1.Modelos.Idiomas.English = false;
 			
+			
+			if (this.Owner != null)
+			{
+				this.Owner.Show();
+			}
+			this.Close();
+		}
+		
+		void Verificar()
+		{
+			if (proyecto1.Modelos.Idiomas.English == true)
+			{
+				lb_Titulo.Text = "Admin´s Menu";
+					
+				BtnGestionarPreguntas.Text = "To manage questions";
+				btnGestionarModulos.Text = "To manage modules";
+				btnConsultar.Text = "To manage users";
+				btn_Cerrar_Sesion.Text = "Log out";
+			}
+			else
+			{
+				lb_Titulo.Text = lb_Titulo.Tag.ToString();
+					
+				BtnGestionarPreguntas.Text = BtnGestionarPreguntas.Tag.ToString();
+				btnGestionarModulos.Text = btnGestionarModulos.Tag.ToString();
+				btnConsultar.Text = btnConsultar.Tag.ToString();
+				btn_Cerrar_Sesion.Text = btn_Cerrar_Sesion.Tag.ToString();
+			}
 		}
 	}
 }

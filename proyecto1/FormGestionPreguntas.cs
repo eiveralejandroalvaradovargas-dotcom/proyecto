@@ -15,6 +15,12 @@ namespace proyecto1
 			
 			cmbPreguntas.DataSource = MainForm.ListaModulos;
 			cmbPreguntas.DisplayMember = "Nombre";
+			
+			foreach(Control Textos_Properties in this.Controls)
+			{
+				Textos_Properties.Tag = Textos_Properties.Text;
+			}
+			Verificar();
 		}
 		
 		void Actualizar()
@@ -48,11 +54,29 @@ namespace proyecto1
 			var Modulo_Actual = cmbPreguntas.SelectedItem as ModuloEducativo;
 			if(cmbPreguntas.SelectedItem == null)
 			{
-				MessageBox.Show("Seleccione una materia", "Advertencia"); return;
+				string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "Select a course"
+					: "Seleccione una materia";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+					
+				MessageBox.Show(Mensaje, Title);return;
+				
 			}
 			else if (string.IsNullOrEmpty(Pregunta_ESP.Text) || string.IsNullOrEmpty(Pregunta_ENG.Text))
 			{
-				MessageBox.Show("Por favor, llenar todos los campos solicitados", "Registro fallido");
+				string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "Please, fill all the fields"
+					: "Por favor, llenar todos los campos solicitados";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+					
+				MessageBox.Show(Mensaje, Title);return;
+				
 			}
 			else
 			{
@@ -70,7 +94,15 @@ namespace proyecto1
 		{
 			if (Seleccion_de_ID == -1)
 			{
-				MessageBox.Show("Seleccionada una pregunta de la  tabla", "Modificacion"); return;
+				string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "Please, select a question from the list"
+					: "Seleccionada una pregunta de la  tabla";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+					
+				MessageBox.Show(Mensaje, Title);return;
 			}
 			
 			Pregunta Encontrada = MainForm.ListaPreguntas.Find(Objeto => Objeto.Id == Seleccion_de_ID);
@@ -80,7 +112,16 @@ namespace proyecto1
 				Encontrada.TextoEn = Pregunta_ENG.Text;
 				Actualizar();
 				Limpiar_Casillas();
-				MessageBox.Show("Se ha modificado la pregunta correctamente", "Yeeeeih");
+				
+				string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "The question was edited sucessfully"
+					:  "Se ha modificado la pregunta correctamente";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+					
+				MessageBox.Show(Mensaje, Title);
 			}
 			
 		}
@@ -89,7 +130,15 @@ namespace proyecto1
 		{
 			if (Seleccion_de_ID == -1)
 			{
-				MessageBox.Show("Seleccione una pregunta para eliminar", "Eliminacion"); return;
+				string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "Select a question to delete"
+					:  "Seleccione una pregunta para eliminar";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+					
+				MessageBox.Show(Mensaje, Title); return;
 			}
 			Pregunta Encontrada = MainForm.ListaPreguntas.Find(Objeto => Objeto.Id == Seleccion_de_ID);
 			if (Encontrada != null)
@@ -99,7 +148,16 @@ namespace proyecto1
 				Limpiar_Casillas();
 				Seleccion_de_ID = -1;
 				
-				MessageBox.Show("Se ha eliminado la pregunta correctamente", "Eliminacion");
+				string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "The question was deleted sucessfully"
+					:  "Se ha eliminado la pregunta correctamente";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+					
+				MessageBox.Show(Mensaje, Title);
+				
 			}
 			
 		}
@@ -143,9 +201,37 @@ namespace proyecto1
 		
 		void VolverClick(object sender, EventArgs e)
 		{
-			FormMenuAdmin Menu_Administrador = new FormMenuAdmin();
-			Menu_Administrador.Show();
+			if (this.Owner != null)
+			{
+				this.Owner.Show();
+			}
 			this.Close();
+		}
+		
+		void Verificar()
+		{
+			if(proyecto1.Modelos.Idiomas.English == true)
+			{
+				lbl_Title.Text = "Module";
+				lbl_Preg_Español.Text = "Spanish question";
+				lbl_Preg_Ingles.Text = "English question";
+				
+				Regisstrar.Text = "Save question";
+				Modificar.Text = "Edit";
+				Eliminar.Text = "Delete";
+				Volver.Text = "Back";
+			}
+			else
+			{
+				lbl_Title.Text = lbl_Title.Tag.ToString();
+				lbl_Preg_Español.Text = lbl_Preg_Español.Tag.ToString();
+				lbl_Preg_Ingles.Text = lbl_Preg_Ingles.Tag.ToString();
+				
+				Regisstrar.Text = Regisstrar.Tag.ToString();
+				Modificar.Text = Modificar.Tag.ToString();
+				Eliminar.Text = Eliminar.Tag.ToString();
+				Volver.Text = Volver.Tag.ToString();
+			}
 		}
 	}
 }

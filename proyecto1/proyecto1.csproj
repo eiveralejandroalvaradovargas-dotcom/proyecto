@@ -83,6 +83,7 @@
     <Compile Include="formularios\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Idiomas.cs" />
     <Compile Include="Modelos\LogicaJuego.cs" />
     <Compile Include="Modelos\ModuloEducativo.cs" />
     <Compile Include="Modelos\opcion.cs" />

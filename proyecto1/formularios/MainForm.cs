@@ -12,11 +12,16 @@ namespace proyecto1
 		public static List<ModuloEducativo> ListaModulos = new List<ModuloEducativo>();
 		public static List<Pregunta> ListaPreguntas = new List<Pregunta>();
 		public static List<PuntuacionJugador> PuntuacionesGlobales = new List<PuntuacionJugador>();
-		
+	
 		public MainForm()
 		{
 			InitializeComponent();
 			CargarDatosIniciales();
+			
+			foreach (Control Textos_Properties in this.Controls)
+			{
+				Textos_Properties.Tag = Textos_Properties.Text;
+			}
 		}
 		
 		 private void CargarDatosIniciales()
@@ -80,14 +85,34 @@ namespace proyecto1
 					{
 					if(encontrar.Rol == "Admin")
 						{
-							MessageBox.Show("Bienvenido Administrador", "Inicio exitoso");
+							string Mensaje = proyecto1.Modelos.Idiomas.English
+							? "Well howdy, Administrator"
+							: "Bienvenido Administrador";
+						
+						string Title = proyecto1.Modelos.Idiomas.English
+							? "Login sucessfully"
+							: "Inicio de sesion exitoso";
+						
+						MessageBox.Show(Mensaje, Title);
 							FormMenuAdmin MenuAdmin = new FormMenuAdmin();
+							MenuAdmin.Owner = this;
 							MenuAdmin.Show();
 							this.Hide();
+							Limpiar_Casillas();
 						}
 					else
 						{
-							MessageBox.Show("Bienvenido Jugador");
+						
+						string Mensaje = proyecto1.Modelos.Idiomas.English
+							? "Well howdy, player"
+							: "Bienvenido Jugador";
+						
+						string Title = proyecto1.Modelos.Idiomas.English
+							? "Login sucessfully"
+							: "Inicio de sesion exitoso";
+						
+						MessageBox.Show(Mensaje, Title);
+						
 							FormMenuJugador Menu_Jugador = new FormMenuJugador(encontrar.Username, encontrar.Id);
 							Menu_Jugador.Show();
 							this.Hide();
@@ -95,12 +120,28 @@ namespace proyecto1
 					}
 				else
 					{
-						MessageBox.Show("Usuario o contraseña incorrectos");
+						string Mensaje = proyecto1.Modelos.Idiomas.English
+							? "Wrong username or password"
+							: "Usuario o contraseña incorrectos";
+						
+						string Title = proyecto1.Modelos.Idiomas.English
+							? "Failed to sign in"
+							: "Fallo al iniciar";
+						
+						MessageBox.Show(Mensaje, Title);
 					}
 			}
 			else
 			{
-				MessageBox.Show("Por favor, complete ambos campos", "Inicio fallido");
+				string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "Please, complete all the fields"
+					: "Complete todos los campos";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+					
+				MessageBox.Show(Mensaje, Title);
 			}
 		}
 
@@ -111,5 +152,50 @@ namespace proyecto1
 		}
 		
 
+		
+		void Btn_Cambiar_IdiomaClick(object sender, EventArgs e)
+		{
+			proyecto1.Modelos.Idiomas.English = !proyecto1.Modelos.Idiomas.English;
+			Verificar();
+		}
+		
+		void Verificar()
+		{
+			if(proyecto1.Modelos.Idiomas.English == true)
+			{
+				lblTitulo.Text = "Login";
+				lblUsuario.Text = "Username";
+				lblContraseña.Text = "Password";
+				lblDesc_shift_btn.Text = "Wanna shifts the language?, just press here :D";
+				lblDesc_shift_btn_2.Text = "This option can´t be change after";
+				
+				btn_Cambiar_Idioma.Text = "Shifts Language";
+				btnAcceder.Text = "Log in";
+				btnRegistrar.Text = "Sign up";
+			}
+			else
+			{
+				lblTitulo.Text = lblTitulo.Tag.ToString();
+				lblUsuario.Text = lblUsuario.Tag.ToString();
+				lblContraseña.Text = lblContraseña.Tag.ToString();
+				lblDesc_shift_btn.Text = lblDesc_shift_btn.Tag.ToString();
+				lblDesc_shift_btn_2.Text = lblDesc_shift_btn_2.Tag.ToString();
+				
+				btn_Cambiar_Idioma.Text = btn_Cambiar_Idioma.Tag.ToString();
+				btnAcceder.Text = btnAcceder.Tag.ToString();
+				btnRegistrar.Text = btnRegistrar.Tag.ToString();
+			}
+		}
+		
+		void MainFormActivated(object sender, EventArgs e)
+		{
+			Verificar();
+		}
+		
+		void Limpiar_Casillas()
+		{
+			textUsuario.Clear();
+			textContraseña.Clear();
+		}
 	}
 }
