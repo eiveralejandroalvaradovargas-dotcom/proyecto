@@ -14,8 +14,18 @@ namespace proyecto1
 			InitializeComponent();
 			this.Name_Ingresado = Name_Recibido;
 			this.ID_Ingresado = ID_Recibido;
+			
+			if (proyecto1.Modelos.Idiomas.English == true)
+			{
+				Bienvenida.Text = "Welcome, " + Name_Ingresado + "!";
 				
-			Bienvenida.Text = "Bienvenido, " + Name_Ingresado + "!";
+				Modulos_Menu.Text = "Show Modules";
+			}
+			else
+			{
+				Bienvenida.Text = "Bienvenido, " + Name_Ingresado + "!";
+				Modulos_Menu.Text = "Ver Modulos";
+			}
 			
 			
 			Seleccion_Modulo_Pts.DataSource = MainForm.ListaModulos;

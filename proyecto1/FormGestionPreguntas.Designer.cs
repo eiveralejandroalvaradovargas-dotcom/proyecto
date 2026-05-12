@@ -38,7 +38,7 @@ namespace proyecto1
 		{
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionPreguntas));
-			this.label1 = new System.Windows.Forms.Label();
+			this.lbl_Title = new System.Windows.Forms.Label();
 			this.cmbPreguntas = new System.Windows.Forms.ComboBox();
 			this.dataPreguntas = new System.Windows.Forms.DataGridView();
 			this.Regisstrar = new System.Windows.Forms.Button();
@@ -46,24 +46,24 @@ namespace proyecto1
 			this.Eliminar = new System.Windows.Forms.Button();
 			this.Pregunta_ESP = new System.Windows.Forms.TextBox();
 			this.Pregunta_ENG = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
+			this.lbl_Preg_Español = new System.Windows.Forms.Label();
+			this.lbl_Preg_Ingles = new System.Windows.Forms.Label();
 			this.Volver = new System.Windows.Forms.Button();
 			this.Ver_Todo = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataPreguntas)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// label1
+			// lbl_Title
 			// 
-			this.label1.BackColor = System.Drawing.Color.Transparent;
-			this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label1.Location = new System.Drawing.Point(238, 24);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(100, 23);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Modulo";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lbl_Title.BackColor = System.Drawing.Color.Transparent;
+			this.lbl_Title.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_Title.ForeColor = System.Drawing.Color.Gainsboro;
+			this.lbl_Title.Location = new System.Drawing.Point(238, 24);
+			this.lbl_Title.Name = "lbl_Title";
+			this.lbl_Title.Size = new System.Drawing.Size(100, 23);
+			this.lbl_Title.TabIndex = 0;
+			this.lbl_Title.Text = "Modulo";
+			this.lbl_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// cmbPreguntas
 			// 
@@ -100,7 +100,7 @@ namespace proyecto1
 			this.Regisstrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.Regisstrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Regisstrar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Regisstrar.Location = new System.Drawing.Point(12, 378);
+			this.Regisstrar.Location = new System.Drawing.Point(32, 378);
 			this.Regisstrar.Name = "Regisstrar";
 			this.Regisstrar.Size = new System.Drawing.Size(89, 37);
 			this.Regisstrar.TabIndex = 3;
@@ -114,7 +114,7 @@ namespace proyecto1
 			this.Modificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Modificar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Modificar.Location = new System.Drawing.Point(249, 378);
+			this.Modificar.Location = new System.Drawing.Point(331, 378);
 			this.Modificar.Name = "Modificar";
 			this.Modificar.Size = new System.Drawing.Size(89, 37);
 			this.Modificar.TabIndex = 4;
@@ -128,7 +128,7 @@ namespace proyecto1
 			this.Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Eliminar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Eliminar.Location = new System.Drawing.Point(357, 378);
+			this.Eliminar.Location = new System.Drawing.Point(457, 378);
 			this.Eliminar.Name = "Eliminar";
 			this.Eliminar.Size = new System.Drawing.Size(89, 37);
 			this.Eliminar.TabIndex = 5;
@@ -143,8 +143,9 @@ namespace proyecto1
 			this.Pregunta_ESP.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Pregunta_ESP.ForeColor = System.Drawing.Color.Gainsboro;
 			this.Pregunta_ESP.Location = new System.Drawing.Point(64, 316);
+			this.Pregunta_ESP.Multiline = true;
 			this.Pregunta_ESP.Name = "Pregunta_ESP";
-			this.Pregunta_ESP.Size = new System.Drawing.Size(124, 22);
+			this.Pregunta_ESP.Size = new System.Drawing.Size(124, 20);
 			this.Pregunta_ESP.TabIndex = 6;
 			// 
 			// Pregunta_ENG
@@ -154,33 +155,34 @@ namespace proyecto1
 			this.Pregunta_ENG.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Pregunta_ENG.ForeColor = System.Drawing.Color.Gainsboro;
 			this.Pregunta_ENG.Location = new System.Drawing.Point(380, 316);
+			this.Pregunta_ENG.Multiline = true;
 			this.Pregunta_ENG.Name = "Pregunta_ENG";
-			this.Pregunta_ENG.Size = new System.Drawing.Size(124, 22);
+			this.Pregunta_ENG.Size = new System.Drawing.Size(124, 20);
 			this.Pregunta_ENG.TabIndex = 7;
 			// 
-			// label2
+			// lbl_Preg_Español
 			// 
-			this.label2.BackColor = System.Drawing.Color.Transparent;
-			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label2.Location = new System.Drawing.Point(51, 290);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(145, 23);
-			this.label2.TabIndex = 8;
-			this.label2.Text = "Pregunta en español";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lbl_Preg_Español.BackColor = System.Drawing.Color.Transparent;
+			this.lbl_Preg_Español.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_Preg_Español.ForeColor = System.Drawing.Color.Gainsboro;
+			this.lbl_Preg_Español.Location = new System.Drawing.Point(51, 290);
+			this.lbl_Preg_Español.Name = "lbl_Preg_Español";
+			this.lbl_Preg_Español.Size = new System.Drawing.Size(145, 23);
+			this.lbl_Preg_Español.TabIndex = 8;
+			this.lbl_Preg_Español.Text = "Pregunta en español";
+			this.lbl_Preg_Español.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// label3
+			// lbl_Preg_Ingles
 			// 
-			this.label3.BackColor = System.Drawing.Color.Transparent;
-			this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label3.Location = new System.Drawing.Point(380, 290);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(128, 23);
-			this.label3.TabIndex = 9;
-			this.label3.Text = "Pregunta en ingles";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lbl_Preg_Ingles.BackColor = System.Drawing.Color.Transparent;
+			this.lbl_Preg_Ingles.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_Preg_Ingles.ForeColor = System.Drawing.Color.Gainsboro;
+			this.lbl_Preg_Ingles.Location = new System.Drawing.Point(380, 290);
+			this.lbl_Preg_Ingles.Name = "lbl_Preg_Ingles";
+			this.lbl_Preg_Ingles.Size = new System.Drawing.Size(128, 23);
+			this.lbl_Preg_Ingles.TabIndex = 9;
+			this.lbl_Preg_Ingles.Text = "Pregunta en ingles";
+			this.lbl_Preg_Ingles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// Volver
 			// 
@@ -193,12 +195,8 @@ namespace proyecto1
 			this.Volver.Size = new System.Drawing.Size(75, 23);
 			this.Volver.TabIndex = 10;
 			this.Volver.Text = "Volver";
-<<<<<<< HEAD
-			this.Volver.UseVisualStyleBackColor = false;
-=======
 			this.Volver.UseVisualStyleBackColor = true;
 			this.Volver.Click += new System.EventHandler(this.VolverClick);
->>>>>>> 731a9ea73c47e0e5cac3f5860fdfcbb641f0ac69
 			// 
 			// Ver_Todo
 			// 
@@ -206,7 +204,7 @@ namespace proyecto1
 			this.Ver_Todo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.Ver_Todo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Ver_Todo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Ver_Todo.Location = new System.Drawing.Point(126, 378);
+			this.Ver_Todo.Location = new System.Drawing.Point(185, 378);
 			this.Ver_Todo.Name = "Ver_Todo";
 			this.Ver_Todo.Size = new System.Drawing.Size(89, 37);
 			this.Ver_Todo.TabIndex = 11;
@@ -220,11 +218,11 @@ namespace proyecto1
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.ClientSize = new System.Drawing.Size(601, 427);
+			this.ClientSize = new System.Drawing.Size(600, 446);
 			this.Controls.Add(this.Ver_Todo);
 			this.Controls.Add(this.Volver);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.lbl_Preg_Ingles);
+			this.Controls.Add(this.lbl_Preg_Español);
 			this.Controls.Add(this.Pregunta_ENG);
 			this.Controls.Add(this.Pregunta_ESP);
 			this.Controls.Add(this.Eliminar);
@@ -232,7 +230,7 @@ namespace proyecto1
 			this.Controls.Add(this.Regisstrar);
 			this.Controls.Add(this.dataPreguntas);
 			this.Controls.Add(this.cmbPreguntas);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lbl_Title);
 			this.Name = "FormGestionPreguntas";
 			this.Text = "Gestion de Preguntas";
 			((System.ComponentModel.ISupportInitialize)(this.dataPreguntas)).EndInit();
@@ -241,8 +239,8 @@ namespace proyecto1
 		}
 		private System.Windows.Forms.Button Ver_Todo;
 		private System.Windows.Forms.Button Volver;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lbl_Preg_Ingles;
+		private System.Windows.Forms.Label lbl_Preg_Español;
 		private System.Windows.Forms.TextBox Pregunta_ENG;
 		private System.Windows.Forms.TextBox Pregunta_ESP;
 		private System.Windows.Forms.Button Eliminar;
@@ -250,6 +248,6 @@ namespace proyecto1
 		private System.Windows.Forms.Button Regisstrar;
 		private System.Windows.Forms.DataGridView dataPreguntas;
 		private System.Windows.Forms.ComboBox cmbPreguntas;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lbl_Title;
 	}
 }

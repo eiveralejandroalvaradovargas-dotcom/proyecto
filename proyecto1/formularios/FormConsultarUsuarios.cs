@@ -13,10 +13,32 @@ namespace proyecto1
 		{
 			InitializeComponent();
 			Actualizacion();
+			
+			foreach(Control Textos_Properties in this.Controls)
+			{
+				Textos_Properties.Tag = Textos_Properties.Text;
+			}
+			Verificar();
 		}
 		
 		public void Actualizacion()
 		{
+			cmbRol.Items.Clear();
+			if (proyecto1.Modelos.Idiomas.English)
+			{
+				cmbRol.Items.Add("All");
+				cmbRol.Items.Add("Player");
+				cmbRol.Items.Add("Administrator");
+			}
+			else
+			{
+				cmbRol.Items.Add("Todos");
+				cmbRol.Items.Add("Jugador");
+				cmbRol.Items.Add("Administrador");
+			}
+			
+			cmbRol.SelectedIndex = 0;
+			
 			dataUsuario.DataSource = null;
 			dataUsuario.DataSource = MainForm.ListaUsuario;
 			
@@ -31,13 +53,23 @@ namespace proyecto1
 		
 		void CmbRolSelectedIndexChanged(object sender, EventArgs e)
 		{
-			string Seleccion = cmbRol.SelectedItem.ToString();
-			if(Seleccion == "Todos")
+			if(cmbRol.SelectedIndex == 0)
 			{
-				Actualizacion();
+				dataUsuario.DataSource = null;
+				dataUsuario.DataSource = MainForm.ListaUsuario;
 			}
 			else
 			{
+				string Seleccion = cmbRol.SelectedItem.ToString();
+				
+				if (Seleccion == "Player") 
+				{
+					Seleccion = "Jugador";
+				}
+				if(Seleccion == "Administrator")
+				{
+					Seleccion = "Admin";
+				}
 				dataUsuario.DataSource = null;
 				var filtro = MainForm.ListaUsuario.Where(x => x.Rol == Seleccion).ToList();
 				dataUsuario.DataSource = filtro;
@@ -64,13 +96,27 @@ namespace proyecto1
 			Usuarios modificar = (Usuarios)cmbID.SelectedItem;
 	        if (modificar == null)
 	        {
-	            MessageBox.Show("Selecciona un usuario de la lista.");
-	            return;
+	        	string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "Select a user in the list"
+					: "Selecciona un usuario de la lista";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+					
+				MessageBox.Show(Mensaje, Title);return;
 	        }
 
 	        if (modificar.Rol == "Admin")
 	        {
-	            MessageBox.Show("No se puede modificar un usuario con rol Admin.");
+	        	string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "A user with admin rol can´t be edit"
+					: "No se puede modificar un usuario con rol Admin.";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+	            MessageBox.Show(Mensaje, Title);
 	            return;
 	        }
 
@@ -78,7 +124,17 @@ namespace proyecto1
 	        modificar.Password = textContraseña.Text;
 	        
 	        Actualizacion();
-	        MessageBox.Show("Usuario modificado correctamente.");
+	        
+	        string Message = proyecto1.Modelos.Idiomas.English
+					? "Sucessfully User edited"
+					: "Usuario modificado correctamente.";
+				
+				string Titlee = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+	            MessageBox.Show(Message, Titlee);
+	            return;
+	 
 	    }
 		
 		
@@ -87,7 +143,16 @@ namespace proyecto1
 			Usuarios Eliminer = (Usuarios)cmbID.SelectedItem;
 			MainForm.ListaUsuario.Remove(Eliminer);
 			Actualizacion();
-			MessageBox.Show("Usuario eliminado.");
+			
+			string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "User deleted"
+					: "Usuario eliminado.";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+	            MessageBox.Show(Mensaje, Title);
+		
 		}
 		
 		void BtnRegistrarClick(object sender, EventArgs e)
@@ -97,6 +162,45 @@ namespace proyecto1
 			Actualizacion();
 		}
 		
-
+		void Btn_VolverClick(object sender, EventArgs e)
+		{
+			if (this.Owner != null)
+			{
+				this.Owner.Show();
+			}
+			this.Close();
+		}
+		
+		void Verificar()
+		{
+			
+				if (proyecto1.Modelos.Idiomas.English == true)
+				{
+					lbl_Title.Text = "User Management";
+					lbl_Usuario.Text = "Username";
+					lbl_Contraseña.Text = "Password";
+					lbl_Ver.Text = "Show";
+					
+					btnRegistrar.Text = "Sign up";
+					btnModificar.Text = "Edit";
+					btnEliminar.Text = "Delete";
+					btn_Volver.Text = "Back";
+				}
+				else
+				{
+					lbl_Title.Text = lbl_Title.Tag.ToString();
+					lbl_Usuario.Text = lbl_Usuario.Tag.ToString();
+					lbl_Contraseña.Text = lbl_Contraseña.Tag.ToString();
+					lbl_Ver.Text = lbl_Ver.Tag.ToString();
+					
+					btnRegistrar.Text = btnRegistrar.Tag.ToString();
+					btnModificar.Text = btnModificar.Tag.ToString();
+					btnEliminar.Text = btnEliminar.Tag.ToString();
+					btn_Volver.Text = btn_Volver.Tag.ToString();
+				}
+				
+				Actualizacion();
+				
+		}
 	}
 }

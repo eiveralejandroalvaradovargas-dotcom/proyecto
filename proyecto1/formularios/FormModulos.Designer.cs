@@ -107,7 +107,7 @@ namespace proyecto1
 			this.cmbNombre.FormattingEnabled = true;
 			this.cmbNombre.Location = new System.Drawing.Point(62, 87);
 			this.cmbNombre.Name = "cmbNombre";
-			this.cmbNombre.Size = new System.Drawing.Size(121, 21);
+			this.cmbNombre.Size = new System.Drawing.Size(147, 21);
 			this.cmbNombre.TabIndex = 5;
 			// 
 			// dataModulos
@@ -121,7 +121,7 @@ namespace proyecto1
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
 			this.dataModulos.RowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.dataModulos.Size = new System.Drawing.Size(331, 299);
+			this.dataModulos.Size = new System.Drawing.Size(379, 299);
 			this.dataModulos.TabIndex = 6;
 			// 
 			// textNombre
@@ -186,7 +186,7 @@ namespace proyecto1
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.ClientSize = new System.Drawing.Size(615, 323);
+			this.ClientSize = new System.Drawing.Size(663, 328);
 			this.Controls.Add(this.btnCerrar);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);

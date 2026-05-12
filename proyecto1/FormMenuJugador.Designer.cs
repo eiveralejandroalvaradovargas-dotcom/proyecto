@@ -50,7 +50,7 @@ namespace proyecto1
 			this.Bienvenida.BackColor = System.Drawing.Color.Transparent;
 			this.Bienvenida.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Bienvenida.ForeColor = System.Drawing.Color.Gainsboro;
-			this.Bienvenida.Location = new System.Drawing.Point(97, 23);
+			this.Bienvenida.Location = new System.Drawing.Point(108, 34);
 			this.Bienvenida.Name = "Bienvenida";
 			this.Bienvenida.Size = new System.Drawing.Size(134, 24);
 			this.Bienvenida.TabIndex = 0;
@@ -59,7 +59,7 @@ namespace proyecto1
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+			this.pictureBox1.Location = new System.Drawing.Point(23, 21);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(70, 59);
 			this.pictureBox1.TabIndex = 1;
@@ -109,14 +109,14 @@ namespace proyecto1
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.ClientSize = new System.Drawing.Size(396, 302);
 			this.Controls.Add(this.Seleccion_Modulo_Pts);
 			this.Controls.Add(this.Modulos_Menu);
 			this.Controls.Add(this.Puntuacion_Modulo);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.Bienvenida);
 			this.Name = "FormMenuJugador";
-			this.Text = "FormMenuJugador";
+			this.Text = "Menu de Jugador";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 		}

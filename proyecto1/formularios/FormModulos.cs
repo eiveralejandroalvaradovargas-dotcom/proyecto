@@ -28,12 +28,28 @@ namespace proyecto1
 		
 		void BtnAgregarClick(object sender, EventArgs e)
 		{
-			int IdModulo = MainForm.ListaModulos.Count + 1;
-			string nombre = textNombre.Text;
-			string descripcion = textDescripcion.Text;
+			if (string.IsNullOrEmpty(textNombre.Text) && string.IsNullOrEmpty(textDescripcion.Text))
+			{
+				string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "No exists information in the fields"
+					: "No hay informacion en los campos";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+					
+				MessageBox.Show(Mensaje, Title);
+
+			}
+			else
+			{
+				int IdModulo = MainForm.ListaModulos.Count + 1;
+			    string nombre = textNombre.Text;
+			    string descripcion = textDescripcion.Text;
 			
 			MainForm.ListaModulos.Add(new ModuloEducativo(IdModulo, nombre, descripcion));
 			Actualizar();
+			}
 			
 		}
 		
@@ -55,7 +71,16 @@ namespace proyecto1
 			
 			if(des != "" || nom != "")
 			{
-				MessageBox.Show("Modificacion exitosa","Modificacion");
+				string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "Correctly updated"
+					: "Modificacion exitosa";
+				
+				string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+					
+				MessageBox.Show(Mensaje, Title);
+
 			}
 			
 			Actualizar();
@@ -66,14 +91,26 @@ namespace proyecto1
 			ModuloEducativo Eliminar = (ModuloEducativo)cmbNombre.SelectedItem;
 			MainForm.ListaModulos.Remove(Eliminar);
 			Actualizar();
-			MessageBox.Show("Modulo Eliminado exitoxamente","Eliminacion");
+			
+			string Mensaje = proyecto1.Modelos.Idiomas.English
+					? "Module deleted sucessfully"
+					: "Modulo eliminado exitoxamente";
+				
+			string Title = proyecto1.Modelos.Idiomas.English
+					? "Advice"
+					: "Aviso";
+					
+				MessageBox.Show(Mensaje, Title);
 		}
 		
 		void BtnCerrarClick(object sender, EventArgs e)
 		{
-			FormMenuAdmin MenuAdmin = new FormMenuAdmin();				
-			MenuAdmin.Show();
-			this.Hide();
+			FormMenuAdmin MenuAdmin = new FormMenuAdmin();			
+			if (this.Owner != null)
+			{
+				this.Owner.Show();
+			}
+			this.Close();
 		}
 	}
 }
