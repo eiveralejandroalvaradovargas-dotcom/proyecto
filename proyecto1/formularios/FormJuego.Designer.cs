@@ -58,9 +58,14 @@ namespace proyecto1
 			this.cmbModulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbModulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.cmbModulo.FormattingEnabled = true;
-			this.cmbModulo.Location = new System.Drawing.Point(30, 30);
+			this.cmbModulo.Location = new System.Drawing.Point(40, 37);
+			this.cmbModulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.cmbModulo.Name = "cmbModulo";
+<<<<<<< HEAD
 			this.cmbModulo.Size = new System.Drawing.Size(202, 33);
+=======
+			this.cmbModulo.Size = new System.Drawing.Size(239, 27);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.cmbModulo.TabIndex = 0;
 			this.cmbModulo.SelectedIndexChanged += new System.EventHandler(this.CmbModuloSelectedIndexChanged);
 			// 
@@ -68,43 +73,78 @@ namespace proyecto1
 			// 
 			this.cmbIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
 			this.cmbIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
 			this.cmbIdioma.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.cmbIdioma.Location = new System.Drawing.Point(307, 30);
 			this.cmbIdioma.Name = "cmbIdioma";
 			this.cmbIdioma.Size = new System.Drawing.Size(422, 33);
+=======
+			this.cmbIdioma.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cmbIdioma.ForeColor = System.Drawing.Color.Gainsboro;
+			this.cmbIdioma.Location = new System.Drawing.Point(307, 37);
+			this.cmbIdioma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.cmbIdioma.Name = "cmbIdioma";
+			this.cmbIdioma.Size = new System.Drawing.Size(159, 27);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.cmbIdioma.TabIndex = 1;
 			this.cmbIdioma.SelectedIndexChanged += new System.EventHandler(this.CmbIdiomaSelectedIndexChanged);
 			// 
 			// lblPregunta
 			// 
 			this.lblPregunta.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
 			this.lblPregunta.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPregunta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lblPregunta.Location = new System.Drawing.Point(30, 70);
 			this.lblPregunta.Name = "lblPregunta";
 			this.lblPregunta.Size = new System.Drawing.Size(699, 60);
+=======
+			this.lblPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+			this.lblPregunta.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblPregunta.Location = new System.Drawing.Point(40, 86);
+			this.lblPregunta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblPregunta.Name = "lblPregunta";
+			this.lblPregunta.Size = new System.Drawing.Size(667, 74);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.lblPregunta.TabIndex = 2;
 			// 
 			// picImagen
 			// 
+<<<<<<< HEAD
 			this.picImagen.BackColor = System.Drawing.Color.Transparent;
 			this.picImagen.ErrorImage = null;
 			this.picImagen.InitialImage = null;
 			this.picImagen.Location = new System.Drawing.Point(12, 133);
 			this.picImagen.Name = "picImagen";
 			this.picImagen.Size = new System.Drawing.Size(176, 170);
+=======
+			this.picImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
+			this.picImagen.Location = new System.Drawing.Point(40, 128);
+			this.picImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.picImagen.Name = "picImagen";
+			this.picImagen.Size = new System.Drawing.Size(200, 185);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.picImagen.TabIndex = 3;
 			this.picImagen.TabStop = false;
 			// 
 			// rbOpcion1
 			// 
 			this.rbOpcion1.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
 			this.rbOpcion1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.rbOpcion1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.rbOpcion1.Location = new System.Drawing.Point(212, 147);
 			this.rbOpcion1.Name = "rbOpcion1";
 			this.rbOpcion1.Size = new System.Drawing.Size(549, 24);
+=======
+			this.rbOpcion1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbOpcion1.ForeColor = System.Drawing.Color.Gainsboro;
+			this.rbOpcion1.Location = new System.Drawing.Point(267, 172);
+			this.rbOpcion1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.rbOpcion1.Name = "rbOpcion1";
+			this.rbOpcion1.Size = new System.Drawing.Size(400, 30);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.rbOpcion1.TabIndex = 4;
 			this.rbOpcion1.TabStop = true;
 			this.rbOpcion1.UseVisualStyleBackColor = false;
@@ -113,11 +153,20 @@ namespace proyecto1
 			// rbOpcion2
 			// 
 			this.rbOpcion2.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
 			this.rbOpcion2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.rbOpcion2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.rbOpcion2.Location = new System.Drawing.Point(212, 191);
 			this.rbOpcion2.Name = "rbOpcion2";
 			this.rbOpcion2.Size = new System.Drawing.Size(549, 24);
+=======
+			this.rbOpcion2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbOpcion2.ForeColor = System.Drawing.Color.Gainsboro;
+			this.rbOpcion2.Location = new System.Drawing.Point(267, 209);
+			this.rbOpcion2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.rbOpcion2.Name = "rbOpcion2";
+			this.rbOpcion2.Size = new System.Drawing.Size(400, 30);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.rbOpcion2.TabIndex = 5;
 			this.rbOpcion2.TabStop = true;
 			this.rbOpcion2.UseVisualStyleBackColor = false;
@@ -125,11 +174,20 @@ namespace proyecto1
 			// rbOpcion3
 			// 
 			this.rbOpcion3.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
 			this.rbOpcion3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.rbOpcion3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.rbOpcion3.Location = new System.Drawing.Point(212, 230);
 			this.rbOpcion3.Name = "rbOpcion3";
 			this.rbOpcion3.Size = new System.Drawing.Size(549, 24);
+=======
+			this.rbOpcion3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbOpcion3.ForeColor = System.Drawing.Color.Gainsboro;
+			this.rbOpcion3.Location = new System.Drawing.Point(267, 246);
+			this.rbOpcion3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.rbOpcion3.Name = "rbOpcion3";
+			this.rbOpcion3.Size = new System.Drawing.Size(400, 30);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.rbOpcion3.TabIndex = 6;
 			this.rbOpcion3.TabStop = true;
 			this.rbOpcion3.UseVisualStyleBackColor = false;
@@ -137,11 +195,20 @@ namespace proyecto1
 			// rbOpcion4
 			// 
 			this.rbOpcion4.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
 			this.rbOpcion4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.rbOpcion4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.rbOpcion4.Location = new System.Drawing.Point(212, 269);
 			this.rbOpcion4.Name = "rbOpcion4";
 			this.rbOpcion4.Size = new System.Drawing.Size(549, 24);
+=======
+			this.rbOpcion4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbOpcion4.ForeColor = System.Drawing.Color.Gainsboro;
+			this.rbOpcion4.Location = new System.Drawing.Point(267, 283);
+			this.rbOpcion4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.rbOpcion4.Name = "rbOpcion4";
+			this.rbOpcion4.Size = new System.Drawing.Size(400, 30);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.rbOpcion4.TabIndex = 7;
 			this.rbOpcion4.TabStop = true;
 			this.rbOpcion4.UseVisualStyleBackColor = false;
@@ -151,11 +218,19 @@ namespace proyecto1
 			this.btnResponder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
 			this.btnResponder.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.btnResponder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
 			this.btnResponder.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnResponder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.btnResponder.Location = new System.Drawing.Point(358, 355);
 			this.btnResponder.Name = "btnResponder";
 			this.btnResponder.Size = new System.Drawing.Size(123, 53);
+=======
+			this.btnResponder.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnResponder.Location = new System.Drawing.Point(267, 332);
+			this.btnResponder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnResponder.Name = "btnResponder";
+			this.btnResponder.Size = new System.Drawing.Size(133, 37);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.btnResponder.TabIndex = 8;
 			this.btnResponder.Text = "Responder";
 			this.btnResponder.UseVisualStyleBackColor = false;
@@ -164,11 +239,20 @@ namespace proyecto1
 			// lblPuntuacion
 			// 
 			this.lblPuntuacion.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
 			this.lblPuntuacion.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPuntuacion.ForeColor = System.Drawing.Color.Navy;
 			this.lblPuntuacion.Location = new System.Drawing.Point(566, 358);
 			this.lblPuntuacion.Name = "lblPuntuacion";
 			this.lblPuntuacion.Size = new System.Drawing.Size(195, 35);
+=======
+			this.lblPuntuacion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPuntuacion.ForeColor = System.Drawing.Color.Cyan;
+			this.lblPuntuacion.Location = new System.Drawing.Point(427, 332);
+			this.lblPuntuacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblPuntuacion.Name = "lblPuntuacion";
+			this.lblPuntuacion.Size = new System.Drawing.Size(200, 37);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.lblPuntuacion.TabIndex = 9;
 			this.lblPuntuacion.Text = "Puntuacion 0";
 			// 
@@ -177,11 +261,19 @@ namespace proyecto1
 			this.Volver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
 			this.Volver.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.Volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
 			this.Volver.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Volver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.Volver.Location = new System.Drawing.Point(30, 355);
 			this.Volver.Name = "Volver";
 			this.Volver.Size = new System.Drawing.Size(123, 53);
+=======
+			this.Volver.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Volver.Location = new System.Drawing.Point(40, 335);
+			this.Volver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Volver.Name = "Volver";
+			this.Volver.Size = new System.Drawing.Size(133, 34);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.Volver.TabIndex = 10;
 			this.Volver.Text = "Volver";
 			this.Volver.UseVisualStyleBackColor = false;
@@ -189,11 +281,15 @@ namespace proyecto1
 			// 
 			// FormJuego
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+<<<<<<< HEAD
 			this.ClientSize = new System.Drawing.Size(811, 429);
+=======
+			this.ClientSize = new System.Drawing.Size(733, 406);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.Controls.Add(this.Volver);
 			this.Controls.Add(this.lblPuntuacion);
 			this.Controls.Add(this.btnResponder);
@@ -205,11 +301,16 @@ namespace proyecto1
 			this.Controls.Add(this.lblPregunta);
 			this.Controls.Add(this.cmbIdioma);
 			this.Controls.Add(this.cmbModulo);
+<<<<<<< HEAD
 			this.DoubleBuffered = true;
+=======
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.Name = "FormJuego";
 			this.Text = "FormJuego";
 			((System.ComponentModel.ISupportInitialize)(this.picImagen)).EndInit();
 			this.ResumeLayout(false);
+
 		}
 		private System.Windows.Forms.Button Volver;
 		private System.Windows.Forms.Label lblPuntuacion;

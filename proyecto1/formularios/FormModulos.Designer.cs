@@ -115,13 +115,18 @@ namespace proyecto1
 			this.cmbNombre.FormattingEnabled = true;
 			this.cmbNombre.Location = new System.Drawing.Point(62, 114);
 			this.cmbNombre.Name = "cmbNombre";
+<<<<<<< HEAD
 			this.cmbNombre.Size = new System.Drawing.Size(200, 21);
+=======
+			this.cmbNombre.Size = new System.Drawing.Size(147, 21);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.cmbNombre.TabIndex = 5;
 			// 
 			// dataModulos
 			// 
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(92)))), ((int)(((byte)(143)))));
 			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
 			this.dataModulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dataModulos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
 			this.dataModulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -151,6 +156,10 @@ namespace proyecto1
 			this.dataModulos.RowsDefaultCellStyle = dataGridViewCellStyle4;
 			this.dataModulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataModulos.Size = new System.Drawing.Size(409, 397);
+=======
+			this.dataModulos.RowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.dataModulos.Size = new System.Drawing.Size(379, 299);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.dataModulos.TabIndex = 6;
 			// 
 			// textNombre
@@ -219,7 +228,11 @@ namespace proyecto1
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+<<<<<<< HEAD
 			this.ClientSize = new System.Drawing.Size(811, 429);
+=======
+			this.ClientSize = new System.Drawing.Size(663, 328);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.Controls.Add(this.btnCerrar);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);

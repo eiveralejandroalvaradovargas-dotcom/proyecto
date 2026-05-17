@@ -55,6 +55,10 @@
     <Compile Include="FormMenuJugador.Designer.cs">
       <DependentUpon>FormMenuJugador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOpciones.cs" />
+    <Compile Include="FormOpciones.Designer.cs">
+      <DependentUpon>FormOpciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\FormConsultarUsuarios.cs" />
     <Compile Include="formularios\FormConsultarUsuarios.Designer.cs">
       <DependentUpon>FormConsultarUsuarios.cs</DependentUpon>
@@ -85,6 +89,7 @@
     <Compile Include="formularios\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Idiomas.cs" />
     <Compile Include="Modelos\LogicaJuego.cs" />
     <Compile Include="Modelos\ModuloEducativo.cs" />
     <Compile Include="Modelos\opcion.cs" />

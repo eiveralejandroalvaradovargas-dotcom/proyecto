@@ -48,9 +48,15 @@ namespace proyecto1
 			// Bienvenida
 			// 
 			this.Bienvenida.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
 			this.Bienvenida.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Bienvenida.ForeColor = System.Drawing.Color.White;
 			this.Bienvenida.Location = new System.Drawing.Point(336, 75);
+=======
+			this.Bienvenida.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Bienvenida.ForeColor = System.Drawing.Color.Gainsboro;
+			this.Bienvenida.Location = new System.Drawing.Point(108, 34);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.Bienvenida.Name = "Bienvenida";
 			this.Bienvenida.Size = new System.Drawing.Size(137, 33);
 			this.Bienvenida.TabIndex = 0;
@@ -59,7 +65,11 @@ namespace proyecto1
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+<<<<<<< HEAD
 			this.pictureBox1.Location = new System.Drawing.Point(66, 12);
+=======
+			this.pictureBox1.Location = new System.Drawing.Point(23, 21);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(195, 155);
 			this.pictureBox1.TabIndex = 1;
@@ -110,7 +120,11 @@ namespace proyecto1
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+<<<<<<< HEAD
 			this.ClientSize = new System.Drawing.Size(811, 429);
+=======
+			this.ClientSize = new System.Drawing.Size(396, 302);
+>>>>>>> 4e151eb3ee3730911d69bdd4fb0681431e01c1bd
 			this.Controls.Add(this.Seleccion_Modulo_Pts);
 			this.Controls.Add(this.Modulos_Menu);
 			this.Controls.Add(this.Puntuacion_Modulo);
@@ -118,7 +132,7 @@ namespace proyecto1
 			this.Controls.Add(this.Bienvenida);
 			this.DoubleBuffered = true;
 			this.Name = "FormMenuJugador";
-			this.Text = "FormMenuJugador";
+			this.Text = "Menu de Jugador";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 		}
