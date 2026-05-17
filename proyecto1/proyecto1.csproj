@@ -79,7 +79,9 @@
     <Compile Include="formularios\FormRegistrarJugador.Designer.cs">
       <DependentUpon>FormRegistrarJugador.cs</DependentUpon>
     </Compile>
-    <Compile Include="formularios\MainForm.cs" />
+    <Content Include="formularios\MainForm.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Compile Include="formularios\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
@@ -124,6 +126,21 @@
   <ItemGroup>
     <Folder Include="Modelos" />
     <Folder Include="formularios" />
+    <Folder Include="imagenes" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\modulo1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="imagenes\modulo2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="imagenes\modulo3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="imagenes\modulo4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

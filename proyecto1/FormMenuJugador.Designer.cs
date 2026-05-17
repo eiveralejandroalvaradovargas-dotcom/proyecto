@@ -48,43 +48,44 @@ namespace proyecto1
 			// Bienvenida
 			// 
 			this.Bienvenida.BackColor = System.Drawing.Color.Transparent;
-			this.Bienvenida.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Bienvenida.ForeColor = System.Drawing.Color.Gainsboro;
-			this.Bienvenida.Location = new System.Drawing.Point(97, 23);
+			this.Bienvenida.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Bienvenida.ForeColor = System.Drawing.Color.White;
+			this.Bienvenida.Location = new System.Drawing.Point(336, 75);
 			this.Bienvenida.Name = "Bienvenida";
-			this.Bienvenida.Size = new System.Drawing.Size(134, 24);
+			this.Bienvenida.Size = new System.Drawing.Size(137, 33);
 			this.Bienvenida.TabIndex = 0;
 			this.Bienvenida.Text = "label1";
 			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+			this.pictureBox1.Location = new System.Drawing.Point(66, 12);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(70, 59);
+			this.pictureBox1.Size = new System.Drawing.Size(195, 155);
 			this.pictureBox1.TabIndex = 1;
 			this.pictureBox1.TabStop = false;
 			// 
 			// Puntuacion_Modulo
 			// 
 			this.Puntuacion_Modulo.BackColor = System.Drawing.Color.Transparent;
-			this.Puntuacion_Modulo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Puntuacion_Modulo.ForeColor = System.Drawing.Color.Gainsboro;
-			this.Puntuacion_Modulo.Location = new System.Drawing.Point(159, 100);
+			this.Puntuacion_Modulo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Puntuacion_Modulo.ForeColor = System.Drawing.Color.White;
+			this.Puntuacion_Modulo.Location = new System.Drawing.Point(407, 134);
 			this.Puntuacion_Modulo.Name = "Puntuacion_Modulo";
-			this.Puntuacion_Modulo.Size = new System.Drawing.Size(100, 23);
+			this.Puntuacion_Modulo.Size = new System.Drawing.Size(111, 33);
 			this.Puntuacion_Modulo.TabIndex = 2;
 			this.Puntuacion_Modulo.Text = "label2";
 			// 
 			// Modulos_Menu
 			// 
-			this.Modulos_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.Modulos_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
 			this.Modulos_Menu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.Modulos_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Modulos_Menu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Modulos_Menu.Location = new System.Drawing.Point(68, 169);
+			this.Modulos_Menu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Modulos_Menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.Modulos_Menu.Location = new System.Drawing.Point(308, 304);
 			this.Modulos_Menu.Name = "Modulos_Menu";
-			this.Modulos_Menu.Size = new System.Drawing.Size(146, 37);
+			this.Modulos_Menu.Size = new System.Drawing.Size(177, 58);
 			this.Modulos_Menu.TabIndex = 3;
 			this.Modulos_Menu.Text = "Ver Modulos";
 			this.Modulos_Menu.UseVisualStyleBackColor = false;
@@ -92,14 +93,14 @@ namespace proyecto1
 			// 
 			// Seleccion_Modulo_Pts
 			// 
-			this.Seleccion_Modulo_Pts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+			this.Seleccion_Modulo_Pts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
 			this.Seleccion_Modulo_Pts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Seleccion_Modulo_Pts.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Seleccion_Modulo_Pts.ForeColor = System.Drawing.Color.Gainsboro;
+			this.Seleccion_Modulo_Pts.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Seleccion_Modulo_Pts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.Seleccion_Modulo_Pts.FormattingEnabled = true;
-			this.Seleccion_Modulo_Pts.Location = new System.Drawing.Point(12, 102);
+			this.Seleccion_Modulo_Pts.Location = new System.Drawing.Point(256, 224);
 			this.Seleccion_Modulo_Pts.Name = "Seleccion_Modulo_Pts";
-			this.Seleccion_Modulo_Pts.Size = new System.Drawing.Size(121, 21);
+			this.Seleccion_Modulo_Pts.Size = new System.Drawing.Size(294, 33);
 			this.Seleccion_Modulo_Pts.TabIndex = 4;
 			this.Seleccion_Modulo_Pts.SelectedIndexChanged += new System.EventHandler(this.Seleccion_Modulo_PtsSelectedIndexChanged);
 			// 
@@ -109,12 +110,13 @@ namespace proyecto1
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.ClientSize = new System.Drawing.Size(811, 429);
 			this.Controls.Add(this.Seleccion_Modulo_Pts);
 			this.Controls.Add(this.Modulos_Menu);
 			this.Controls.Add(this.Puntuacion_Modulo);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.Bienvenida);
+			this.DoubleBuffered = true;
 			this.Name = "FormMenuJugador";
 			this.Text = "FormMenuJugador";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

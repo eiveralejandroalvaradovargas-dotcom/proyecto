@@ -48,67 +48,69 @@ namespace proyecto1
 			// label1
 			// 
 			this.label1.BackColor = System.Drawing.Color.Transparent;
-			this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label1.Location = new System.Drawing.Point(118, 34);
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.White;
+			this.label1.Location = new System.Drawing.Point(350, 45);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(93, 23);
+			this.label1.Size = new System.Drawing.Size(123, 41);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Registrar";
 			// 
 			// label2
 			// 
 			this.label2.BackColor = System.Drawing.Color.Transparent;
-			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label2.Location = new System.Drawing.Point(45, 113);
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.White;
+			this.label2.Location = new System.Drawing.Point(209, 139);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(106, 23);
+			this.label2.Size = new System.Drawing.Size(106, 33);
 			this.label2.TabIndex = 1;
 			this.label2.Text = "Usuario :";
 			// 
 			// label3
 			// 
 			this.label3.BackColor = System.Drawing.Color.Transparent;
-			this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label3.Location = new System.Drawing.Point(45, 168);
+			this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.ForeColor = System.Drawing.Color.White;
+			this.label3.Location = new System.Drawing.Point(209, 228);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(106, 23);
+			this.label3.Size = new System.Drawing.Size(137, 35);
 			this.label3.TabIndex = 2;
 			this.label3.Text = "Contraseña :";
 			// 
 			// textUsuario
 			// 
-			this.textUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+			this.textUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textUsuario.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textUsuario.Location = new System.Drawing.Point(177, 112);
+			this.textUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.textUsuario.Location = new System.Drawing.Point(438, 141);
 			this.textUsuario.Name = "textUsuario";
-			this.textUsuario.Size = new System.Drawing.Size(100, 22);
+			this.textUsuario.Size = new System.Drawing.Size(219, 33);
 			this.textUsuario.TabIndex = 3;
 			// 
 			// textContraseña
 			// 
-			this.textContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+			this.textContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textContraseña.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textContraseña.Location = new System.Drawing.Point(177, 167);
+			this.textContraseña.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.textContraseña.Location = new System.Drawing.Point(438, 230);
 			this.textContraseña.Name = "textContraseña";
-			this.textContraseña.Size = new System.Drawing.Size(100, 22);
+			this.textContraseña.Size = new System.Drawing.Size(219, 33);
 			this.textContraseña.TabIndex = 4;
 			this.textContraseña.UseSystemPasswordChar = true;
 			// 
 			// btnRegistrar
 			// 
-			this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
 			this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.btnRegistrar.Location = new System.Drawing.Point(104, 219);
+			this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnRegistrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.btnRegistrar.Location = new System.Drawing.Point(326, 328);
 			this.btnRegistrar.Name = "btnRegistrar";
-			this.btnRegistrar.Size = new System.Drawing.Size(107, 37);
+			this.btnRegistrar.Size = new System.Drawing.Size(147, 55);
 			this.btnRegistrar.TabIndex = 5;
 			this.btnRegistrar.Text = "Registrar";
 			this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -120,14 +122,15 @@ namespace proyecto1
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.ClientSize = new System.Drawing.Size(335, 295);
+			this.ClientSize = new System.Drawing.Size(811, 429);
 			this.Controls.Add(this.btnRegistrar);
 			this.Controls.Add(this.textContraseña);
 			this.Controls.Add(this.textUsuario);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.ForeColor = System.Drawing.Color.Coral;
+			this.DoubleBuffered = true;
+			this.ForeColor = System.Drawing.Color.White;
 			this.Name = "FormRegistrarJugador";
 			this.Text = "Registrar";
 			this.ResumeLayout(false);

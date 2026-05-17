@@ -180,5 +180,8 @@ namespace proyecto1
 			Menu_Jugador.Show();
 			this.Close();
 		}
+		
+		
+		
 	}
 }
