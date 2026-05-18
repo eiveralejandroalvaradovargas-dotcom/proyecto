@@ -13,13 +13,15 @@ namespace proyecto1
 		{
 			InitializeComponent();
 			
-			cmbPreguntas.DataSource = MainForm.ListaModulos;
+			cmbPreguntas.DataSource = BaseDatos.ObtenerModulos();
 			cmbPreguntas.DisplayMember = "Nombre";
+			cmbPreguntas.ValueMember = "Id";
 			
 			foreach(Control Textos_Properties in this.Controls)
 			{
 				Textos_Properties.Tag = Textos_Properties.Text;
 			}
+			this.Regisstrar.Click += RegisstrarClick;
 			Verificar();
 		}
 		
@@ -31,13 +33,12 @@ namespace proyecto1
 			var Modulo_Actual = cmbPreguntas.SelectedItem as ModuloEducativo;
 			if(Modulo_Actual != null)
 			{
-				dataPreguntas.DataSource = null;
-				var Filtro = MainForm.ListaPreguntas.Where(Objeto => Objeto.IdModulo == Modulo_Actual.Id).ToList();
+				var Filtro = BaseDatos.ObtenerPreguntas().Where(Objeto => Objeto.IdModulo == Modulo_Actual.Id).ToList();
 				dataPreguntas.DataSource = Filtro;
 			}
 			else
 			{
-				dataPreguntas.DataSource = MainForm.ListaPreguntas;
+				dataPreguntas.DataSource = BaseDatos.ObtenerPreguntas();
 			}
 			
 			dataPreguntas.Refresh();
@@ -49,7 +50,7 @@ namespace proyecto1
 			Pregunta_ENG.Clear();
 		}
 		
-		void Button1Click(object sender, EventArgs e)
+		void RegisstrarClick(object sender, EventArgs e)
 		{
 			var Modulo_Actual = cmbPreguntas.SelectedItem as ModuloEducativo;
 			if(cmbPreguntas.SelectedItem == null)
@@ -80,11 +81,8 @@ namespace proyecto1
 			}
 			else
 			{
-			    int New_ID = MainForm.ListaPreguntas.Count +1;
-			
-			    Pregunta New_Question = new Pregunta (New_ID, Modulo_Actual.Id, Pregunta_ESP.Text, Pregunta_ENG.Text, "");
-			
-			    MainForm.ListaPreguntas.Add(New_Question);
+			    Pregunta New_Question = new Pregunta (0, Modulo_Actual.Id, Pregunta_ESP.Text, Pregunta_ENG.Text, "");
+			    BaseDatos.AgregarPregunta(New_Question);
 			    Actualizar();
 			    Limpiar_Casillas();
 			}
@@ -105,11 +103,12 @@ namespace proyecto1
 				MessageBox.Show(Mensaje, Title);return;
 			}
 			
-			Pregunta Encontrada = MainForm.ListaPreguntas.Find(Objeto => Objeto.Id == Seleccion_de_ID);
+			Pregunta Encontrada = BaseDatos.ObtenerPreguntas().Find(Objeto => Objeto.Id == Seleccion_de_ID);
 			if (Encontrada !=null)
 			{
 				Encontrada.TextoEs = Pregunta_ESP.Text;
 				Encontrada.TextoEn = Pregunta_ENG.Text;
+				BaseDatos.ActualizarPregunta(Encontrada);
 				Actualizar();
 				Limpiar_Casillas();
 				
@@ -140,10 +139,10 @@ namespace proyecto1
 					
 				MessageBox.Show(Mensaje, Title); return;
 			}
-			Pregunta Encontrada = MainForm.ListaPreguntas.Find(Objeto => Objeto.Id == Seleccion_de_ID);
+			Pregunta Encontrada = BaseDatos.ObtenerPreguntas().Find(Objeto => Objeto.Id == Seleccion_de_ID);
 			if (Encontrada != null)
 			{
-				MainForm.ListaPreguntas.Remove(Encontrada);
+				BaseDatos.EliminarPregunta(Seleccion_de_ID);
 				Actualizar();
 				Limpiar_Casillas();
 				Seleccion_de_ID = -1;
@@ -169,7 +168,7 @@ namespace proyecto1
 			if (Modulo_Actual != null)
 			{
 				Seleccion_de_ID = -1;
-				var Filtro = MainForm.ListaPreguntas.Where(Objeto => Objeto.IdModulo == Modulo_Actual.Id).ToList();
+				var Filtro = BaseDatos.ObtenerPreguntas().Where(Objeto => Objeto.IdModulo == Modulo_Actual.Id).ToList();
 				
 				dataPreguntas.DataSource = null;
 				dataPreguntas.DataSource = Filtro;
@@ -181,7 +180,7 @@ namespace proyecto1
 			cmbPreguntas.SelectedIndex = -1;
 			
 			dataPreguntas.DataSource = null;
-			dataPreguntas.DataSource = MainForm.ListaPreguntas;
+			dataPreguntas.DataSource = BaseDatos.ObtenerPreguntas();
 		}
 		
 		void DataPreguntasCellClick(object sender, DataGridViewCellEventArgs e)

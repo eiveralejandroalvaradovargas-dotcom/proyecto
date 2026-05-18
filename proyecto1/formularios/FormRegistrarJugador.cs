@@ -24,64 +24,27 @@ namespace proyecto1
 		{
 			
 			
-			string user = textUsuario.Text;
-			string pass = textContraseña.Text;
-			string rol = "Jugador";
+			string user = textUsuario.Text.Trim();
+			string pass = textContraseña.Text.Trim();
 			
-			if(user != "" && pass!= "")
+			if(string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
 			{
-				bool Encontrado = false;
-				foreach(Usuarios Objeto in MainForm.ListaUsuario)
-				{
-					if (Objeto.Username == user && Objeto.Password == pass)
-					{
-						Encontrado = true;
-						break;
-					}
-				}
-				if(Encontrado)
-				{
-					string Mensaje = proyecto1.Modelos.Idiomas.English
-						? "This information belows to a exist account"
-						: "Estos datos le pertenecen a una cuenta existente";
-						
-					string Title = proyecto1.Modelos.Idiomas.English
-						? "Registration failed"
-						: "Registro fallido";
-					
-					MessageBox.Show(Mensaje,Title,MessageBoxButtons.RetryCancel);
-				}
-				else
-				{
-				int nuevoId = MainForm.ListaUsuario.Count + 1;
-                MainForm.ListaUsuario.Add(new Usuarios(nuevoId, user, pass, rol));
-                
-                string Mensaje = proyecto1.Modelos.Idiomas.English
-					? "Player signed up sucessfully!"
-					: "Jugador registrado exitosamente";
-				
-				string Title = proyecto1.Modelos.Idiomas.English
-					? "Registration done"
-					: "Registro terminado";
-                
-                MessageBox.Show(Mensaje, Title);
-                this.Close();
-				}
+				MessageBox.Show("Complete todos los campos", "Aviso");
+				return;
 			}
-			else
+			
+			var usuarios = BaseDatos.ObtenerUsuarios();
+			if(usuarios.Exists(u => u.Username == user))
 			{
-				string Mensaje = proyecto1.Modelos.Idiomas.English
-					? "Please, complete all the fields"
-					: "Complete todos los campos";
-				
-				string Title = proyecto1.Modelos.Idiomas.English
-					? "Advice"
-					: "Aviso";
-					
-				MessageBox.Show(Mensaje, Title);
+				MessageBox.Show("Ese nombre de usuario ya está registrado", "Registro fallido");
+				return;
 			}
+			
+			Usuarios nuevo = new Usuarios(0, user, pass, "Jugador");
+			BaseDatos.AgregarUsuario(nuevo);
+			MessageBox.Show("Jugador registrado exitosamente", "Registro terminado");
+			this.Close();
 		}
-			
 			void Verificar()
 			{
 				if (proyecto1.Modelos.Idiomas.English == true)

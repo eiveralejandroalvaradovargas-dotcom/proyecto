@@ -106,7 +106,6 @@ namespace proyecto1
 			this.Regisstrar.TabIndex = 3;
 			this.Regisstrar.Text = "Registrar";
 			this.Regisstrar.UseVisualStyleBackColor = false;
-			this.Regisstrar.Click += new System.EventHandler(this.Button1Click);
 			// 
 			// Modificar
 			// 

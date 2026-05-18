@@ -14,13 +14,14 @@ namespace proyecto1
 		
 		void Actualizar()
 		{
+			var modulos = BaseDatos.ObtenerModulos();
 			dataModulos.DataSource = null;
-			dataModulos.DataSource = MainForm.ListaModulos;
+			dataModulos.DataSource = modulos;
 			
 			cmbNombre.DataSource = null;
-			cmbNombre.DataSource = MainForm.ListaModulos;
-			cmbNombre.ValueMember = "nombre";
-			cmbNombre.DisplayMember ="nombre";
+			cmbNombre.DataSource = modulos;
+			cmbNombre.DisplayMember ="Nombre";
+			cmbNombre.ValueMember = "Id";
 			
 			textDescripcion.Text = "";
 			textNombre.Text = "";
@@ -28,7 +29,9 @@ namespace proyecto1
 		
 		void BtnAgregarClick(object sender, EventArgs e)
 		{
-			if (string.IsNullOrEmpty(textNombre.Text) && string.IsNullOrEmpty(textDescripcion.Text))
+			string name = textNombre.Text.Trim();
+			string desc = textDescripcion.Text.Trim();
+			if (string.IsNullOrEmpty(name) && string.IsNullOrEmpty(desc))
 			{
 				string Mensaje = proyecto1.Modelos.Idiomas.English
 					? "No exists information in the fields"
@@ -39,38 +42,23 @@ namespace proyecto1
 					: "Aviso";
 					
 				MessageBox.Show(Mensaje, Title);
-
+				return;
 			}
-			else
-			{
-				int IdModulo = MainForm.ListaModulos.Count + 1;
-			    string nombre = textNombre.Text;
-			    string descripcion = textDescripcion.Text;
-			
-			MainForm.ListaModulos.Add(new ModuloEducativo(IdModulo, nombre, descripcion));
+			ModuloEducativo nuevo = new ModuloEducativo(0, name, desc);
+			BaseDatos.AgregarModulo(nuevo);
 			Actualizar();
-			}
-			
 		}
 		
 		void BtnModificarClick(object sender, EventArgs e)
 		{
-			ModuloEducativo Modificar = (ModuloEducativo)cmbNombre.SelectedItem;
-			string nom = textNombre.Text;
-			string des = textDescripcion.Text;		
-			
-			if(nom != "")
-			{
-				Modificar.Nombre = textNombre.Text;
-				
-			}
-			if(des != "")
-			{
-				Modificar.Descripcion = textDescripcion.Text;
-			}
-			
-			if(des != "" || nom != "")
-			{
+			ModuloEducativo Modificar = cmbNombre.SelectedItem as ModuloEducativo;
+			if(Modificar == null) return;
+			string nom = textNombre.Text.Trim();
+			string des = textDescripcion.Text.Trim();
+			if(!string.IsNullOrEmpty(nom)) Modificar.Nombre = nom;
+			if(!string.IsNullOrEmpty(des)) Modificar.Descripcion = des;
+			BaseDatos.ActualizarModulo(Modificar);
+	
 				string Mensaje = proyecto1.Modelos.Idiomas.English
 					? "Correctly updated"
 					: "Modificacion exitosa";
@@ -80,17 +68,14 @@ namespace proyecto1
 					: "Aviso";
 					
 				MessageBox.Show(Mensaje, Title);
-
-			}
-			
 			Actualizar();
 		}
 		
 		void BtnEliminarClick(object sender, EventArgs e)
 		{
-			ModuloEducativo Eliminar = (ModuloEducativo)cmbNombre.SelectedItem;
-			MainForm.ListaModulos.Remove(Eliminar);
-			Actualizar();
+			ModuloEducativo Eliminar = cmbNombre.SelectedItem as ModuloEducativo;
+			if(Eliminar == null) return;
+			BaseDatos.EliminarModulo(Eliminar.Id);
 			
 			string Mensaje = proyecto1.Modelos.Idiomas.English
 					? "Module deleted sucessfully"
@@ -101,6 +86,7 @@ namespace proyecto1
 					: "Aviso";
 					
 				MessageBox.Show(Mensaje, Title);
+				Actualizar();
 		}
 		
 		void BtnCerrarClick(object sender, EventArgs e)

@@ -42,6 +42,7 @@ namespace proyecto1
 			this.BtnGestionarPreguntas = new System.Windows.Forms.Button();
 			this.btnGestionarModulos = new System.Windows.Forms.Button();
 			this.btn_Cerrar_Sesion = new System.Windows.Forms.Button();
+			this.btnOpciones = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// lb_Titulo
@@ -116,6 +117,21 @@ namespace proyecto1
 			this.btn_Cerrar_Sesion.UseVisualStyleBackColor = false;
 			this.btn_Cerrar_Sesion.Click += new System.EventHandler(this.Btn_Cerrar_SesionClick);
 			// 
+			// btnOpciones
+			// 
+			this.btnOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnOpciones.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnOpciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnOpciones.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnOpciones.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btnOpciones.Location = new System.Drawing.Point(143, 88);
+			this.btnOpciones.Name = "btnOpciones";
+			this.btnOpciones.Size = new System.Drawing.Size(86, 46);
+			this.btnOpciones.TabIndex = 10;
+			this.btnOpciones.Text = "Gestionar Opciones";
+			this.btnOpciones.UseVisualStyleBackColor = false;
+			this.btnOpciones.Click += new System.EventHandler(this.BtnOpcionesClick);
+			// 
 			// FormMenuAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +139,7 @@ namespace proyecto1
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.ClientSize = new System.Drawing.Size(393, 210);
+			this.Controls.Add(this.btnOpciones);
 			this.Controls.Add(this.btn_Cerrar_Sesion);
 			this.Controls.Add(this.btnGestionarModulos);
 			this.Controls.Add(this.BtnGestionarPreguntas);
@@ -134,6 +151,7 @@ namespace proyecto1
 			this.Click += new System.EventHandler(this.Btn_Cerrar_SesionClick);
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Button btnOpciones;
 		private System.Windows.Forms.Button btn_Cerrar_Sesion;
 		private System.Windows.Forms.Button btnGestionarModulos;
 		private System.Windows.Forms.Button BtnGestionarPreguntas;

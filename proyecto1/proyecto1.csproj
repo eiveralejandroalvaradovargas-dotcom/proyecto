@@ -31,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -47,21 +48,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormGestionPreguntas.cs" />
-    <Compile Include="FormGestionPreguntas.Designer.cs">
-      <DependentUpon>FormGestionPreguntas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenuJugador.cs" />
-    <Compile Include="FormMenuJugador.Designer.cs">
-      <DependentUpon>FormMenuJugador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormOpciones.cs" />
-    <Compile Include="FormOpciones.Designer.cs">
-      <DependentUpon>FormOpciones.cs</DependentUpon>
-    </Compile>
     <Compile Include="formularios\FormConsultarUsuarios.cs" />
     <Compile Include="formularios\FormConsultarUsuarios.Designer.cs">
       <DependentUpon>FormConsultarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FormGestionPreguntas.cs" />
+    <Compile Include="formularios\FormGestionPreguntas.Designer.cs">
+      <DependentUpon>FormGestionPreguntas.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\FormJuego.cs" />
     <Compile Include="formularios\FormJuego.Designer.cs">
@@ -71,9 +64,17 @@
     <Compile Include="formularios\FormMenuAdmin.Designer.cs">
       <DependentUpon>FormMenuAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\FormMenuJugador.cs" />
+    <Compile Include="formularios\FormMenuJugador.Designer.cs">
+      <DependentUpon>FormMenuJugador.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\FormModulos.cs" />
     <Compile Include="formularios\FormModulos.Designer.cs">
       <DependentUpon>FormModulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FormOpciones.cs" />
+    <Compile Include="formularios\FormOpciones.Designer.cs">
+      <DependentUpon>FormOpciones.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\FormRegistrarAdmin.cs" />
     <Compile Include="formularios\FormRegistrarAdmin.Designer.cs">
@@ -87,6 +88,7 @@
     <Compile Include="formularios\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\BaseDatos.cs" />
     <Compile Include="Modelos\Idiomas.cs" />
     <Compile Include="Modelos\LogicaJuego.cs" />
     <Compile Include="Modelos\ModuloEducativo.cs" />
@@ -98,14 +100,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormGestionPreguntas.resx">
-      <DependentUpon>FormGestionPreguntas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenuJugador.resx">
-      <DependentUpon>FormMenuJugador.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formularios\FormConsultarUsuarios.resx">
       <DependentUpon>FormConsultarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FormGestionPreguntas.resx">
+      <DependentUpon>FormGestionPreguntas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\FormJuego.resx">
       <DependentUpon>FormJuego.cs</DependentUpon>
@@ -113,8 +112,14 @@
     <EmbeddedResource Include="formularios\FormMenuAdmin.resx">
       <DependentUpon>FormMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FormMenuJugador.resx">
+      <DependentUpon>FormMenuJugador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\FormModulos.resx">
       <DependentUpon>FormModulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FormOpciones.resx">
+      <DependentUpon>FormOpciones.Designer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\FormRegistrarAdmin.resx">
       <DependentUpon>FormRegistrarAdmin.cs</DependentUpon>

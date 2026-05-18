@@ -63,7 +63,6 @@ namespace proyecto1
 			if (proyecto1.Modelos.Idiomas.English == true)
 			{
 				lb_Titulo.Text = "Admin´s Menu";
-					
 				BtnGestionarPreguntas.Text = "To manage questions";
 				btnGestionarModulos.Text = "To manage modules";
 				btnConsultar.Text = "To manage users";
@@ -72,12 +71,19 @@ namespace proyecto1
 			else
 			{
 				lb_Titulo.Text = lb_Titulo.Tag.ToString();
-					
 				BtnGestionarPreguntas.Text = BtnGestionarPreguntas.Tag.ToString();
 				btnGestionarModulos.Text = btnGestionarModulos.Tag.ToString();
 				btnConsultar.Text = btnConsultar.Tag.ToString();
 				btn_Cerrar_Sesion.Text = btn_Cerrar_Sesion.Tag.ToString();
 			}
+		}
+		
+		void BtnOpcionesClick(object sender, EventArgs e)
+		{
+			FormOpciones PantallaOpciones = new FormOpciones();
+			PantallaOpciones.Owner = this;
+			PantallaOpciones.Show();
+			this.Hide();
 		}
 	}
 }

@@ -29,7 +29,7 @@ namespace proyecto1
 		private void CargarModulos()
 		{
 			cmbModulo.DataSource = null;
-			cmbModulo.DataSource = MainForm.ListaModulos;
+			cmbModulo.DataSource = BaseDatos.ObtenerModulos();
 			cmbModulo.DisplayMember = "Nombre";
 			cmbModulo.ValueMember = "Id";
 			cmbModulo.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -51,7 +51,7 @@ namespace proyecto1
 		{
 			if(cmbModulo.SelectedItem == null) return;
 			int idModulo = (int)cmbModulo.SelectedValue;
-			preguntasActuales = MainForm.ListaPreguntas.Where(p => p.IdModulo == idModulo).ToList();
+			preguntasActuales = BaseDatos.ObtenerPreguntas().Where(p => p.IdModulo == idModulo).ToList();
 			indicePregunta = 0;
 			logica.ResetearJuego();
 			ActualizarPuntuacion();
@@ -166,11 +166,7 @@ namespace proyecto1
 		private void GuardarPuntuacion()
 		{
 			int idModulo = (int)cmbModulo.SelectedValue;
-			var existente = MainForm.PuntuacionesGlobales.FirstOrDefault(p => p.IdUsuario == idUsuario && p.IdModulo == idModulo);
-			if(existente != null)
-				existente.Puntos = logica.PuntajeActual;
-			else
-				MainForm.PuntuacionesGlobales.Add(new PuntuacionJugador(idUsuario,idModulo,logica.PuntajeActual));
+			BaseDatos.GuardarPuntuacion(idUsuario, idModulo, logica.PuntajeActual);
 		}
 		
 		

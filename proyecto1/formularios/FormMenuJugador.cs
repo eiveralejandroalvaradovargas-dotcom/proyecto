@@ -28,14 +28,20 @@ namespace proyecto1
 			}
 			
 			
-			Seleccion_Modulo_Pts.DataSource = MainForm.ListaModulos;
+			Seleccion_Modulo_Pts.DataSource = BaseDatos.ObtenerModulos();
 		    Seleccion_Modulo_Pts.DisplayMember = "Nombre";
+		    Seleccion_Modulo_Pts.ValueMember = "Id";
 		    
 		}
 		
 		void Seleccion_Modulo_PtsSelectedIndexChanged(object sender, EventArgs e)
 		{
-			//ModuloEducativo Modulo_Elegidoc (ModuloEducativo) Seleccion_Modulo_Pts.SelectedItem;
+			if(Seleccion_Modulo_Pts.SelectedItem != null)
+			{
+				int idModulo = (int)Seleccion_Modulo_Pts.SelectedValue;
+				int puntos = BaseDatos.ObtenerPuntuacion(ID_Ingresado, idModulo);
+				Puntuacion_Modulo.Text = "puntuacion: "+puntos;
+			}
 		}
 		
 		void Modulos_MenuClick(object sender, EventArgs e)

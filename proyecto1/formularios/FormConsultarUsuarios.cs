@@ -23,6 +23,15 @@ namespace proyecto1
 		
 		public void Actualizacion()
 		{
+			var usuarios = BaseDatos.ObtenerUsuarios();
+			dataUsuario.DataSource = null;
+			dataUsuario.DataSource = usuarios;
+			
+			cmbID.DataSource = null;
+			cmbID.DataSource = usuarios;
+			cmbID.DisplayMember = "Id";
+			cmbID.ValueMember = "Id";
+			
 			cmbRol.Items.Clear();
 			if (proyecto1.Modelos.Idiomas.English)
 			{
@@ -38,47 +47,29 @@ namespace proyecto1
 			}
 			
 			cmbRol.SelectedIndex = 0;
-			
-			dataUsuario.DataSource = null;
-			dataUsuario.DataSource = MainForm.ListaUsuario;
-			
-			cmbID.DataSource = null;
-			cmbID.DataSource = MainForm.ListaUsuario;
-			cmbID.DisplayMember = "Id";
-			cmbID.ValueMember = "Id";
 		}
-		
-
-
-		
+				
 		void CmbRolSelectedIndexChanged(object sender, EventArgs e)
 		{
-			if(cmbRol.SelectedIndex == 0)
+			string seleccion = cmbRol.SelectedItem.ToString();
+			var todos = BaseDatos.ObtenerUsuarios();
+			if(seleccion == "All" || seleccion == "Todos")
 			{
-				dataUsuario.DataSource = null;
-				dataUsuario.DataSource = MainForm.ListaUsuario;
+				dataUsuario.DataSource = todos;
 			}
 			else
 			{
-				string Seleccion = cmbRol.SelectedItem.ToString();
-				
-				if (Seleccion == "Player") 
-				{
-					Seleccion = "Jugador";
-				}
-				if(Seleccion == "Administrator")
-				{
-					Seleccion = "Admin";
-				}
-				dataUsuario.DataSource = null;
-				var filtro = MainForm.ListaUsuario.Where(x => x.Rol == Seleccion).ToList();
-				dataUsuario.DataSource = filtro;
+				string rolFiltro = "";
+				if(seleccion == "Player" || seleccion == "Jugador") rolFiltro = "Jugador";
+				else if(seleccion == "Administrator" || seleccion == "Administrador") rolFiltro = "Admin";
+				var filtrados = todos.Where(u => u.Rol == rolFiltro).ToList();
+				dataUsuario.DataSource = filtrados;
 			}
 		}
 		
 		void CmbIDSelectedIndexChanged(object sender, EventArgs e)
 		{
-			Usuarios seleccionado = (Usuarios)cmbID.SelectedItem;
+			Usuarios seleccionado = cmbID.SelectedItem as Usuarios;
 	        if (seleccionado != null)
 	        {
 	            textNombre.Text = seleccionado.Username;
@@ -93,7 +84,7 @@ namespace proyecto1
 		
 		void BtnModificarClick(object sender, EventArgs e)
 		{
-			Usuarios modificar = (Usuarios)cmbID.SelectedItem;
+			Usuarios modificar = cmbID.SelectedItem as Usuarios;
 	        if (modificar == null)
 	        {
 	        	string Mensaje = proyecto1.Modelos.Idiomas.English
@@ -122,7 +113,7 @@ namespace proyecto1
 
 	        modificar.Username = textNombre.Text;
 	        modificar.Password = textContraseña.Text;
-	        
+	        BaseDatos.ActualizarUsuario(modificar);
 	        Actualizacion();
 	        
 	        string Message = proyecto1.Modelos.Idiomas.English
@@ -132,19 +123,22 @@ namespace proyecto1
 				string Titlee = proyecto1.Modelos.Idiomas.English
 					? "Advice"
 					: "Aviso";
-	            MessageBox.Show(Message, Titlee);
-	            return;
-	 
+	            MessageBox.Show(Message, Titlee);	 
 	    }
 		
 		
 		void BtnEliminarClick(object sender, EventArgs e)
 		{
-			Usuarios Eliminer = (Usuarios)cmbID.SelectedItem;
-			MainForm.ListaUsuario.Remove(Eliminer);
-			Actualizacion();
+			Usuarios Eliminar = cmbID.SelectedItem as Usuarios;
+			if(Eliminar == null)
+			{
+				MessageBox.Show("Seleccione un usuario", "Aviso");
+				return;
+			}
+			BaseDatos.EliminarUsuario(Eliminar.Id);
 			
-			string Mensaje = proyecto1.Modelos.Idiomas.English
+			
+				string Mensaje = proyecto1.Modelos.Idiomas.English
 					? "User deleted"
 					: "Usuario eliminado.";
 				
@@ -152,7 +146,7 @@ namespace proyecto1
 					? "Advice"
 					: "Aviso";
 	            MessageBox.Show(Mensaje, Title);
-		
+				Actualizacion();
 		}
 		
 		void BtnRegistrarClick(object sender, EventArgs e)
