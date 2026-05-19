@@ -5,13 +5,15 @@ namespace proyecto1
 	public class ModuloEducativo
 	{
 		public int Id {get;set;}
-		public string Nombre {get;set;}
+		public string NombreEs {get;set;}
+		public string NombreEn {get;set;}
 		public string Descripcion {get;set;}
 		
-		public ModuloEducativo(int id, string nombre, string descripcion)
+		public ModuloEducativo(int id, string nombreEs, string nombreEn, string descripcion)
 		{
 			Id = id;
-			Nombre = nombre;
+			NombreEs = nombreEs;
+			NombreEn = nombreEn;
 			Descripcion = descripcion;
 		}
 	}

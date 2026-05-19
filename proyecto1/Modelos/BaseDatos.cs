@@ -83,7 +83,7 @@ namespace proyecto1
 			using(MySqlConnection conexion = new MySqlConnection(cadenaconexion))
 			{
 				conexion.Open();
-				string datos = "SELECT id, nombre, descripcion FROM MODULO";
+				string datos = "SELECT id, nombreEs, nombreEn, descripcion FROM MODULO";
 				MySqlCommand cmd = new MySqlCommand(datos, conexion);
 				using(MySqlDataReader reader = cmd.ExecuteReader())
 				{
@@ -91,7 +91,8 @@ namespace proyecto1
 					{
 					ModuloEducativo m = new ModuloEducativo(
 						reader.GetInt32("id"),
-						reader.GetString("nombre"),
+						reader.GetString("nombreEs"),
+						reader.GetString("nombreEn"),
 						reader.GetString("descripcion"));
 					lista.Add(m);
 					}
@@ -104,9 +105,10 @@ namespace proyecto1
 			using(MySqlConnection conexion = new MySqlConnection(cadenaconexion))
 			{
 				conexion.Open();
-				string datos = "INSERT INTO MODULO (nombre, descripcion) VALUES (@nombre, @descripcion)";
+				string datos = "INSERT INTO MODULO (nombreEs, nombreEn, descripcion) VALUES (@nombreEs, @nombreEn, @descripcion)";
 				MySqlCommand cmd = new MySqlCommand(datos, conexion);
-				cmd.Parameters.AddWithValue("@nombre", modulo.Nombre);
+				cmd.Parameters.AddWithValue("@nombreEs", modulo.NombreEs);
+				cmd.Parameters.AddWithValue("@nombreEn", modulo.NombreEn);
 				cmd.Parameters.AddWithValue("@descripcion", modulo.Descripcion);
 				cmd.ExecuteNonQuery();
 			}
@@ -117,9 +119,10 @@ namespace proyecto1
 			using(MySqlConnection conexion = new MySqlConnection(cadenaconexion))
 			{
 				conexion.Open();
-				string datos = "UPDATE MODULO SET nombre = @nombre, descripcion = @descripcion WHERE id = @id";
+				string datos = "UPDATE MODULO SET nombreEs = @nombreEs, nombreEn = @nombreEn, descripcion = @descripcion WHERE id = @id";
 				MySqlCommand cmd = new MySqlCommand(datos, conexion);
-				cmd.Parameters.AddWithValue("@nombre", modulo.Nombre);
+				cmd.Parameters.AddWithValue("@nombreEs", modulo.NombreEs);
+				cmd.Parameters.AddWithValue("@nombreEn", modulo.NombreEn);
 				cmd.Parameters.AddWithValue("@descripcion", modulo.Descripcion);
 				cmd.Parameters.AddWithValue("@id", modulo.Id);
 				cmd.ExecuteNonQuery();
