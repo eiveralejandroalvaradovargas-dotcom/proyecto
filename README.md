@@ -47,3 +47,10 @@
 			  FOREIGN KEY (`idUsuario`) REFERENCES `USUARIO`(`id`) ON DELETE CASCADE,
 			  FOREIGN KEY (`idModulo`) REFERENCES `MODULO`(`id`) ON DELETE CASCADE
 			) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+			INSERT IGNORE INTO MODULO (id, nombreEs, nombreEn, descripcion) VALUES (1, 'Arquitectura del computador', 'Computer Architecture', 'Hardware y componentes');
+			INSERT IGNORE INTO MODULO (id, nombreEs, nombreEn, descripcion) VALUES (2, 'Antropología', 'Anthropology', 'Estudio del ser humano');
+			INSERT IGNORE INTO MODULO (id, nombreEs, nombreEn, descripcion) VALUES (3, 'Cálculo', 'Calculus', 'Derivadas e integrales');
+			INSERT IGNORE INTO MODULO (id, nombreEs, nombreEn, descripcion) VALUES (4, 'Deporte y primeros auxilios', 'Sports and First Aid', 'Actividad física y conocimientos básicos de emergencia');
