@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS `JuegoEducativo` 
+			CREATE DATABASE IF NOT EXISTS `JuegoEducativo` 
 			DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 			USE `JuegoEducativo`;
 			
@@ -12,7 +12,8 @@ CREATE DATABASE IF NOT EXISTS `JuegoEducativo`
 			
 			CREATE TABLE IF NOT EXISTS `MODULO` (
 			  `id` INT(11) NOT NULL AUTO_INCREMENT,
-			  `nombre` VARCHAR(100) NOT NULL,
+			  `nombreEs` VARCHAR(100) NOT NULL,
+			  `nombreEn` VARCHAR(100) NOT NULL,
 			  `descripcion` VARCHAR(500) NOT NULL,
 			  PRIMARY KEY (`id`)
 			) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
