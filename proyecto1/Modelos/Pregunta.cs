@@ -13,10 +13,12 @@ namespace proyecto1
 		public string ImagenRuta {get;set;}
 		
 		public List<opcion> opciones {get;set;}
+		public List<string> ImagenesRuta {get; set;}
 			
 		public Pregunta()
 		{
 			opciones = new List<opcion>();
+			ImagenesRuta = new List<string>(); 
 		}
 		
 		public Pregunta(int id, int idModulo, string textoEs, string textoEn, string imagenRuta)
@@ -27,6 +29,7 @@ namespace proyecto1
 			TextoEn = textoEn;
 			ImagenRuta = imagenRuta;
 			opciones = new List<opcion>();
+			ImagenesRuta = new List<string>();
 		}
 	}
 }

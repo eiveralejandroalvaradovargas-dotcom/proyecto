@@ -48,25 +48,25 @@ namespace proyecto1
 			// lb_Titulo
 			// 
 			this.lb_Titulo.BackColor = System.Drawing.Color.Transparent;
-			this.lb_Titulo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lb_Titulo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lb_Titulo.ForeColor = System.Drawing.Color.White;
-			this.lb_Titulo.Location = new System.Drawing.Point(-1, 9);
+			this.lb_Titulo.Location = new System.Drawing.Point(297, 58);
 			this.lb_Titulo.Name = "lb_Titulo";
-			this.lb_Titulo.Size = new System.Drawing.Size(393, 23);
+			this.lb_Titulo.Size = new System.Drawing.Size(399, 40);
 			this.lb_Titulo.TabIndex = 0;
 			this.lb_Titulo.Text = "Menu de Administrador";
 			this.lb_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// btnConsultar
 			// 
-			this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.btnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
+			this.btnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
 			this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btnConsultar.Location = new System.Drawing.Point(245, 47);
+			this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.btnConsultar.Location = new System.Drawing.Point(654, 156);
 			this.btnConsultar.Name = "btnConsultar";
-			this.btnConsultar.Size = new System.Drawing.Size(86, 44);
+			this.btnConsultar.Size = new System.Drawing.Size(142, 83);
 			this.btnConsultar.TabIndex = 6;
 			this.btnConsultar.Text = "Consultar usuarios";
 			this.btnConsultar.UseVisualStyleBackColor = false;
@@ -74,14 +74,14 @@ namespace proyecto1
 			// 
 			// BtnGestionarPreguntas
 			// 
-			this.BtnGestionarPreguntas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.BtnGestionarPreguntas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.BtnGestionarPreguntas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
+			this.BtnGestionarPreguntas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
 			this.BtnGestionarPreguntas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.BtnGestionarPreguntas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BtnGestionarPreguntas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.BtnGestionarPreguntas.Location = new System.Drawing.Point(51, 129);
+			this.BtnGestionarPreguntas.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnGestionarPreguntas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.BtnGestionarPreguntas.Location = new System.Drawing.Point(178, 371);
 			this.BtnGestionarPreguntas.Name = "BtnGestionarPreguntas";
-			this.BtnGestionarPreguntas.Size = new System.Drawing.Size(86, 44);
+			this.BtnGestionarPreguntas.Size = new System.Drawing.Size(142, 83);
 			this.BtnGestionarPreguntas.TabIndex = 7;
 			this.BtnGestionarPreguntas.Text = "Gestionar Preguntas";
 			this.BtnGestionarPreguntas.UseVisualStyleBackColor = false;
@@ -89,14 +89,14 @@ namespace proyecto1
 			// 
 			// btnGestionarModulos
 			// 
-			this.btnGestionarModulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.btnGestionarModulos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnGestionarModulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
+			this.btnGestionarModulos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
 			this.btnGestionarModulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnGestionarModulos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnGestionarModulos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btnGestionarModulos.Location = new System.Drawing.Point(51, 47);
+			this.btnGestionarModulos.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnGestionarModulos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.btnGestionarModulos.Location = new System.Drawing.Point(178, 156);
 			this.btnGestionarModulos.Name = "btnGestionarModulos";
-			this.btnGestionarModulos.Size = new System.Drawing.Size(86, 46);
+			this.btnGestionarModulos.Size = new System.Drawing.Size(142, 83);
 			this.btnGestionarModulos.TabIndex = 8;
 			this.btnGestionarModulos.Text = "Gestionar Modulos";
 			this.btnGestionarModulos.UseVisualStyleBackColor = false;
@@ -104,14 +104,14 @@ namespace proyecto1
 			// 
 			// btn_Cerrar_Sesion
 			// 
-			this.btn_Cerrar_Sesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.btn_Cerrar_Sesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btn_Cerrar_Sesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
+			this.btn_Cerrar_Sesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
 			this.btn_Cerrar_Sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_Cerrar_Sesion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_Cerrar_Sesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_Cerrar_Sesion.Location = new System.Drawing.Point(245, 129);
+			this.btn_Cerrar_Sesion.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_Cerrar_Sesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.btn_Cerrar_Sesion.Location = new System.Drawing.Point(654, 371);
 			this.btn_Cerrar_Sesion.Name = "btn_Cerrar_Sesion";
-			this.btn_Cerrar_Sesion.Size = new System.Drawing.Size(86, 44);
+			this.btn_Cerrar_Sesion.Size = new System.Drawing.Size(142, 83);
 			this.btn_Cerrar_Sesion.TabIndex = 9;
 			this.btn_Cerrar_Sesion.Text = "Cerrar sesion";
 			this.btn_Cerrar_Sesion.UseVisualStyleBackColor = false;
@@ -119,14 +119,14 @@ namespace proyecto1
 			// 
 			// btnOpciones
 			// 
-			this.btnOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.btnOpciones.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
+			this.btnOpciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
 			this.btnOpciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnOpciones.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnOpciones.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btnOpciones.Location = new System.Drawing.Point(143, 88);
+			this.btnOpciones.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnOpciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.btnOpciones.Location = new System.Drawing.Point(418, 245);
 			this.btnOpciones.Name = "btnOpciones";
-			this.btnOpciones.Size = new System.Drawing.Size(86, 46);
+			this.btnOpciones.Size = new System.Drawing.Size(142, 83);
 			this.btnOpciones.TabIndex = 10;
 			this.btnOpciones.Text = "Gestionar Opciones";
 			this.btnOpciones.UseVisualStyleBackColor = false;
@@ -138,13 +138,14 @@ namespace proyecto1
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.ClientSize = new System.Drawing.Size(393, 210);
+			this.ClientSize = new System.Drawing.Size(984, 561);
 			this.Controls.Add(this.btnOpciones);
 			this.Controls.Add(this.btn_Cerrar_Sesion);
 			this.Controls.Add(this.btnGestionarModulos);
 			this.Controls.Add(this.BtnGestionarPreguntas);
 			this.Controls.Add(this.btnConsultar);
 			this.Controls.Add(this.lb_Titulo);
+			this.DoubleBuffered = true;
 			this.Name = "FormMenuAdmin";
 			this.Text = "FormMenuAdmin";
 			this.Activated += new System.EventHandler(this.FormMenuAdminActivated);

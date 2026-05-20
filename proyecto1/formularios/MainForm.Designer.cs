@@ -52,11 +52,11 @@ namespace proyecto1
 			// lblTitulo
 			// 
 			this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-			this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTitulo.ForeColor = System.Drawing.Color.Gainsboro;
-			this.lblTitulo.Location = new System.Drawing.Point(2, 9);
+			this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTitulo.ForeColor = System.Drawing.Color.White;
+			this.lblTitulo.Location = new System.Drawing.Point(338, 39);
 			this.lblTitulo.Name = "lblTitulo";
-			this.lblTitulo.Size = new System.Drawing.Size(393, 23);
+			this.lblTitulo.Size = new System.Drawing.Size(393, 49);
 			this.lblTitulo.TabIndex = 0;
 			this.lblTitulo.Text = "Inicio de Sesion";
 			this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,32 +64,33 @@ namespace proyecto1
 			// lblUsuario
 			// 
 			this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-			this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblUsuario.ForeColor = System.Drawing.Color.Gainsboro;
-			this.lblUsuario.Location = new System.Drawing.Point(103, 47);
+			this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblUsuario.ForeColor = System.Drawing.Color.White;
+			this.lblUsuario.Location = new System.Drawing.Point(335, 147);
 			this.lblUsuario.Name = "lblUsuario";
-			this.lblUsuario.Size = new System.Drawing.Size(76, 23);
+			this.lblUsuario.Size = new System.Drawing.Size(108, 41);
 			this.lblUsuario.TabIndex = 1;
 			this.lblUsuario.Text = "Usuario :";
 			// 
 			// lblContraseña
 			// 
 			this.lblContraseña.BackColor = System.Drawing.Color.Transparent;
-			this.lblContraseña.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblContraseña.ForeColor = System.Drawing.Color.Gainsboro;
-			this.lblContraseña.Location = new System.Drawing.Point(85, 88);
+			this.lblContraseña.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblContraseña.ForeColor = System.Drawing.Color.White;
+			this.lblContraseña.Location = new System.Drawing.Point(335, 242);
 			this.lblContraseña.Name = "lblContraseña";
-			this.lblContraseña.Size = new System.Drawing.Size(100, 23);
+			this.lblContraseña.Size = new System.Drawing.Size(137, 34);
 			this.lblContraseña.TabIndex = 2;
 			this.lblContraseña.Text = "Contraseña :";
 			// 
 			// btnAcceder
 			// 
-			this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.btnAcceder.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
+			this.btnAcceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
 			this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnAcceder.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAcceder.Location = new System.Drawing.Point(199, 139);
+			this.btnAcceder.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAcceder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.btnAcceder.Location = new System.Drawing.Point(548, 321);
 			this.btnAcceder.Name = "btnAcceder";
 			this.btnAcceder.Size = new System.Drawing.Size(107, 37);
 			this.btnAcceder.TabIndex = 3;
@@ -99,34 +100,35 @@ namespace proyecto1
 			// 
 			// textUsuario
 			// 
-			this.textUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+			this.textUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textUsuario.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textUsuario.ForeColor = System.Drawing.Color.Gainsboro;
-			this.textUsuario.Location = new System.Drawing.Point(199, 47);
+			this.textUsuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.textUsuario.Location = new System.Drawing.Point(520, 153);
 			this.textUsuario.Name = "textUsuario";
-			this.textUsuario.Size = new System.Drawing.Size(100, 22);
+			this.textUsuario.Size = new System.Drawing.Size(200, 35);
 			this.textUsuario.TabIndex = 4;
 			// 
 			// textContraseña
 			// 
-			this.textContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+			this.textContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textContraseña.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textContraseña.ForeColor = System.Drawing.Color.Gainsboro;
-			this.textContraseña.Location = new System.Drawing.Point(199, 89);
+			this.textContraseña.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.textContraseña.Location = new System.Drawing.Point(520, 242);
 			this.textContraseña.Name = "textContraseña";
-			this.textContraseña.Size = new System.Drawing.Size(100, 22);
+			this.textContraseña.Size = new System.Drawing.Size(200, 35);
 			this.textContraseña.TabIndex = 5;
 			this.textContraseña.UseSystemPasswordChar = true;
 			// 
 			// btnRegistrar
 			// 
-			this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
+			this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
 			this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnRegistrar.Location = new System.Drawing.Point(72, 139);
+			this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnRegistrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.btnRegistrar.Location = new System.Drawing.Point(365, 321);
 			this.btnRegistrar.Name = "btnRegistrar";
 			this.btnRegistrar.Size = new System.Drawing.Size(107, 37);
 			this.btnRegistrar.TabIndex = 6;
@@ -137,23 +139,24 @@ namespace proyecto1
 			// lblDesc_shift_btn
 			// 
 			this.lblDesc_shift_btn.BackColor = System.Drawing.Color.Transparent;
-			this.lblDesc_shift_btn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDesc_shift_btn.ForeColor = System.Drawing.Color.Gainsboro;
-			this.lblDesc_shift_btn.Location = new System.Drawing.Point(35, 196);
+			this.lblDesc_shift_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblDesc_shift_btn.ForeColor = System.Drawing.Color.White;
+			this.lblDesc_shift_btn.Location = new System.Drawing.Point(364, 379);
 			this.lblDesc_shift_btn.Name = "lblDesc_shift_btn";
-			this.lblDesc_shift_btn.Size = new System.Drawing.Size(335, 23);
+			this.lblDesc_shift_btn.Size = new System.Drawing.Size(307, 33);
 			this.lblDesc_shift_btn.TabIndex = 7;
 			this.lblDesc_shift_btn.Text = "Desea cambiar el idioma a ingles? presione aqui :D";
 			// 
 			// btn_Cambiar_Idioma
 			// 
-			this.btn_Cambiar_Idioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.btn_Cambiar_Idioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btn_Cambiar_Idioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
+			this.btn_Cambiar_Idioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
 			this.btn_Cambiar_Idioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_Cambiar_Idioma.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_Cambiar_Idioma.Location = new System.Drawing.Point(143, 222);
+			this.btn_Cambiar_Idioma.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_Cambiar_Idioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.btn_Cambiar_Idioma.Location = new System.Drawing.Point(466, 415);
 			this.btn_Cambiar_Idioma.Name = "btn_Cambiar_Idioma";
-			this.btn_Cambiar_Idioma.Size = new System.Drawing.Size(107, 37);
+			this.btn_Cambiar_Idioma.Size = new System.Drawing.Size(110, 36);
 			this.btn_Cambiar_Idioma.TabIndex = 8;
 			this.btn_Cambiar_Idioma.Text = "Cambiar idioma";
 			this.btn_Cambiar_Idioma.UseVisualStyleBackColor = false;
@@ -162,11 +165,11 @@ namespace proyecto1
 			// lblDesc_shift_btn_2
 			// 
 			this.lblDesc_shift_btn_2.BackColor = System.Drawing.Color.Transparent;
-			this.lblDesc_shift_btn_2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDesc_shift_btn_2.ForeColor = System.Drawing.Color.Gainsboro;
-			this.lblDesc_shift_btn_2.Location = new System.Drawing.Point(31, 266);
+			this.lblDesc_shift_btn_2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblDesc_shift_btn_2.ForeColor = System.Drawing.Color.White;
+			this.lblDesc_shift_btn_2.Location = new System.Drawing.Point(350, 464);
 			this.lblDesc_shift_btn_2.Name = "lblDesc_shift_btn_2";
-			this.lblDesc_shift_btn_2.Size = new System.Drawing.Size(335, 23);
+			this.lblDesc_shift_btn_2.Size = new System.Drawing.Size(334, 29);
 			this.lblDesc_shift_btn_2.TabIndex = 9;
 			this.lblDesc_shift_btn_2.Text = "Esta opcion no podra ser cambiada mas adelante";
 			this.lblDesc_shift_btn_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,7 +180,7 @@ namespace proyecto1
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.ClientSize = new System.Drawing.Size(396, 302);
+			this.ClientSize = new System.Drawing.Size(984, 561);
 			this.Controls.Add(this.lblDesc_shift_btn_2);
 			this.Controls.Add(this.btn_Cambiar_Idioma);
 			this.Controls.Add(this.lblDesc_shift_btn);
@@ -188,6 +191,7 @@ namespace proyecto1
 			this.Controls.Add(this.lblContraseña);
 			this.Controls.Add(this.lblUsuario);
 			this.Controls.Add(this.lblTitulo);
+			this.DoubleBuffered = true;
 			this.Name = "MainForm";
 			this.Text = "Plataforma educativa(?";
 			this.Activated += new System.EventHandler(this.MainFormActivated);
