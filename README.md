@@ -51,10 +51,10 @@
 
 
             INSERT INTO `USUARIO` (`nombre`, `clave`, `rol`) 
-            VALUES ('Eiver', '123', 'administrador');
+            VALUES ('Eiver', '123', 'Admin');
 
             INSERT INTO `USUARIO` (`nombre`, `clave`, `rol`) 
-            VALUES ('Juan', '123', 'jugador');
+            VALUES ('Juan', '123', 'Jugador');
 
 
 			
