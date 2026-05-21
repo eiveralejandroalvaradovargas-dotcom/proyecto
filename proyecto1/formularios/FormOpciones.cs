@@ -187,16 +187,6 @@ namespace proyecto1
             }
         }
         
-        private void BtnModificarClick(object sender, EventArgs e)
-        {
-            if (dataOpciones.CurrentRow == null)
-            {
-                MessageBox.Show("Seleccione una opción de la tabla.");
-                return;
-            }
-            MessageBox.Show("Para modificar, edite directamente la celda en la tabla (no implementado).");
-        }
-        
         private void BtnEliminarClick(object sender, EventArgs e)
         {
             if (dataOpciones.CurrentRow == null)
@@ -231,7 +221,6 @@ namespace proyecto1
 			if (proyecto1.Modelos.Idiomas.English == true)
 			{
 				btnAgregar.Text = "Save Options";
-				btnModificar.Text = "Edit";
 				btnEliminar.Text = "Delete";
 				btn_Salir.Text = "Log out";
 				
@@ -239,7 +228,6 @@ namespace proyecto1
 			else
 			{
 				btnAgregar.Text = btnAgregar.Tag.ToString();
-				btnModificar.Text = btnModificar.Tag.ToString();
 				btnEliminar.Text = btnEliminar.Tag.ToString();
 				btn_Salir.Text = btn_Salir.Tag.ToString();
 			}

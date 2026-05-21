@@ -48,7 +48,6 @@ namespace proyecto1
 			this.textNombreEn2 = new System.Windows.Forms.TextBox();
 			this.textNombreEn4 = new System.Windows.Forms.TextBox();
 			this.btnAgregar = new System.Windows.Forms.Button();
-			this.btnModificar = new System.Windows.Forms.Button();
 			this.btnEliminar = new System.Windows.Forms.Button();
 			this.rob1 = new System.Windows.Forms.RadioButton();
 			this.rob2 = new System.Windows.Forms.RadioButton();
@@ -165,28 +164,13 @@ namespace proyecto1
 			this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.btnAgregar.Location = new System.Drawing.Point(12, 457);
+			this.btnAgregar.Location = new System.Drawing.Point(21, 457);
 			this.btnAgregar.Name = "btnAgregar";
-			this.btnAgregar.Size = new System.Drawing.Size(117, 51);
+			this.btnAgregar.Size = new System.Drawing.Size(151, 51);
 			this.btnAgregar.TabIndex = 9;
 			this.btnAgregar.Text = "Agregar";
 			this.btnAgregar.UseVisualStyleBackColor = false;
 			this.btnAgregar.Click += new System.EventHandler(this.BtnAgregarClick);
-			// 
-			// btnModificar
-			// 
-			this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
-			this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
-			this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.btnModificar.Location = new System.Drawing.Point(308, 457);
-			this.btnModificar.Name = "btnModificar";
-			this.btnModificar.Size = new System.Drawing.Size(117, 51);
-			this.btnModificar.TabIndex = 10;
-			this.btnModificar.Text = "Modificar";
-			this.btnModificar.UseVisualStyleBackColor = false;
-			this.btnModificar.Click += new System.EventHandler(this.BtnModificarClick);
 			// 
 			// btnEliminar
 			// 
@@ -195,9 +179,9 @@ namespace proyecto1
 			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.btnEliminar.Location = new System.Drawing.Point(159, 457);
+			this.btnEliminar.Location = new System.Drawing.Point(198, 457);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(117, 51);
+			this.btnEliminar.Size = new System.Drawing.Size(150, 51);
 			this.btnEliminar.TabIndex = 11;
 			this.btnEliminar.Text = "Eliminar";
 			this.btnEliminar.UseVisualStyleBackColor = false;
@@ -267,7 +251,6 @@ namespace proyecto1
 			this.dataOpciones.Location = new System.Drawing.Point(448, 52);
 			this.dataOpciones.Name = "dataOpciones";
 			this.dataOpciones.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(226)))), ((int)(((byte)(216)))));
-			this.dataOpciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataOpciones.Size = new System.Drawing.Size(514, 456);
 			this.dataOpciones.TabIndex = 21;
 			// 
@@ -299,7 +282,6 @@ namespace proyecto1
 			this.Controls.Add(this.rob2);
 			this.Controls.Add(this.rob1);
 			this.Controls.Add(this.btnEliminar);
-			this.Controls.Add(this.btnModificar);
 			this.Controls.Add(this.btnAgregar);
 			this.Controls.Add(this.textNombreEn4);
 			this.Controls.Add(this.textNombreEn2);
@@ -323,7 +305,6 @@ namespace proyecto1
 		private System.Windows.Forms.RadioButton rob2;
 		private System.Windows.Forms.RadioButton rob1;
 		private System.Windows.Forms.Button btnEliminar;
-		private System.Windows.Forms.Button btnModificar;
 		private System.Windows.Forms.Button btnAgregar;
 		private System.Windows.Forms.TextBox textNombreEn4;
 		private System.Windows.Forms.TextBox textNombreEn2;
