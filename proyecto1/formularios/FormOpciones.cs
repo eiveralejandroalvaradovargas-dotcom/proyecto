@@ -18,6 +18,12 @@ namespace proyecto1
             
             CargarPreguntas();
             cmbPreguntas.SelectedIndexChanged += cmbPreguntas_SelectedIndexChanged;
+            
+            foreach (Control Textos_Properties in this.Controls)
+			{
+				Textos_Properties.Tag = Textos_Properties.Text;
+			}
+			Verificar();
         }
         
         private void CargarPreguntas()
@@ -219,5 +225,38 @@ namespace proyecto1
                 }
             }
         }
+        
+        void Verificar()
+		{
+			if (proyecto1.Modelos.Idiomas.English == true)
+			{
+				btnAgregar.Text = "Save Options";
+				btnModificar.Text = "Edit";
+				btnEliminar.Text = "Delete";
+				btn_Salir.Text = "Log out";
+				
+			}
+			else
+			{
+				btnAgregar.Text = btnAgregar.Tag.ToString();
+				btnModificar.Text = btnModificar.Tag.ToString();
+				btnEliminar.Text = btnEliminar.Tag.ToString();
+				btn_Salir.Text = btn_Salir.Tag.ToString();
+			}
+        }  
+		
+		void Btn_SalirClick(object sender, EventArgs e)
+		{
+			proyecto1.Modelos.Idiomas.English = false;
+			
+			
+			if (this.Owner != null)
+			{
+				this.Owner.Show();
+			}
+			this.Close();
+		}
+		
+	
     }
 }

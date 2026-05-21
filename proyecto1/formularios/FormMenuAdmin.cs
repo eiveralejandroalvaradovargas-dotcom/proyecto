@@ -67,6 +67,7 @@ namespace proyecto1
 				btnGestionarModulos.Text = "To manage modules";
 				btnConsultar.Text = "To manage users";
 				btn_Cerrar_Sesion.Text = "Log out";
+				btnOpciones.Text= "Options";
 			}
 			else
 			{
@@ -75,6 +76,7 @@ namespace proyecto1
 				btnGestionarModulos.Text = btnGestionarModulos.Tag.ToString();
 				btnConsultar.Text = btnConsultar.Tag.ToString();
 				btn_Cerrar_Sesion.Text = btn_Cerrar_Sesion.Tag.ToString();
+				btnOpciones.Text = btnOpciones.Tag.ToString();
 			}
 		}
 		

@@ -14,7 +14,7 @@ namespace proyecto1
 			InitializeComponent();
 			
 			cmbPreguntas.DataSource = BaseDatos.ObtenerModulos();
-			cmbPreguntas.DisplayMember = "Nombre";
+			cmbPreguntas.DisplayMember = "NombreEs";
 			cmbPreguntas.ValueMember = "Id";
 			
 			foreach(Control Textos_Properties in this.Controls)
@@ -219,6 +219,7 @@ namespace proyecto1
 				Modificar.Text = "Edit";
 				Eliminar.Text = "Delete";
 				Volver.Text = "Back";
+				cmbPreguntas.DisplayMember = "NombreEn";
 			}
 			else
 			{

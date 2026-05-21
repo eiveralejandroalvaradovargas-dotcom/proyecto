@@ -29,7 +29,7 @@ namespace proyecto1
         {
             cmbModulo.DataSource = null;
             cmbModulo.DataSource = BaseDatos.ObtenerModulos();
-            cmbModulo.DisplayMember = "Nombre";
+            cmbModulo.DisplayMember = "NombreEs";
             cmbModulo.ValueMember = "Id";
             cmbModulo.DropDownStyle = ComboBoxStyle.DropDownList;
         }

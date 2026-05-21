@@ -55,106 +55,107 @@ namespace proyecto1
 			this.rob3 = new System.Windows.Forms.RadioButton();
 			this.rob4 = new System.Windows.Forms.RadioButton();
 			this.dataOpciones = new System.Windows.Forms.DataGridView();
+			this.btn_Salir = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataOpciones)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// cmbPreguntas
 			// 
 			this.cmbPreguntas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
-			this.cmbPreguntas.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cmbPreguntas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbPreguntas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.cmbPreguntas.FormattingEnabled = true;
 			this.cmbPreguntas.Location = new System.Drawing.Point(21, 109);
 			this.cmbPreguntas.Name = "cmbPreguntas";
-			this.cmbPreguntas.Size = new System.Drawing.Size(305, 38);
+			this.cmbPreguntas.Size = new System.Drawing.Size(328, 25);
 			this.cmbPreguntas.TabIndex = 0;
 			// 
 			// textNombreEs2
 			// 
 			this.textNombreEs2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textNombreEs2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textNombreEs2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textNombreEs2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textNombreEs2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.textNombreEs2.Location = new System.Drawing.Point(21, 248);
+			this.textNombreEs2.Location = new System.Drawing.Point(21, 229);
 			this.textNombreEs2.Name = "textNombreEs2";
-			this.textNombreEs2.Size = new System.Drawing.Size(151, 35);
+			this.textNombreEs2.Size = new System.Drawing.Size(151, 25);
 			this.textNombreEs2.TabIndex = 1;
 			// 
 			// textNombreEs4
 			// 
 			this.textNombreEs4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textNombreEs4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textNombreEs4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textNombreEs4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textNombreEs4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.textNombreEs4.Location = new System.Drawing.Point(21, 349);
+			this.textNombreEs4.Location = new System.Drawing.Point(21, 330);
 			this.textNombreEs4.Name = "textNombreEs4";
-			this.textNombreEs4.Size = new System.Drawing.Size(151, 35);
+			this.textNombreEs4.Size = new System.Drawing.Size(151, 25);
 			this.textNombreEs4.TabIndex = 2;
 			// 
 			// textNombreEs3
 			// 
 			this.textNombreEs3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textNombreEs3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textNombreEs3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textNombreEs3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textNombreEs3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.textNombreEs3.Location = new System.Drawing.Point(21, 296);
+			this.textNombreEs3.Location = new System.Drawing.Point(21, 277);
 			this.textNombreEs3.Name = "textNombreEs3";
-			this.textNombreEs3.Size = new System.Drawing.Size(151, 35);
+			this.textNombreEs3.Size = new System.Drawing.Size(151, 25);
 			this.textNombreEs3.TabIndex = 3;
 			// 
 			// textNombreEs1
 			// 
 			this.textNombreEs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textNombreEs1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textNombreEs1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textNombreEs1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textNombreEs1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.textNombreEs1.Location = new System.Drawing.Point(21, 202);
+			this.textNombreEs1.Location = new System.Drawing.Point(21, 183);
 			this.textNombreEs1.Name = "textNombreEs1";
-			this.textNombreEs1.Size = new System.Drawing.Size(151, 35);
+			this.textNombreEs1.Size = new System.Drawing.Size(151, 25);
 			this.textNombreEs1.TabIndex = 4;
 			// 
 			// textNombreEn1
 			// 
 			this.textNombreEn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textNombreEn1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textNombreEn1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textNombreEn1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textNombreEn1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.textNombreEn1.Location = new System.Drawing.Point(198, 202);
+			this.textNombreEn1.Location = new System.Drawing.Point(197, 183);
 			this.textNombreEn1.Name = "textNombreEn1";
-			this.textNombreEn1.Size = new System.Drawing.Size(151, 35);
+			this.textNombreEn1.Size = new System.Drawing.Size(151, 25);
 			this.textNombreEn1.TabIndex = 5;
 			// 
 			// textNombreEn3
 			// 
 			this.textNombreEn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textNombreEn3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textNombreEn3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textNombreEn3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textNombreEn3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.textNombreEn3.Location = new System.Drawing.Point(198, 296);
+			this.textNombreEn3.Location = new System.Drawing.Point(198, 277);
 			this.textNombreEn3.Name = "textNombreEn3";
-			this.textNombreEn3.Size = new System.Drawing.Size(151, 35);
+			this.textNombreEn3.Size = new System.Drawing.Size(151, 25);
 			this.textNombreEn3.TabIndex = 6;
 			// 
 			// textNombreEn2
 			// 
 			this.textNombreEn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textNombreEn2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textNombreEn2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textNombreEn2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textNombreEn2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.textNombreEn2.Location = new System.Drawing.Point(198, 248);
+			this.textNombreEn2.Location = new System.Drawing.Point(198, 229);
 			this.textNombreEn2.Name = "textNombreEn2";
-			this.textNombreEn2.Size = new System.Drawing.Size(151, 35);
+			this.textNombreEn2.Size = new System.Drawing.Size(151, 25);
 			this.textNombreEn2.TabIndex = 7;
 			// 
 			// textNombreEn4
 			// 
 			this.textNombreEn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(251)))), ((int)(((byte)(248)))));
 			this.textNombreEn4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textNombreEn4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textNombreEn4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textNombreEn4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.textNombreEn4.Location = new System.Drawing.Point(198, 349);
+			this.textNombreEn4.Location = new System.Drawing.Point(198, 330);
 			this.textNombreEn4.Name = "textNombreEn4";
-			this.textNombreEn4.Size = new System.Drawing.Size(151, 35);
+			this.textNombreEn4.Size = new System.Drawing.Size(151, 25);
 			this.textNombreEn4.TabIndex = 8;
 			// 
 			// btnAgregar
@@ -206,7 +207,7 @@ namespace proyecto1
 			// 
 			this.rob1.BackColor = System.Drawing.Color.Transparent;
 			this.rob1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.rob1.Location = new System.Drawing.Point(367, 207);
+			this.rob1.Location = new System.Drawing.Point(367, 188);
 			this.rob1.Name = "rob1";
 			this.rob1.Size = new System.Drawing.Size(129, 24);
 			this.rob1.TabIndex = 13;
@@ -218,7 +219,7 @@ namespace proyecto1
 			// 
 			this.rob2.BackColor = System.Drawing.Color.Transparent;
 			this.rob2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.rob2.Location = new System.Drawing.Point(367, 253);
+			this.rob2.Location = new System.Drawing.Point(367, 234);
 			this.rob2.Name = "rob2";
 			this.rob2.Size = new System.Drawing.Size(129, 24);
 			this.rob2.TabIndex = 14;
@@ -230,7 +231,7 @@ namespace proyecto1
 			// 
 			this.rob3.BackColor = System.Drawing.Color.Transparent;
 			this.rob3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.rob3.Location = new System.Drawing.Point(367, 301);
+			this.rob3.Location = new System.Drawing.Point(367, 282);
 			this.rob3.Name = "rob3";
 			this.rob3.Size = new System.Drawing.Size(129, 24);
 			this.rob3.TabIndex = 15;
@@ -242,7 +243,7 @@ namespace proyecto1
 			// 
 			this.rob4.BackColor = System.Drawing.Color.Transparent;
 			this.rob4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.rob4.Location = new System.Drawing.Point(367, 354);
+			this.rob4.Location = new System.Drawing.Point(367, 335);
 			this.rob4.Name = "rob4";
 			this.rob4.Size = new System.Drawing.Size(129, 24);
 			this.rob4.TabIndex = 16;
@@ -270,12 +271,28 @@ namespace proyecto1
 			this.dataOpciones.Size = new System.Drawing.Size(514, 456);
 			this.dataOpciones.TabIndex = 21;
 			// 
+			// btn_Salir
+			// 
+			this.btn_Salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(197)))), ((int)(((byte)(186)))));
+			this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
+			this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_Salir.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_Salir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+			this.btn_Salir.Location = new System.Drawing.Point(21, 12);
+			this.btn_Salir.Name = "btn_Salir";
+			this.btn_Salir.Size = new System.Drawing.Size(117, 51);
+			this.btn_Salir.TabIndex = 22;
+			this.btn_Salir.Text = "Volver";
+			this.btn_Salir.UseVisualStyleBackColor = false;
+			this.btn_Salir.Click += new System.EventHandler(this.Btn_SalirClick);
+			// 
 			// FormOpciones
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(984, 561);
+			this.Controls.Add(this.btn_Salir);
 			this.Controls.Add(this.dataOpciones);
 			this.Controls.Add(this.rob4);
 			this.Controls.Add(this.rob3);
@@ -299,6 +316,7 @@ namespace proyecto1
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button btn_Salir;
 		private System.Windows.Forms.DataGridView dataOpciones;
 		private System.Windows.Forms.RadioButton rob4;
 		private System.Windows.Forms.RadioButton rob3;

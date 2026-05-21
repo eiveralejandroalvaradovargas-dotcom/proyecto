@@ -10,6 +10,11 @@ namespace proyecto1
 		{
 			InitializeComponent();
 			Actualizar();
+			foreach (Control Textos_Properties in this.Controls)
+			{
+				Textos_Properties.Tag = Textos_Properties.Text;
+			}
+			Verificar();
 		}
 		
 		void Actualizar()
@@ -64,6 +69,8 @@ namespace proyecto1
 		    Actualizar();
 		}
 		
+		
+		
 		void BtnEliminarClick(object sender, EventArgs e)
 		{
 			ModuloEducativo Eliminar = cmbNombre.SelectedItem as ModuloEducativo;
@@ -90,6 +97,41 @@ namespace proyecto1
 				this.Owner.Show();
 			}
 			this.Close();
+			}
+		
+		void Verificar()
+		{
+			
+				if (proyecto1.Modelos.Idiomas.English == true)
+				{
+					lbl_Title.Text = "Modules Interface";
+					lbl_Nombre_Eng.Text = "Modules name in english";
+					lbl_Nombre_Esp.Text = "Modules name in spanish";
+					lbl_Descripcion.Text = "Description";
+					
+					btnAgregar.Text = "Add";
+					btnModificar.Text = "Edit";
+					btnEliminar.Text = "Delete";
+					btnCerrar.Text = "Back";
+				}
+				else
+				{
+					lbl_Title.Text = lbl_Title.Tag.ToString();
+					lbl_Nombre_Eng.Text = lbl_Nombre_Eng.Tag.ToString();
+					lbl_Nombre_Esp.Text = lbl_Nombre_Esp.Tag.ToString();
+					lbl_Descripcion.Text = lbl_Descripcion.Tag.ToString();
+					
+					btnAgregar.Text = btnAgregar.Tag.ToString();
+					btnModificar.Text = btnModificar.Tag.ToString();
+					btnEliminar.Text = btnEliminar.Tag.ToString();
+					btnCerrar.Text = btnCerrar.Tag.ToString();
+				}
+		}
+		
+		void FormModulosLoad(object sender, EventArgs e)
+		{
+			
 		}
 	}
+	
 }

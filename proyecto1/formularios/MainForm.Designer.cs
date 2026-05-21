@@ -53,7 +53,7 @@ namespace proyecto1
 			// 
 			this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
 			this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTitulo.ForeColor = System.Drawing.Color.White;
+			this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lblTitulo.Location = new System.Drawing.Point(338, 39);
 			this.lblTitulo.Name = "lblTitulo";
 			this.lblTitulo.Size = new System.Drawing.Size(393, 49);
@@ -65,7 +65,7 @@ namespace proyecto1
 			// 
 			this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
 			this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblUsuario.ForeColor = System.Drawing.Color.White;
+			this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lblUsuario.Location = new System.Drawing.Point(335, 147);
 			this.lblUsuario.Name = "lblUsuario";
 			this.lblUsuario.Size = new System.Drawing.Size(108, 41);
@@ -76,7 +76,7 @@ namespace proyecto1
 			// 
 			this.lblContraseña.BackColor = System.Drawing.Color.Transparent;
 			this.lblContraseña.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblContraseña.ForeColor = System.Drawing.Color.White;
+			this.lblContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lblContraseña.Location = new System.Drawing.Point(335, 242);
 			this.lblContraseña.Name = "lblContraseña";
 			this.lblContraseña.Size = new System.Drawing.Size(137, 34);
@@ -140,7 +140,7 @@ namespace proyecto1
 			// 
 			this.lblDesc_shift_btn.BackColor = System.Drawing.Color.Transparent;
 			this.lblDesc_shift_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDesc_shift_btn.ForeColor = System.Drawing.Color.White;
+			this.lblDesc_shift_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lblDesc_shift_btn.Location = new System.Drawing.Point(364, 379);
 			this.lblDesc_shift_btn.Name = "lblDesc_shift_btn";
 			this.lblDesc_shift_btn.Size = new System.Drawing.Size(307, 33);
@@ -166,7 +166,7 @@ namespace proyecto1
 			// 
 			this.lblDesc_shift_btn_2.BackColor = System.Drawing.Color.Transparent;
 			this.lblDesc_shift_btn_2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDesc_shift_btn_2.ForeColor = System.Drawing.Color.White;
+			this.lblDesc_shift_btn_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lblDesc_shift_btn_2.Location = new System.Drawing.Point(350, 464);
 			this.lblDesc_shift_btn_2.Name = "lblDesc_shift_btn_2";
 			this.lblDesc_shift_btn_2.Size = new System.Drawing.Size(334, 29);

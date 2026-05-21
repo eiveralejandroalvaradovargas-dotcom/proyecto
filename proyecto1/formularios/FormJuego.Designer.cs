@@ -80,7 +80,7 @@ namespace proyecto1
 			// 
 			this.lblPregunta.BackColor = System.Drawing.Color.Transparent;
 			this.lblPregunta.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPregunta.ForeColor = System.Drawing.Color.White;
+			this.lblPregunta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lblPregunta.Location = new System.Drawing.Point(53, 66);
 			this.lblPregunta.Name = "lblPregunta";
 			this.lblPregunta.Size = new System.Drawing.Size(908, 60);
@@ -100,7 +100,7 @@ namespace proyecto1
 			// 
 			this.rbOpcion1.BackColor = System.Drawing.Color.Transparent;
 			this.rbOpcion1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbOpcion1.ForeColor = System.Drawing.Color.White;
+			this.rbOpcion1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.rbOpcion1.Location = new System.Drawing.Point(241, 163);
 			this.rbOpcion1.Name = "rbOpcion1";
 			this.rbOpcion1.Size = new System.Drawing.Size(720, 60);
@@ -112,7 +112,7 @@ namespace proyecto1
 			// 
 			this.rbOpcion2.BackColor = System.Drawing.Color.Transparent;
 			this.rbOpcion2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbOpcion2.ForeColor = System.Drawing.Color.White;
+			this.rbOpcion2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.rbOpcion2.Location = new System.Drawing.Point(241, 229);
 			this.rbOpcion2.Name = "rbOpcion2";
 			this.rbOpcion2.Size = new System.Drawing.Size(720, 60);
@@ -124,7 +124,7 @@ namespace proyecto1
 			// 
 			this.rbOpcion3.BackColor = System.Drawing.Color.Transparent;
 			this.rbOpcion3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbOpcion3.ForeColor = System.Drawing.Color.White;
+			this.rbOpcion3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.rbOpcion3.Location = new System.Drawing.Point(241, 295);
 			this.rbOpcion3.Name = "rbOpcion3";
 			this.rbOpcion3.Size = new System.Drawing.Size(720, 60);
@@ -136,7 +136,7 @@ namespace proyecto1
 			// 
 			this.rbOpcion4.BackColor = System.Drawing.Color.Transparent;
 			this.rbOpcion4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbOpcion4.ForeColor = System.Drawing.Color.White;
+			this.rbOpcion4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.rbOpcion4.Location = new System.Drawing.Point(241, 361);
 			this.rbOpcion4.Name = "rbOpcion4";
 			this.rbOpcion4.Size = new System.Drawing.Size(720, 60);

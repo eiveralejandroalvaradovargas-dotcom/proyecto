@@ -68,7 +68,9 @@ namespace proyecto1
 						MessageBox.Show(Mensaje, Title);
 						
 							FormMenuJugador Menu_Jugador = new FormMenuJugador(encontrar.Username, encontrar.Id);
+							Menu_Jugador.Owner = this;
 							Menu_Jugador.Show();
+							
 							this.Hide();
 						}
 					Limpiar_Casillas();

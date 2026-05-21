@@ -49,7 +49,7 @@ namespace proyecto1
 			// 
 			this.lb_Titulo.BackColor = System.Drawing.Color.Transparent;
 			this.lb_Titulo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lb_Titulo.ForeColor = System.Drawing.Color.White;
+			this.lb_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lb_Titulo.Location = new System.Drawing.Point(297, 58);
 			this.lb_Titulo.Name = "lb_Titulo";
 			this.lb_Titulo.Size = new System.Drawing.Size(399, 40);

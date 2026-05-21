@@ -49,7 +49,7 @@ namespace proyecto1
 			// 
 			this.lbl_Title.BackColor = System.Drawing.Color.Transparent;
 			this.lbl_Title.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Title.ForeColor = System.Drawing.Color.White;
+			this.lbl_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lbl_Title.Location = new System.Drawing.Point(203, 32);
 			this.lbl_Title.Name = "lbl_Title";
 			this.lbl_Title.Size = new System.Drawing.Size(395, 50);
@@ -61,7 +61,7 @@ namespace proyecto1
 			// 
 			this.lbl_Usuario.BackColor = System.Drawing.Color.Transparent;
 			this.lbl_Usuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Usuario.ForeColor = System.Drawing.Color.White;
+			this.lbl_Usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lbl_Usuario.Location = new System.Drawing.Point(171, 135);
 			this.lbl_Usuario.Name = "lbl_Usuario";
 			this.lbl_Usuario.Size = new System.Drawing.Size(111, 33);
@@ -72,7 +72,7 @@ namespace proyecto1
 			// 
 			this.lbl_Contraseña.BackColor = System.Drawing.Color.Transparent;
 			this.lbl_Contraseña.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Contraseña.ForeColor = System.Drawing.Color.White;
+			this.lbl_Contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lbl_Contraseña.Location = new System.Drawing.Point(171, 237);
 			this.lbl_Contraseña.Name = "lbl_Contraseña";
 			this.lbl_Contraseña.Size = new System.Drawing.Size(139, 37);
@@ -130,6 +130,7 @@ namespace proyecto1
 			this.Controls.Add(this.lbl_Contraseña);
 			this.Controls.Add(this.lbl_Usuario);
 			this.Controls.Add(this.lbl_Title);
+			this.DoubleBuffered = true;
 			this.Name = "FormRegistrarJugador";
 			this.Text = "Registrar";
 			this.ResumeLayout(false);

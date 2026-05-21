@@ -29,7 +29,7 @@ namespace proyecto1
 			
 			
 			Seleccion_Modulo_Pts.DataSource = BaseDatos.ObtenerModulos();
-		    Seleccion_Modulo_Pts.DisplayMember = "Nombre";
+		    Seleccion_Modulo_Pts.DisplayMember = "NombreEs";
 		    Seleccion_Modulo_Pts.ValueMember = "Id";
 		    
 		}
@@ -49,6 +49,18 @@ namespace proyecto1
 			FormJuego Juego = new FormJuego (this.ID_Ingresado, this.Name_Ingresado);
 			Juego.Show();
 			this.Hide();
+		}
+		
+		void Btn_Cerrar_SesionClick(object sender, EventArgs e)
+		{
+			proyecto1.Modelos.Idiomas.English = false;
+			
+			
+			if (this.Owner != null)
+			{
+				this.Owner.Show();
+			}
+			this.Close();
 		}
 	}
 }

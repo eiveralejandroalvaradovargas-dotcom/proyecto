@@ -62,7 +62,7 @@ namespace proyecto1
 			this.lbl_Title.BackColor = System.Drawing.Color.Transparent;
 			this.lbl_Title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.lbl_Title.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Title.ForeColor = System.Drawing.Color.White;
+			this.lbl_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lbl_Title.Location = new System.Drawing.Point(338, 30);
 			this.lbl_Title.Name = "lbl_Title";
 			this.lbl_Title.Size = new System.Drawing.Size(309, 38);
@@ -78,7 +78,7 @@ namespace proyecto1
 			this.dataUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(226)))), ((int)(((byte)(216)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
 			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -169,7 +169,7 @@ namespace proyecto1
 			// 
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.Color.White;
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.label2.Location = new System.Drawing.Point(742, 96);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(102, 37);
@@ -180,7 +180,7 @@ namespace proyecto1
 			// 
 			this.lbl_Contraseña.BackColor = System.Drawing.Color.Transparent;
 			this.lbl_Contraseña.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Contraseña.ForeColor = System.Drawing.Color.White;
+			this.lbl_Contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lbl_Contraseña.Location = new System.Drawing.Point(441, 227);
 			this.lbl_Contraseña.Name = "lbl_Contraseña";
 			this.lbl_Contraseña.Size = new System.Drawing.Size(133, 34);
@@ -191,10 +191,10 @@ namespace proyecto1
 			// 
 			this.lbl_Usuario.BackColor = System.Drawing.Color.Transparent;
 			this.lbl_Usuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Usuario.ForeColor = System.Drawing.Color.White;
+			this.lbl_Usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lbl_Usuario.Location = new System.Drawing.Point(441, 97);
 			this.lbl_Usuario.Name = "lbl_Usuario";
-			this.lbl_Usuario.Size = new System.Drawing.Size(106, 38);
+			this.lbl_Usuario.Size = new System.Drawing.Size(133, 38);
 			this.lbl_Usuario.TabIndex = 13;
 			this.lbl_Usuario.Text = "Nombre";
 			// 
@@ -245,10 +245,10 @@ namespace proyecto1
 			// 
 			this.lbl_Ver.BackColor = System.Drawing.Color.Transparent;
 			this.lbl_Ver.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Ver.ForeColor = System.Drawing.Color.White;
+			this.lbl_Ver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lbl_Ver.Location = new System.Drawing.Point(742, 227);
 			this.lbl_Ver.Name = "lbl_Ver";
-			this.lbl_Ver.Size = new System.Drawing.Size(61, 34);
+			this.lbl_Ver.Size = new System.Drawing.Size(102, 34);
 			this.lbl_Ver.TabIndex = 17;
 			this.lbl_Ver.Text = "Ver";
 			// 

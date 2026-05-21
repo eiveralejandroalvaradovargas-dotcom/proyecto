@@ -86,7 +86,7 @@ namespace proyecto1
 			// 
 			this.lbl_Contraseña.BackColor = System.Drawing.Color.Transparent;
 			this.lbl_Contraseña.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Contraseña.ForeColor = System.Drawing.Color.White;
+			this.lbl_Contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lbl_Contraseña.Location = new System.Drawing.Point(329, 283);
 			this.lbl_Contraseña.Name = "lbl_Contraseña";
 			this.lbl_Contraseña.Size = new System.Drawing.Size(169, 33);
@@ -97,7 +97,7 @@ namespace proyecto1
 			// 
 			this.lbl_Usuario.BackColor = System.Drawing.Color.Transparent;
 			this.lbl_Usuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Usuario.ForeColor = System.Drawing.Color.White;
+			this.lbl_Usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lbl_Usuario.Location = new System.Drawing.Point(329, 172);
 			this.lbl_Usuario.Name = "lbl_Usuario";
 			this.lbl_Usuario.Size = new System.Drawing.Size(142, 33);
@@ -108,7 +108,7 @@ namespace proyecto1
 			// 
 			this.lbl_Title.BackColor = System.Drawing.Color.Transparent;
 			this.lbl_Title.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Title.ForeColor = System.Drawing.Color.White;
+			this.lbl_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lbl_Title.Location = new System.Drawing.Point(307, 69);
 			this.lbl_Title.Name = "lbl_Title";
 			this.lbl_Title.Size = new System.Drawing.Size(392, 51);
