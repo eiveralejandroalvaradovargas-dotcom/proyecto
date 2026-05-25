@@ -18,9 +18,6 @@ namespace proyecto1
 			}
 			Verificar();
 		}
-
-		
-
 		
 		void BtnConsultarClick(object sender, EventArgs e)
 		{

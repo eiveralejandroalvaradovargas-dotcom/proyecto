@@ -62,7 +62,6 @@ namespace proyecto1
 			this.cmbModulo.Name = "cmbModulo";
 			this.cmbModulo.Size = new System.Drawing.Size(262, 33);
 			this.cmbModulo.TabIndex = 0;
-			this.cmbModulo.SelectedIndexChanged += new System.EventHandler(this.CmbModuloSelectedIndexChanged);
 			// 
 			// cmbIdioma
 			// 

@@ -5,18 +5,20 @@ namespace proyecto1
     public class LogicaJuego
     {
         public int PuntajeActual { get; set; }
-        public string IdiomaActual { get; set; } // "ES" o "EN"
+        public string IdiomaActual { get; set; }
+        public int PuntosPorRespuesta { get; set; }
         
         public LogicaJuego()
         {
             PuntajeActual = 0;
             IdiomaActual = "ES";
+            PuntosPorRespuesta = 10;
         }
         
         public void ProcesarRespuesta(bool esCorrecta)
         {
             if (esCorrecta)
-                PuntajeActual += 10;
+                PuntajeActual += PuntosPorRespuesta;
             else
                 PuntajeActual -= 5;
             

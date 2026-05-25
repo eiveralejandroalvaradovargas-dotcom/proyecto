@@ -11,27 +11,58 @@ namespace proyecto1
     {
         private int idUsuario;
         private string Nombre_de_Usuario;
+        private int idModuloSeleccionado;
         private LogicaJuego logica;
         private List<Pregunta> preguntasActuales;
         private int indicePregunta;
         
-        public FormJuego(int idUsuario, string Nombre_de_Usuario)
+        public FormJuego(int idUsuario, string Nombre_de_Usuario, int idModulo)
         {
             this.idUsuario = idUsuario;
             this.Nombre_de_Usuario = Nombre_de_Usuario;
+            this.idModuloSeleccionado = idModulo;
             logica = new LogicaJuego();
             InitializeComponent();
-            CargarModulos();
+            
+            cmbModulo.Visible = false;
+            this.Text = "Juego - " + ObtenerNombreModulo(idModulo);
+            
             CargarIdiomas();
+            CargarPreguntasDelModulo(idModulo);
         }
         
-        private void CargarModulos()
+        private string ObtenerNombreModulo(int idModulo)
         {
-            cmbModulo.DataSource = null;
-            cmbModulo.DataSource = BaseDatos.ObtenerModulos();
-            cmbModulo.DisplayMember = "NombreEs";
-            cmbModulo.ValueMember = "Id";
-            cmbModulo.DropDownStyle = ComboBoxStyle.DropDownList;
+            var modulos = BaseDatos.ObtenerModulos();
+            var modulo = modulos.FirstOrDefault(m => m.Id == idModulo);
+            if (modulo != null)
+                return modulo.NombreEs;
+            else
+                return "Módulo " + idModulo;
+        }
+        
+        private void CargarPreguntasDelModulo(int idModulo)
+        {
+            preguntasActuales = BaseDatos.ObtenerPreguntas()
+                .Where(p => p.IdModulo == idModulo).ToList();
+            indicePregunta = 0;
+            logica.ResetearJuego();
+            ActualizarPuntuacion();
+            
+            if (preguntasActuales.Count == 0)
+            {
+                if (logica.IdiomaActual == "ES")
+                    MessageBox.Show("No hay preguntas para este modulo.");
+                else
+                    MessageBox.Show("There are no questions for this module.");
+                    
+                btnResponder.Enabled = false;
+            }
+            else
+            {
+                btnResponder.Enabled = true;
+                MostrarPregunta();
+            }
         }
         
         private void CargarIdiomas()
@@ -44,20 +75,13 @@ namespace proyecto1
             cmbIdioma.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         
-        void CmbModuloSelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(cmbModulo.SelectedItem == null) return;
-            int idModulo = (int)cmbModulo.SelectedValue;
-            preguntasActuales = BaseDatos.ObtenerPreguntas().Where(p => p.IdModulo == idModulo).ToList();
-            indicePregunta = 0;
-            logica.ResetearJuego();
-            ActualizarPuntuacion();
-            MostrarPregunta();
-        }
-        
         void CmbIdiomaSelectedIndexChanged(object sender, EventArgs e)
         {
-            logica.IdiomaActual = (cmbIdioma.SelectedIndex == 0) ? "ES" : "EN";
+            if (cmbIdioma.SelectedIndex == 0)
+                logica.IdiomaActual = "ES";
+            else
+                logica.IdiomaActual = "EN";
+            
             MostrarPregunta();
         }
         
@@ -65,27 +89,74 @@ namespace proyecto1
         {
             if(preguntasActuales == null || preguntasActuales.Count == 0)
             {
-                lblPregunta.Text = "No hay preguntas para este módulo.";
+                if (logica.IdiomaActual == "ES")
+                    lblPregunta.Text = "No hay preguntas para este modulo.";
+                else
+                    lblPregunta.Text = "There are no questions for this module.";
+                    
                 LimpiarOpciones();
                 LimpiarImagen();
                 return;
             }
+            
             if(indicePregunta >= preguntasActuales.Count)
             {
-                MessageBox.Show("¡Módulo completado! Puntuación final: "+ logica.PuntajeActual);
+                string mensajeFinal;
+                string tituloFinal;
+                
+                if (logica.IdiomaActual == "ES")
+                {
+                    mensajeFinal = "Modulo completado!\nPuntuacion final: " + logica.PuntajeActual;
+                    tituloFinal = "Completado";
+                }
+                else
+                {
+                    mensajeFinal = "Module completed!\nFinal score: " + logica.PuntajeActual;
+                    tituloFinal = "Completed";
+                }
+                
+                MessageBox.Show(mensajeFinal, tituloFinal, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 GuardarPuntuacion();
+                btnResponder.Enabled = false;
                 return;
             }
             
             Pregunta p = preguntasActuales[indicePregunta];
             
-            lblPregunta.Text = (logica.IdiomaActual == "ES") ? p.TextoEs : p.TextoEn;
+            if (logica.IdiomaActual == "ES")
+                lblPregunta.Text = p.TextoEs;
+            else
+                lblPregunta.Text = p.TextoEn;
             
             List<opcion> ops = p.opciones;
-            if(ops.Count >= 1) rbOpcion1.Text = (logica.IdiomaActual == "ES") ? ops[0].TextoEs : ops[0].TextoEn;
-            if(ops.Count >= 2) rbOpcion2.Text = (logica.IdiomaActual == "ES") ? ops[1].TextoEs : ops[1].TextoEn;
-            if(ops.Count >= 3) rbOpcion3.Text = (logica.IdiomaActual == "ES") ? ops[2].TextoEs : ops[2].TextoEn;
-            if(ops.Count >= 4) rbOpcion4.Text = (logica.IdiomaActual == "ES") ? ops[3].TextoEs : ops[3].TextoEn;
+            if(ops.Count >= 1)
+            {
+                if (logica.IdiomaActual == "ES")
+                    rbOpcion1.Text = ops[0].TextoEs;
+                else
+                    rbOpcion1.Text = ops[0].TextoEn;
+            }
+            if(ops.Count >= 2)
+            {
+                if (logica.IdiomaActual == "ES")
+                    rbOpcion2.Text = ops[1].TextoEs;
+                else
+                    rbOpcion2.Text = ops[1].TextoEn;
+            }
+            if(ops.Count >= 3)
+            {
+                if (logica.IdiomaActual == "ES")
+                    rbOpcion3.Text = ops[2].TextoEs;
+                else
+                    rbOpcion3.Text = ops[2].TextoEn;
+            }
+            if(ops.Count >= 4)
+            {
+                if (logica.IdiomaActual == "ES")
+                    rbOpcion4.Text = ops[3].TextoEs;
+                else
+                    rbOpcion4.Text = ops[3].TextoEn;
+            }
             
             MostrarImagenPorModulo(p);
         }
@@ -100,11 +171,14 @@ namespace proyecto1
                 
                 if (!string.IsNullOrEmpty(rutaImagen) && File.Exists(rutaImagen))
                 {
-                    using (var fs = new FileStream(rutaImagen, FileMode.Open, FileAccess.Read))
-                    {
-                        picImagen.Image = Image.FromStream(fs);
-                    }
+                    picImagen.Image = Image.FromFile(rutaImagen);
                     picImagen.SizeMode = PictureBoxSizeMode.Zoom;
+                    picImagen.Visible = true;
+                }
+                else
+                {
+                    picImagen.Image = null;
+                    picImagen.Visible = true;
                 }
             }
             catch (Exception ex)
@@ -116,34 +190,35 @@ namespace proyecto1
         
         private string ObtenerRutaImagen(Pregunta p)
         {
-            string rutaBase = @"C:\Users\Usuario\Documents\SharpDevelop Projects\proyecto\proyecto-nuevo\proyecto1\imagenes\";
+            string rutaBase = @"C:\Users\Usuario\Documents\proyecto\proyecto1\imagenes\";
             
             int idModulo = p.IdModulo;
+            int numeroPregunta = indicePregunta + 1;
             
             switch (idModulo)
             {
-                case 1: 
-                    string rutaSinExtension = rutaBase + @"arquitectura\pregunta" + p.Id;
-                    
-                    if (File.Exists(rutaSinExtension + ".jpg")) return rutaSinExtension + ".jpg";
-                    if (File.Exists(rutaSinExtension + ".jpeg")) return rutaSinExtension + ".jpeg";
-                    if (File.Exists(rutaSinExtension + ".png")) return rutaSinExtension + ".png";
-                    if (File.Exists(rutaSinExtension)) return rutaSinExtension;
+                case 1:
+                    string rutaArquitectura = Path.Combine(rutaBase, "arquitectura", "pregunta" + numeroPregunta + ".jpg");
+                    if (File.Exists(rutaArquitectura))
+                        return rutaArquitectura;
                     break;
                     
-                case 2: 
-                    string imgAntro = rutaBase + @"antropologia\modulo2.jpg";
-                    if (File.Exists(imgAntro)) return imgAntro;
+                case 2:
+                    string rutaAntropologia = Path.Combine(rutaBase, "antropologia", "modulo2.jpg");
+                    if (File.Exists(rutaAntropologia))
+                        return rutaAntropologia;
                     break;
                     
-                case 3: 
-                    string imgCalc = rutaBase + @"calculo\modulo3.jpg";
-                    if (File.Exists(imgCalc)) return imgCalc;
+                case 3:
+                    string rutaCalculo = Path.Combine(rutaBase, "calculo", "modulo3.jpg");
+                    if (File.Exists(rutaCalculo))
+                        return rutaCalculo;
                     break;
                     
-                case 4: 
-                    string imgDep = rutaBase + @"deporte\modulo4.jpg";
-                    if (File.Exists(imgDep)) return imgDep;
+                case 4:
+                    string rutaDeporte = Path.Combine(rutaBase, "deporte", "modulo4.jpg");
+                    if (File.Exists(rutaDeporte))
+                        return rutaDeporte;
                     break;
             }
             
@@ -163,12 +238,22 @@ namespace proyecto1
         {
             if(preguntasActuales == null || preguntasActuales.Count == 0)
             {
-                MessageBox.Show("Seleccione un módulo primero.");
+            	if (logica.IdiomaActual == "ES")
+            	{
+            		MessageBox.Show("Seleccione un modulo primero.");
+            	}
+                else
+                {
+            		MessageBox.Show("Select a module first.");
+                }
                 return;
             }
             if(indicePregunta >= preguntasActuales.Count)
             {
-                MessageBox.Show("Ya completó este módulo. Seleccione otro.");
+                if (logica.IdiomaActual == "ES")
+                    MessageBox.Show("Ya completo este modulo.");
+                else
+                    MessageBox.Show("You already completed this module.");
                 return;
             }
             
@@ -180,7 +265,14 @@ namespace proyecto1
             
             if(seleccionado == null)
             {
-                MessageBox.Show("Por favor, seleccione una respuesta.");
+            	if (logica.IdiomaActual == "ES")
+            	{
+            		MessageBox.Show("Seleccione una respuesta.");
+            	}
+            	else
+            	{
+            		MessageBox.Show("Select an answer.");
+            	}
                 return;
             }
             
@@ -192,6 +284,30 @@ namespace proyecto1
             
             Pregunta p = preguntasActuales[indicePregunta];
             bool esCorrecta = p.opciones[indiceOpcion].EsCorrecta;
+            
+            if (esCorrecta)
+            {
+            	if (logica.IdiomaActual == "ES")
+            	{
+            		MessageBox.Show("+" + logica.PuntosPorRespuesta + " puntos");
+            	}
+            	else
+            	{
+            		MessageBox.Show("+" + logica.PuntosPorRespuesta + " points");
+            	}
+            }
+            else
+            {
+            	if (logica.IdiomaActual == "ES")
+            	{
+            		MessageBox.Show("-5 puntos");
+            	}
+            	else
+            	{
+            		MessageBox.Show("-5 points");
+            	}
+            }
+            
             logica.ProcesarRespuesta(esCorrecta);
             ActualizarPuntuacion();
             
@@ -206,7 +322,14 @@ namespace proyecto1
         
         private void ActualizarPuntuacion()
         {
-            lblPuntuacion.Text = "Puntuación: "+logica.PuntajeActual;
+        	if (logica.IdiomaActual == "ES")
+        	{
+        		lblPuntuacion.Text = "Puntuacion: " + logica.PuntajeActual;
+        	}
+        	else
+        	{
+        		lblPuntuacion.Text = "Score: " + logica.PuntajeActual;
+        	}
         }
         
         private void LimpiarOpciones()
@@ -215,12 +338,15 @@ namespace proyecto1
             rbOpcion2.Text = "";
             rbOpcion3.Text = "";
             rbOpcion4.Text = "";
+            rbOpcion1.Checked = false;
+            rbOpcion2.Checked = false;
+            rbOpcion3.Checked = false;
+            rbOpcion4.Checked = false;
         }
         
         private void GuardarPuntuacion()
         {
-            int idModulo = (int)cmbModulo.SelectedValue;
-            BaseDatos.GuardarPuntuacion(idUsuario, idModulo, logica.PuntajeActual);
+            BaseDatos.GuardarPuntuacion(idUsuario, idModuloSeleccionado, logica.PuntajeActual);
         }
         
         void VolverClick(object sender, EventArgs e)
