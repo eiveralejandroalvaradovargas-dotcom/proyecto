@@ -190,7 +190,8 @@ namespace proyecto1
       
         private string ObtenerRutaImagen(Pregunta p)
         {
-            string rutaBase = Path.Combine(Application.StartupPath, "imagenes");
+            
+            string rutaBase = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "imagenes");
             
             int idModulo = p.IdModulo;
             int numeroPregunta = indicePregunta + 1;
