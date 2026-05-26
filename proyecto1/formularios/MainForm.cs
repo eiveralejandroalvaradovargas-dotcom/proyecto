@@ -123,8 +123,7 @@ namespace proyecto1
 				lblTitulo.Text = "Login";
 				lblUsuario.Text = "Username";
 				lblContraseña.Text = "Password";
-				lblDesc_shift_btn.Text = "Wanna shifts the language?, just press here :D";
-				lblDesc_shift_btn_2.Text = "This option can´t be change after";
+				lblDesc_shift_btn.Text = "Wanna shifts the language?";
 				
 				btn_Cambiar_Idioma.Text = "Shifts Language";
 				btnAcceder.Text = "Log in";
@@ -136,7 +135,6 @@ namespace proyecto1
 				lblUsuario.Text = lblUsuario.Tag.ToString();
 				lblContraseña.Text = lblContraseña.Tag.ToString();
 				lblDesc_shift_btn.Text = lblDesc_shift_btn.Tag.ToString();
-				lblDesc_shift_btn_2.Text = lblDesc_shift_btn_2.Tag.ToString();
 				
 				btn_Cambiar_Idioma.Text = btn_Cambiar_Idioma.Tag.ToString();
 				btnAcceder.Text = btnAcceder.Tag.ToString();
