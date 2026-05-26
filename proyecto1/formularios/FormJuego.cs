@@ -265,16 +265,16 @@ namespace proyecto1
             if (esCorrecta)
             {
                 if (logica.IdiomaActual == "ES")
-                    MessageBox.Show("+" + logica.PuntosPorRespuesta + " puntos");
+                    MessageBox.Show("Correcto: +" + logica.PuntosPorRespuesta + " puntos");
                 else
-                    MessageBox.Show("+" + logica.PuntosPorRespuesta + " points");
+                    MessageBox.Show("Correct: +" + logica.PuntosPorRespuesta + " points");
             }
             else
             {
                 if (logica.IdiomaActual == "ES")
-                    MessageBox.Show("-5 puntos");
+                    MessageBox.Show("Incorrecto: -5 puntos");
                 else
-                    MessageBox.Show("-5 points");
+                    MessageBox.Show("Incorrect: -5 points");
             }
             
             logica.ProcesarRespuesta(esCorrecta);
