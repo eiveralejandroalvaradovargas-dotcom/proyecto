@@ -46,7 +46,6 @@ namespace proyecto1
 			this.btnRegistrar = new System.Windows.Forms.Button();
 			this.lblDesc_shift_btn = new System.Windows.Forms.Label();
 			this.btn_Cambiar_Idioma = new System.Windows.Forms.Button();
-			this.lblDesc_shift_btn_2 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// lblTitulo
@@ -143,7 +142,7 @@ namespace proyecto1
 			this.lblDesc_shift_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
 			this.lblDesc_shift_btn.Location = new System.Drawing.Point(364, 379);
 			this.lblDesc_shift_btn.Name = "lblDesc_shift_btn";
-			this.lblDesc_shift_btn.Size = new System.Drawing.Size(307, 33);
+			this.lblDesc_shift_btn.Size = new System.Drawing.Size(318, 33);
 			this.lblDesc_shift_btn.TabIndex = 7;
 			this.lblDesc_shift_btn.Text = "Desea cambiar el idioma a ingles? presione aqui :D";
 			// 
@@ -162,18 +161,6 @@ namespace proyecto1
 			this.btn_Cambiar_Idioma.UseVisualStyleBackColor = false;
 			this.btn_Cambiar_Idioma.Click += new System.EventHandler(this.Btn_Cambiar_IdiomaClick);
 			// 
-			// lblDesc_shift_btn_2
-			// 
-			this.lblDesc_shift_btn_2.BackColor = System.Drawing.Color.Transparent;
-			this.lblDesc_shift_btn_2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDesc_shift_btn_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-			this.lblDesc_shift_btn_2.Location = new System.Drawing.Point(350, 464);
-			this.lblDesc_shift_btn_2.Name = "lblDesc_shift_btn_2";
-			this.lblDesc_shift_btn_2.Size = new System.Drawing.Size(334, 29);
-			this.lblDesc_shift_btn_2.TabIndex = 9;
-			this.lblDesc_shift_btn_2.Text = "Esta opcion no podra ser cambiada mas adelante";
-			this.lblDesc_shift_btn_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,7 +168,6 @@ namespace proyecto1
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.ClientSize = new System.Drawing.Size(984, 561);
-			this.Controls.Add(this.lblDesc_shift_btn_2);
 			this.Controls.Add(this.btn_Cambiar_Idioma);
 			this.Controls.Add(this.lblDesc_shift_btn);
 			this.Controls.Add(this.btnRegistrar);
@@ -198,7 +184,6 @@ namespace proyecto1
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
-		private System.Windows.Forms.Label lblDesc_shift_btn_2;
 		private System.Windows.Forms.Button btn_Cambiar_Idioma;
 		private System.Windows.Forms.Label lblDesc_shift_btn;
 		private System.Windows.Forms.Button btnRegistrar;

@@ -24,6 +24,11 @@ namespace proyecto1
             logica = new LogicaJuego();
             InitializeComponent();
             
+            foreach (Control Textos_Properties in this.Controls)
+			{
+				Textos_Properties.Tag = Textos_Properties.Text;
+			}
+            
             cmbModulo.Visible = false;
             this.Text = "Juego - " + ObtenerNombreModulo(idModulo);
             
@@ -77,11 +82,20 @@ namespace proyecto1
         
         void CmbIdiomaSelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbIdioma.SelectedIndex == 0)
+        	if (cmbIdioma.SelectedIndex == 0)
+        	{
                 logica.IdiomaActual = "ES";
+                lblPuntuacion.Text = lblPuntuacion.Tag.ToString();
+                Volver.Text = Volver.Tag.ToString();
+                btnResponder.Text = btnResponder.Tag.ToString();
+        	}
             else
+            {
                 logica.IdiomaActual = "EN";
-            
+                lblPuntuacion.Text = "Score: ";
+                Volver.Text = "Back";
+                btnResponder.Text = "Check";
+            }
             MostrarPregunta();
         }
         
@@ -272,10 +286,28 @@ namespace proyecto1
             }
             else
             {
+            	string R_Correcta = "";
+            	
+            	foreach (var op in p.opciones)
+            	{
+            		if (op.EsCorrecta)
+            		{
+            			if(logica.IdiomaActual == "ES")
+            			{
+            				R_Correcta = op.TextoEs;
+            			}
+            			else
+            			{
+            				R_Correcta = op.TextoEn;
+            				break;
+            			}
+            		}
+            	}
+            	
                 if (logica.IdiomaActual == "ES")
-                    MessageBox.Show("Incorrecto: -5 puntos");
+                    MessageBox.Show("Incorrecto: -5 puntos \nLa opcion correcta era...\n" + R_Correcta, "Aviso");
                 else
-                    MessageBox.Show("Incorrect: -5 points");
+                    MessageBox.Show("Incorrect: -5 points \nThe correct answer was...\n" + R_Correcta, "Advice");
             }
             
             logica.ProcesarRespuesta(esCorrecta);
@@ -318,7 +350,10 @@ namespace proyecto1
         void VolverClick(object sender, EventArgs e)
         {
             FormMenuJugador Menu_Jugador = new FormMenuJugador(this.Nombre_de_Usuario, this.idUsuario);                
-            Menu_Jugador.Show();
+            if (this.Owner !=null)
+            {
+            	this.Owner.Show();
+            }
             this.Close();
         }
     }

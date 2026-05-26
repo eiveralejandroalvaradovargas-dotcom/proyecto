@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace proyecto1
 {
@@ -13,6 +14,11 @@ namespace proyecto1
         public FormMenuJugador(string Name_Recibido, int ID_Recibido)
         {
             InitializeComponent();
+            
+            GraphicsPath path = new GraphicsPath();
+            path.AddEllipse(0, 0, pictureBox1.Width, pictureBox1.Height);
+            pictureBox1.Region = new Region(path);
+            
             this.Name_Ingresado = Name_Recibido;
             this.ID_Ingresado = ID_Recibido;
             
@@ -95,6 +101,7 @@ namespace proyecto1
             if (moduloSeleccionado != 0)
             {
                 FormJuego Juego = new FormJuego(this.ID_Ingresado, this.Name_Ingresado, moduloSeleccionado);
+                Juego.Owner = this;
                 Juego.Show();
                 this.Hide();
             }
@@ -119,7 +126,7 @@ namespace proyecto1
             {
                 this.Owner.Show();
             }
-            this.Close();
+            this.Hide();
         }
     }
 }

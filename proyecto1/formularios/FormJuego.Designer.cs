@@ -92,6 +92,7 @@ namespace proyecto1
 			this.picImagen.Location = new System.Drawing.Point(12, 197);
 			this.picImagen.Name = "picImagen";
 			this.picImagen.Size = new System.Drawing.Size(223, 192);
+			this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.picImagen.TabIndex = 3;
 			this.picImagen.TabStop = false;
 			// 
