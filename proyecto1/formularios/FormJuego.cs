@@ -187,10 +187,10 @@ namespace proyecto1
                 picImagen.Image = null;
             }
         }
-        
+      
         private string ObtenerRutaImagen(Pregunta p)
         {
-            string rutaBase = @"C:\Users\Usuario\Documents\proyecto\proyecto1\imagenes\";
+            string rutaBase = Path.Combine(Application.StartupPath, "imagenes");
             
             int idModulo = p.IdModulo;
             int numeroPregunta = indicePregunta + 1;
@@ -198,31 +198,16 @@ namespace proyecto1
             switch (idModulo)
             {
                 case 1:
-                    string rutaArquitectura = Path.Combine(rutaBase, "arquitectura", "pregunta" + numeroPregunta + ".jpg");
-                    if (File.Exists(rutaArquitectura))
-                        return rutaArquitectura;
-                    break;
-                    
+                    return Path.Combine(rutaBase, "arquitectura", "pregunta" + numeroPregunta + ".jpg");
                 case 2:
-                    string rutaAntropologia = Path.Combine(rutaBase, "antropologia", "modulo2.jpg");
-                    if (File.Exists(rutaAntropologia))
-                        return rutaAntropologia;
-                    break;
-                    
+                    return Path.Combine(rutaBase, "antropologia", "modulo2.jpg");
                 case 3:
-                    string rutaCalculo = Path.Combine(rutaBase, "calculo", "modulo3.jpg");
-                    if (File.Exists(rutaCalculo))
-                        return rutaCalculo;
-                    break;
-                    
+                    return Path.Combine(rutaBase, "calculo", "modulo3.jpg");
                 case 4:
-                    string rutaDeporte = Path.Combine(rutaBase, "deporte", "modulo4.jpg");
-                    if (File.Exists(rutaDeporte))
-                        return rutaDeporte;
-                    break;
+                    return Path.Combine(rutaBase, "deporte", "modulo4.jpg");
+                default:
+                    return string.Empty;
             }
-            
-            return string.Empty;
         }
         
         private void LimpiarImagen()
@@ -238,14 +223,10 @@ namespace proyecto1
         {
             if(preguntasActuales == null || preguntasActuales.Count == 0)
             {
-            	if (logica.IdiomaActual == "ES")
-            	{
-            		MessageBox.Show("Seleccione un modulo primero.");
-            	}
+                if (logica.IdiomaActual == "ES")
+                    MessageBox.Show("Seleccione un modulo primero.");
                 else
-                {
-            		MessageBox.Show("Select a module first.");
-                }
+                    MessageBox.Show("Select a module first.");
                 return;
             }
             if(indicePregunta >= preguntasActuales.Count)
@@ -265,14 +246,10 @@ namespace proyecto1
             
             if(seleccionado == null)
             {
-            	if (logica.IdiomaActual == "ES")
-            	{
-            		MessageBox.Show("Seleccione una respuesta.");
-            	}
-            	else
-            	{
-            		MessageBox.Show("Select an answer.");
-            	}
+                if (logica.IdiomaActual == "ES")
+                    MessageBox.Show("Seleccione una respuesta.");
+                else
+                    MessageBox.Show("Select an answer.");
                 return;
             }
             
@@ -287,25 +264,17 @@ namespace proyecto1
             
             if (esCorrecta)
             {
-            	if (logica.IdiomaActual == "ES")
-            	{
-            		MessageBox.Show("+" + logica.PuntosPorRespuesta + " puntos");
-            	}
-            	else
-            	{
-            		MessageBox.Show("+" + logica.PuntosPorRespuesta + " points");
-            	}
+                if (logica.IdiomaActual == "ES")
+                    MessageBox.Show("+" + logica.PuntosPorRespuesta + " puntos");
+                else
+                    MessageBox.Show("+" + logica.PuntosPorRespuesta + " points");
             }
             else
             {
-            	if (logica.IdiomaActual == "ES")
-            	{
-            		MessageBox.Show("-5 puntos");
-            	}
-            	else
-            	{
-            		MessageBox.Show("-5 points");
-            	}
+                if (logica.IdiomaActual == "ES")
+                    MessageBox.Show("-5 puntos");
+                else
+                    MessageBox.Show("-5 points");
             }
             
             logica.ProcesarRespuesta(esCorrecta);
@@ -322,14 +291,10 @@ namespace proyecto1
         
         private void ActualizarPuntuacion()
         {
-        	if (logica.IdiomaActual == "ES")
-        	{
-        		lblPuntuacion.Text = "Puntuacion: " + logica.PuntajeActual;
-        	}
-        	else
-        	{
-        		lblPuntuacion.Text = "Score: " + logica.PuntajeActual;
-        	}
+            if (logica.IdiomaActual == "ES")
+                lblPuntuacion.Text = "Puntuacion: " + logica.PuntajeActual;
+            else
+                lblPuntuacion.Text = "Score: " + logica.PuntajeActual;
         }
         
         private void LimpiarOpciones()
